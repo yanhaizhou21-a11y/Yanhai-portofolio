@@ -10,15 +10,15 @@ const navItems = [
 
 function Navbar() {
   return (
-    <header className="sticky top-0 z-50 border-b border-gray-200 bg-white/85 backdrop-blur">
+    <header className="sticky top-0 z-50 border-b border-white/10 bg-[#0a0a0a]/90 backdrop-blur-lg">
       <nav className="mx-auto flex max-w-6xl items-center justify-between px-4 py-3 md:px-8">
-        <a href="#hero" className="text-sm font-medium tracking-[0.2em] text-black">
+        <a href="#hero" className="text-sm font-medium tracking-[0.2em] text-white">
           PORTFOLIO
         </a>
-        <ul className="hidden gap-5 text-xs text-gray-700 md:flex">
+        <ul className="hidden gap-5 text-xs text-gray-400 md:flex">
           {navItems.map((item) => (
             <li key={item.href}>
-              <a className="transition hover:text-black" href={item.href}>
+              <a className="transition hover:text-white" href={item.href}>
                 {item.label}
               </a>
             </li>

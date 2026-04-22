@@ -12,7 +12,7 @@ import { usePortfolio } from '../context/PortfolioContext.jsx'
 function PortfolioPage() {
   const { data } = usePortfolio()
   return (
-    <div className="bg-white text-black">
+    <div className="bg-[#0a0a0a] text-white">
       <CustomCursor />
       <Navbar />
       <main>

@@ -9,12 +9,16 @@ export const defaultPortfolioData = {
     values: ['Curiosity', 'Craft', 'Consistency', 'Collaboration'],
   },
   skills: [
-    { id: 'sk1', category: 'Design Tools', name: 'Figma', logo: 'F', level: 90 },
-    { id: 'sk2', category: 'Design Tools', name: 'Adobe Illustrator', logo: 'Ai', level: 84 },
-    { id: 'sk3', category: 'Design Tools', name: 'Photoshop', logo: 'Ps', level: 80 },
-    { id: 'sk4', category: 'Dev Tools', name: 'React', logo: 'R', level: 88 },
-    { id: 'sk5', category: 'Dev Tools', name: 'Tailwind CSS', logo: 'Tw', level: 86 },
-    { id: 'sk6', category: 'Dev Tools', name: 'Node.js', logo: 'N', level: 76 },
+    { id: 'sk1', name: 'HTML', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/html5/html5-original.svg' },
+    { id: 'sk2', name: 'CSS', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/css3/css3-original.svg' },
+    { id: 'sk3', name: 'Sass', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/sass/sass-original.svg' },
+    { id: 'sk4', name: 'JavaScript', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/javascript/javascript-original.svg' },
+    { id: 'sk5', name: 'React JS', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/react/react-original.svg' },
+    { id: 'sk6', name: 'GitHub', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/github/github-original.svg', iconDark: true },
+    { id: 'sk7', name: 'Node JS', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/nodejs/nodejs-original.svg' },
+    { id: 'sk8', name: 'Firebase', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/firebase/firebase-original.svg' },
+    { id: 'sk9', name: 'MongoDB', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/mongodb/mongodb-original.svg' },
+    { id: 'sk10', name: 'Docker', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/docker/docker-original.svg' },
   ],
   experience: [
     {
@@ -40,11 +44,11 @@ export const defaultPortfolioData = {
     },
   ],
   graphicDesignProjects: [
-    { id: 'gd1', title: 'Editorial Poster Series', image: '' },
-    { id: 'gd2', title: 'Brand Identity Toolkit', image: '' },
-    { id: 'gd3', title: 'Packaging Concept Blackline', image: '' },
-    { id: 'gd4', title: 'Typography Social Campaign', image: '' },
-    { id: 'gd5', title: 'Minimal Portfolio Cover', image: '' },
+    { id: 'gd1', title: 'Editorial Poster Series', image: 'https://picsum.photos/seed/poster1/800/600' },
+    { id: 'gd2', title: 'Brand Identity Toolkit', image: 'https://picsum.photos/seed/brand2/800/600' },
+    { id: 'gd3', title: 'Packaging Concept Blackline', image: 'https://picsum.photos/seed/pack3/800/600' },
+    { id: 'gd4', title: 'Typography Social Campaign', image: 'https://picsum.photos/seed/typo4/800/600' },
+    { id: 'gd5', title: 'Minimal Portfolio Cover', image: 'https://picsum.photos/seed/cover5/800/600' },
   ],
   webProjects: [
     {
@@ -54,7 +58,7 @@ export const defaultPortfolioData = {
       techStack: 'React, Tailwind, Framer Motion',
       githubLink: 'https://github.com/example/studio-landing',
       liveLink: 'https://example.com/studio-landing',
-      image: '',
+      image: 'https://picsum.photos/seed/web1/800/600',
     },
     {
       id: 'wp2',
@@ -63,7 +67,7 @@ export const defaultPortfolioData = {
       techStack: 'React, Recharts, LocalStorage',
       githubLink: 'https://github.com/example/freelance-dashboard',
       liveLink: 'https://example.com/freelance-dashboard',
-      image: '',
+      image: 'https://picsum.photos/seed/web2/800/600',
     },
     {
       id: 'wp3',
@@ -72,7 +76,7 @@ export const defaultPortfolioData = {
       techStack: 'React, Vite, Tailwind CSS',
       githubLink: 'https://github.com/example/design-asset-vault',
       liveLink: 'https://example.com/design-asset-vault',
-      image: '',
+      image: 'https://picsum.photos/seed/web3/800/600',
     },
   ],
   certificates: [
