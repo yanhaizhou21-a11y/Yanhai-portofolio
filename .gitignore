@@ -25,6 +25,3 @@ dist-ssr
 .env.local
 
 
-#fiebase files
-firebase.js
-./src/firebase.js
