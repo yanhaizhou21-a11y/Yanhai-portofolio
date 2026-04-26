@@ -5,7 +5,7 @@ import { usePortfolio } from '../context/PortfolioContext.jsx'
 function Projects() {
   const { data } = usePortfolio()
   const allProjects = [
-    ...(data.webProjects || []).map(p => ({ ...p, category: 'web', title: p.name, imageUrl: p.image, link: p.liveLink, tags: p.techStack ? p.techStack.split(',').map(s => s.trim()) : [] })),
+    ...(data.webProjects || []).map(p => ({ ...p, category: 'web', title: p.name, imageUrl: p.image, link: p.liveLink, githubLink: p.githubLink, tags: p.techStack ? p.techStack.split(',').map(s => s.trim()) : [] })),
     ...(data.graphicDesignProjects || []).map(p => ({ ...p, category: 'graphic', title: p.title, imageUrl: p.image }))
   ]
 

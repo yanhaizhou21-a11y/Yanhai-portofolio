@@ -4,7 +4,7 @@ import ProtectedRoute from './components/ProtectedRoute.jsx'
 import Navbar from './components/Navbar.jsx'
 import Home from './pages/Home.jsx'
 import Projects from './pages/Projects.jsx'
-import Admin from './pages/Admin.jsx'
+import Admin from './admin/AdminPage.jsx'
 import AdminLogin from './pages/AdminLogin.jsx'
 
 function App() {

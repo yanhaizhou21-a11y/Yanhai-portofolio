@@ -35,7 +35,7 @@ function Skills({ skills }) {
   const data = (skills || []).length
     ? skills.map((s) => {
         if (s.icon && (s.icon.startsWith('http') || s.icon.startsWith('data:image'))) {
-          return { title: s.name, node: <img src={s.icon} alt={s.name} className="h-full w-full object-contain" /> }
+          return { title: s.name, node: <img src={s.icon} alt={s.name} className="h-8 w-8 object-contain" /> }
         }
         const Icon = iconMap[s.name] || iconMap[s.icon]
         return { title: s.name, node: Icon ? <Icon /> : <SiReact /> }
