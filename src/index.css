@@ -1,5 +1,29 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500&family=Playfair+Display:ital@1&display=swap');
 @import 'tailwindcss';
+
+:root {
+  --bg: #0a0a0a;
+  --bg-secondary: #111111;
+  --text: #f0ede8;
+  --text-muted: #6b6b6b;
+  --accent: #ffffff;
+  --border: rgba(255, 255, 255, 0.08);
+  --card-bg: #141414;
+}
+
+[data-theme='light'] {
+  --bg: #f5f2ed;
+  --bg-secondary: #ebe8e2;
+  --text: #0a0a0a;
+  --text-muted: #6b6867;
+  --accent: #0a0a0a;
+  --border: rgba(0, 0, 0, 0.1);
+  --card-bg: #ffffff;
+}
+
+* {
+  box-sizing: border-box;
+}
 
 html {
   scroll-behavior: smooth;
@@ -7,31 +31,74 @@ html {
 
 body {
   margin: 0;
-  font-family: 'Inter', sans-serif;
-  background: #0a0a0a;
-  color: #f5f5f5;
-  cursor: none;
+  font-family: 'DM Sans', sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  transition: background 0.2s ease, color 0.2s ease;
 }
 
-a,
-button,
-input,
-textarea,
-select {
-  cursor: none;
+.section-wrap {
+  border-top: 1px solid var(--border);
+  padding: 5rem 1.25rem;
 }
 
-/* Scrollbar styling for dark theme */
+.container {
+  max-width: 1120px;
+  margin: 0 auto;
+}
+
+.label {
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  font-size: 0.72rem;
+}
+
+.title {
+  font-size: clamp(1.8rem, 3.7vw, 3.2rem);
+  line-height: 1.1;
+  margin-top: 0.65rem;
+}
+
+.marquee-wrap {
+  overflow: hidden;
+  border-top: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
+}
+
+.marquee {
+  white-space: nowrap;
+  display: inline-block;
+  padding: 1.25rem 0;
+  letter-spacing: 0.2em;
+  color: var(--text-muted);
+  animation: marquee 28s linear infinite;
+}
+
+@keyframes marquee {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
 ::-webkit-scrollbar {
   width: 6px;
 }
 ::-webkit-scrollbar-track {
-  background: #0a0a0a;
+  background: var(--bg);
 }
 ::-webkit-scrollbar-thumb {
-  background: #333;
+  background: var(--text-muted);
   border-radius: 3px;
 }
 ::-webkit-scrollbar-thumb:hover {
-  background: #555;
+  background: var(--text-muted);
+}
+
+* {
+  scrollbar-width: thin;
+  scrollbar-color: var(--text-muted) var(--bg);
 }
