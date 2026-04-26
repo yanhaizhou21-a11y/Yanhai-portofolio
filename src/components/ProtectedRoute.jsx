@@ -16,7 +16,7 @@ function ProtectedRoute({ children }) {
   }
 
   if (!user) {
-    return <Navigate to="/admin/login" replace />
+    return <Navigate to="/xon2-admin/login" replace />
   }
 
   return children
