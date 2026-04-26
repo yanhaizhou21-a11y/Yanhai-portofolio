@@ -147,9 +147,9 @@ export const StaggeredMenu = ({
   }, [closeOnClickAway, open, closeMenu])
 
   return (
-    <div className={`sm-scope pointer-events-none z-40 ${isFixed ? 'fixed top-0 left-0 h-screen w-screen overflow-hidden' : 'h-full w-full'}`}>
+    <div className={`sm-scope ${open ? 'pointer-events-auto' : 'pointer-events-none'} z-40 ${isFixed ? 'fixed top-0 left-0 h-screen w-screen overflow-hidden' : 'h-full w-full'}`}>
       <div
-        className={`${className ? `${className} ` : ''}staggered-menu-wrapper pointer-events-none relative h-full w-full`}
+        className={`${className ? `${className} ` : ''}staggered-menu-wrapper ${open ? 'pointer-events-auto' : 'pointer-events-none'} relative h-full w-full`}
         style={accentColor ? { '--sm-accent': accentColor } : undefined}
         data-position={position}
       >

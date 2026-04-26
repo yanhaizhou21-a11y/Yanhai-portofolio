@@ -35,12 +35,15 @@ export function useFirestore() {
   }, [])
 
   // Write to Firestore
-  const updateData = (newData) => {
+  const updateData = async (newData) => {
     const resolved = typeof newData === 'function' ? newData(data) : newData
     setData(resolved)
-    setDoc(DOC_REF, resolved).catch((error) => {
+    try {
+      await setDoc(DOC_REF, resolved)
+    } catch (error) {
       console.error('Firestore write error:', error)
-    })
+      throw error
+    }
   }
 
   return [data, updateData, loading]

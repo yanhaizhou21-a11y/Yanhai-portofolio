@@ -12,8 +12,8 @@ export function PortfolioProvider({ children }) {
       data,
       loading,
       setData,
-      replaceSection: (sectionKey, nextValue) => {
-        setData((prev) => ({ ...prev, [sectionKey]: nextValue }))
+      replaceSection: async (sectionKey, nextValue) => {
+        return setData((prev) => ({ ...prev, [sectionKey]: nextValue }))
       },
       resetData: () => setData(defaultPortfolioData),
     }),

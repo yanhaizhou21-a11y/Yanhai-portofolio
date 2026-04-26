@@ -26,7 +26,6 @@ function Navbar() {
     { label: 'Skills', ariaLabel: 'Go to skills', link: '/#skills', onClick: () => goToSection('skills') },
     { label: 'About', ariaLabel: 'Go to about', link: '/#about', onClick: () => goToSection('about') },
     { label: 'Contact', ariaLabel: 'Go to contact', link: '/#contact', onClick: () => goToSection('contact') },
-    { label: 'Admin', ariaLabel: 'Open admin login', link: '/admin/login' },
   ]
 
   const socialItems = [

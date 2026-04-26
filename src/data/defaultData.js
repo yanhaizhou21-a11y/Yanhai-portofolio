@@ -3,10 +3,13 @@ export const defaultPortfolioData = {
     name: '[YOUR NAME]',
     title: '[YOUR TITLE e.g. Graphic Designer & Frontend Developer]',
     cta: 'Scroll to explore',
+    avatarUrl: '',
+    iconUrl: '',
   },
   about: {
     bio: '[YOUR BIO]',
     values: ['Curiosity', 'Craft', 'Consistency', 'Collaboration'],
+    aboutPhotoUrl: '',
   },
   skills: [
     { id: 'sk1', name: 'HTML', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/html5/html5-original.svg' },

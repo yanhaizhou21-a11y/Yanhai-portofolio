@@ -8,14 +8,14 @@ function Hero({ config }) {
           <h1 className="text-6xl leading-[0.95]" style={{ fontFamily: "'Playfair Display', serif", fontStyle: 'italic' }}>
             {config.name}
           </h1>
-          <p className="mt-2 text-2xl font-light">{config.role}</p>
+          <p className="mt-2 text-2xl font-light">{config.title}</p>
           <hr className="my-6 border-0 border-t" style={{ borderColor: 'var(--border)' }} />
-          <p style={{ color: 'var(--text-muted)' }}>{config.heroTagline}</p>
+          <p style={{ color: 'var(--text-muted)' }}>{config.cta}</p>
         </div>
         <div className="mx-auto w-full max-w-sm">
           <ProfileCard
             name={config.name}
-            title={config.role}
+            title={config.title}
             handle="carlosprado"
             status="Available for work"
             contactText="Say Hello"

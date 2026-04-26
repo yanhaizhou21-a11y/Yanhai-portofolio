@@ -1,7 +1,7 @@
 import { Link } from 'react-router-dom'
 
 function ProjectsPreview({ projects }) {
-  const featured = projects.filter((p) => p.featured).slice(0, 3)
+  const featured = projects.filter((p) => p.featured).length > 0 ? projects.filter((p) => p.featured).slice(0, 3) : projects.slice(0, 3)
 
   return (
     <section id="projects" className="section-wrap">

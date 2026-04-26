@@ -7,13 +7,13 @@ function AdminLogin() {
   const navigate = useNavigate()
   const [error, setError] = useState('')
 
-  if (!loading && user) return <Navigate to="/admin" replace />
+  if (!loading && user) return <Navigate to="/xon2-admin" replace />
 
   const onGoogle = async () => {
     setError('')
     try {
       await loginWithGoogle()
-      navigate('/admin', { replace: true })
+      navigate('/xon2-admin', { replace: true })
     } catch (err) {
       if (err?.message === 'auth/not-admin') {
         setError(`Only ${adminEmail} can access admin panel.`)

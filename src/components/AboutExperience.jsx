@@ -5,19 +5,19 @@ function AboutExperience({ config, experience }) {
         <div>
           <p className="label">// ABOUT</p>
           <h2 className="title">About & Experience</h2>
-          <img src={config.aboutPhotoUrl || config.avatarUrl || 'https://placehold.co/900x700'} alt="profile" className="mt-6 h-80 w-full rounded-xl object-cover" loading="lazy" />
+          <img src={config.aboutPhotoUrl || 'https://placehold.co/900x700'} alt="profile" className="mt-6 h-80 w-full rounded-xl object-cover" loading="lazy" />
           <p className="mt-4 leading-relaxed" style={{ color: 'var(--text-muted)' }}>
-            {config.aboutBio || 'Creative developer focused on expressive interfaces and performant web products.'}
+            {config.bio || 'Creative developer focused on expressive interfaces and performant web products.'}
           </p>
           <p className="mt-4 text-sm uppercase tracking-wider" style={{ color: 'var(--text-muted)' }}>
-            3+ years exp · 20+ projects · 5 countries
+            {(config.values || []).join(' · ')}
           </p>
         </div>
         <div>
           <div className="mt-12 border-l pl-6" style={{ borderColor: 'var(--border)' }}>
-            {experience.map((item) => (
-              <article key={item.id} className="mb-8">
-                <p className="text-sm" style={{ color: 'var(--text-muted)' }}>{item.yearRange}</p>
+            {(experience || []).map((item) => (
+              <article key={item.id || item.company} className="mb-8">
+                <p className="text-sm" style={{ color: 'var(--text-muted)' }}>{item.dateRange}</p>
                 <h3 className="text-xl">{item.company}</h3>
                 <p className="text-sm">{item.role}</p>
                 <p className="mt-2 text-sm" style={{ color: 'var(--text-muted)' }}>{item.description}</p>

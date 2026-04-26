@@ -15,9 +15,9 @@ function App() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/projects" element={<Projects />} />
-          <Route path="/admin/login" element={<AdminLogin />} />
+          <Route path="/xon2-admin/login" element={<AdminLogin />} />
           <Route
-            path="/admin"
+            path="/xon2-admin"
             element={
               <ProtectedRoute>
                 <Admin />

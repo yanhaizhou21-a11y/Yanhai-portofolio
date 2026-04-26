@@ -5,22 +5,23 @@ import ProjectsPreview from '../components/Projects/ProjectsPreview.jsx'
 import AboutExperience from '../components/AboutExperience.jsx'
 import Certificates from '../components/Certificates.jsx'
 import Footer from '../components/Footer.jsx'
-import { useCollectionData, useConfig } from '../hooks/usePortfolioData.js'
+import { usePortfolio } from '../context/PortfolioContext.jsx'
 
 function Home() {
-  const config = useConfig()
-  const projects = useCollectionData('projects')
-  const skills = useCollectionData('skills')
-  const experience = useCollectionData('experience')
-  const certificates = useCollectionData('certificates')
+  const { data } = usePortfolio()
+  
+  const allProjects = [
+    ...(data.webProjects || []).map(p => ({ ...p, category: 'web', title: p.name, imageUrl: p.image, link: p.liveLink, tags: p.techStack ? p.techStack.split(',').map(s => s.trim()) : [] })),
+    ...(data.graphicDesignProjects || []).map(p => ({ ...p, category: 'graphic', title: p.title, imageUrl: p.image }))
+  ]
 
   return (
     <motion.main initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }}>
-      <Hero config={config} />
-      <Skills skills={skills} />
-      <ProjectsPreview projects={projects} />
-      <AboutExperience config={config} experience={experience} />
-      <Certificates certificates={certificates} />
+      <Hero config={data.hero} />
+      <Skills skills={data.skills} />
+      <ProjectsPreview projects={allProjects} />
+      <AboutExperience config={data.about} experience={data.experience} />
+      <Certificates certificates={data.certificates} />
       <Footer />
     </motion.main>
   )

@@ -12,6 +12,8 @@ const sectionConfig = {
       { key: 'name', label: 'Name', type: 'text' },
       { key: 'title', label: 'Title', type: 'textarea' },
       { key: 'cta', label: 'CTA Text', type: 'text' },
+      { key: 'avatarUrl', label: 'Avatar (URL or Upload)', type: 'image' },
+      { key: 'iconUrl', label: 'Icon (URL or Upload)', type: 'image' },
     ],
   },
   about: {
@@ -20,6 +22,7 @@ const sectionConfig = {
     fields: [
       { key: 'bio', label: 'Bio', type: 'textarea' },
       { key: 'valuesText', label: 'Values (comma separated)', type: 'text' },
+      { key: 'aboutPhotoUrl', label: 'About Photo (URL or Upload)', type: 'image' },
     ],
   },
   webProjects: {
@@ -31,7 +34,7 @@ const sectionConfig = {
       { key: 'techStack', label: 'Tech Stack', type: 'text' },
       { key: 'githubLink', label: 'GitHub Link', type: 'text' },
       { key: 'liveLink', label: 'Live Link', type: 'text' },
-      { key: 'image', label: 'Image URL', type: 'text' },
+      { key: 'image', label: 'Image (URL or Upload)', type: 'image' },
     ],
     labelKey: 'name',
   },
@@ -40,7 +43,7 @@ const sectionConfig = {
     mode: 'list',
     fields: [
       { key: 'title', label: 'Title', type: 'text' },
-      { key: 'image', label: 'Image URL', type: 'text' },
+      { key: 'image', label: 'Image (URL or Upload)', type: 'image' },
     ],
     labelKey: 'title',
   },
@@ -49,7 +52,7 @@ const sectionConfig = {
     mode: 'list',
     fields: [
       { key: 'name', label: 'Skill Name', type: 'text' },
-      { key: 'icon', label: 'Icon URL (e.g. devicons CDN)', type: 'text' },
+      { key: 'icon', label: 'Icon (URL or Upload)', type: 'image' },
     ],
     labelKey: 'name',
   },
@@ -71,7 +74,7 @@ const sectionConfig = {
       { key: 'name', label: 'Certificate Name', type: 'text' },
       { key: 'issuer', label: 'Issuer', type: 'text' },
       { key: 'date', label: 'Date', type: 'text' },
-      { key: 'image', label: 'Image URL', type: 'text' },
+      { key: 'image', label: 'Image (URL or Upload)', type: 'image' },
     ],
     labelKey: 'name',
   },
@@ -79,6 +82,41 @@ const sectionConfig = {
 
 function buildEmpty(fields) {
   return fields.reduce((acc, field) => ({ ...acc, [field.key]: '' }), {})
+}
+
+const compressImage = (file) => {
+  return new Promise((resolve) => {
+    const reader = new FileReader()
+    reader.readAsDataURL(file)
+    reader.onload = (event) => {
+      const img = new Image()
+      img.src = event.target.result
+      img.onload = () => {
+        const canvas = document.createElement('canvas')
+        const MAX_WIDTH = 800
+        const MAX_HEIGHT = 800
+        let width = img.width
+        let height = img.height
+
+        if (width > height) {
+          if (width > MAX_WIDTH) {
+            height *= MAX_WIDTH / width
+            width = MAX_WIDTH
+          }
+        } else {
+          if (height > MAX_HEIGHT) {
+            width *= MAX_HEIGHT / height
+            height = MAX_HEIGHT
+          }
+        }
+        canvas.width = width
+        canvas.height = height
+        const ctx = canvas.getContext('2d')
+        ctx.drawImage(img, 0, 0, width, height)
+        resolve(canvas.toDataURL('image/jpeg', 0.7))
+      }
+    }
+  })
 }
 
 function AdminPage() {
@@ -101,6 +139,7 @@ function AdminPage() {
       return {
         bio: aboutData.bio || '',
         valuesText: Array.isArray(aboutData.values) ? aboutData.values.join(', ') : '',
+        aboutPhotoUrl: aboutData.aboutPhotoUrl || '',
       }
     }
     return {
@@ -112,6 +151,17 @@ function AdminPage() {
 
   const setField = (key, value) => setFormState((prev) => ({ ...prev, [key]: value }))
 
+  const handleImageUpload = async (key, file) => {
+    if (!file) return
+    try {
+      const base64 = await compressImage(file)
+      setField(key, base64)
+    } catch (err) {
+      console.error('Image compression failed', err)
+      alert('Failed to process image')
+    }
+  }
+
   const startNew = () => {
     setEditId(null)
     setFormState(emptyState)
@@ -122,35 +172,43 @@ function AdminPage() {
     setFormState(item)
   }
 
-  const saveItem = (event) => {
+  const saveItem = async (event) => {
     event.preventDefault()
-    if (isSingleSection) {
-      if (activeTab === 'about') {
-        const values = (activeForm.valuesText || '')
-          .split(',')
-          .map((value) => value.trim())
-          .filter(Boolean)
-        replaceSection('about', {
-          bio: activeForm.bio || '',
-          values,
-        })
-      } else {
-        replaceSection(activeTab, activeForm)
+    try {
+      if (isSingleSection) {
+        if (activeTab === 'about') {
+          const values = (activeForm.valuesText || '')
+            .split(',')
+            .map((value) => value.trim())
+            .filter(Boolean)
+          await replaceSection('about', {
+            bio: activeForm.bio || '',
+            values,
+            aboutPhotoUrl: activeForm.aboutPhotoUrl || '',
+          })
+        } else {
+          await replaceSection(activeTab, activeForm)
+        }
+        setFormState({})
+        alert('Berhasil disimpan!')
+        return
       }
-      setFormState({})
-      return
-    }
 
-    const nextItem = {
-      ...activeForm,
-      id: editId || `${activeTab}-${Date.now()}`,
+      const nextItem = {
+        ...activeForm,
+        id: editId || `${activeTab}-${Date.now()}`,
+      }
+      const nextItems = editId
+        ? items.map((item) => (item.id === editId ? nextItem : item))
+        : [nextItem, ...items]
+      await replaceSection(activeTab, nextItems)
+      setEditId(null)
+      setFormState(emptyState)
+      alert('Berhasil disimpan!')
+    } catch (err) {
+      console.error(err)
+      alert('Gagal menyimpan data! Pastikan Firestore rules Anda sudah benar (allow read, write).')
     }
-    const nextItems = editId
-      ? items.map((item) => (item.id === editId ? nextItem : item))
-      : [nextItem, ...items]
-    replaceSection(activeTab, nextItems)
-    setEditId(null)
-    setFormState(emptyState)
   }
 
   const requestDelete = (item) =>
@@ -218,7 +276,7 @@ function AdminPage() {
               type="button"
               onClick={async () => {
                 await logout()
-                navigate('/admin-login-x7', { replace: true })
+                navigate('/xon2-admin/login', { replace: true })
               }}
               className="rounded-lg border border-red-900/30 px-3 py-2 text-sm text-red-400 transition hover:border-red-500 hover:text-red-300"
             >
@@ -252,6 +310,30 @@ function AdminPage() {
                     rows={3}
                     className="w-full rounded-lg border border-white/10 bg-[#1a1a1a] px-3 py-2 text-white placeholder-gray-600 focus:border-white/30 focus:outline-none"
                   />
+                ) : field.type === 'image' ? (
+                  <div className="space-y-2">
+                    <input
+                      type="text"
+                      placeholder="Paste Image URL or upload below..."
+                      value={activeForm[field.key] ?? ''}
+                      onChange={(event) => setField(field.key, event.target.value)}
+                      className="w-full rounded-lg border border-white/10 bg-[#1a1a1a] px-3 py-2 text-white placeholder-gray-600 focus:border-white/30 focus:outline-none"
+                    />
+                    <div className="flex items-center gap-3">
+                      <label className="cursor-pointer rounded-lg border border-white/10 bg-[#2a2a2a] px-3 py-2 text-sm text-gray-300 transition hover:bg-[#333]">
+                        Upload Image
+                        <input
+                          type="file"
+                          accept="image/*"
+                          className="hidden"
+                          onChange={(e) => handleImageUpload(field.key, e.target.files[0])}
+                        />
+                      </label>
+                      {activeForm[field.key] && (
+                        <img src={activeForm[field.key]} alt="Preview" className="h-10 w-10 rounded object-cover border border-white/10" />
+                      )}
+                    </div>
+                  </div>
                 ) : (
                   <input
                     type="text"

@@ -32,10 +32,13 @@ const defaults = [
 function Skills({ skills }) {
   const { theme } = useTheme()
   const fadeColor = theme === 'dark' ? '#0a0a0a' : '#f5f2ed'
-  const data = skills.length
+  const data = (skills || []).length
     ? skills.map((s) => {
-        const Icon = iconMap[s.iconName]
-        return { title: s.label, node: Icon ? <Icon /> : <SiReact /> }
+        if (s.icon && (s.icon.startsWith('http') || s.icon.startsWith('data:image'))) {
+          return { title: s.name, node: <img src={s.icon} alt={s.name} className="h-full w-full object-contain" /> }
+        }
+        const Icon = iconMap[s.name] || iconMap[s.icon]
+        return { title: s.name, node: Icon ? <Icon /> : <SiReact /> }
       })
     : defaults
 
