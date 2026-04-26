@@ -1,34 +1,33 @@
-import { Suspense, lazy } from 'react'
-import { Navigate, Route, Routes } from 'react-router-dom'
+import { BrowserRouter, Navigate, Route, Routes } from 'react-router-dom'
+import { AnimatePresence } from 'framer-motion'
 import ProtectedRoute from './components/ProtectedRoute.jsx'
-
-const PortfolioPage = lazy(() => import('./pages/PortfolioPage.jsx'))
-const LoginPage = lazy(() => import('./pages/LoginPage.jsx'))
-const AdminPage = lazy(() => import('./admin/AdminPage.jsx'))
+import Navbar from './components/Navbar.jsx'
+import Home from './pages/Home.jsx'
+import Projects from './pages/Projects.jsx'
+import Admin from './pages/Admin.jsx'
+import AdminLogin from './pages/AdminLogin.jsx'
 
 function App() {
   return (
-    <Suspense
-      fallback={
-        <div className="flex min-h-screen items-center justify-center bg-[#0a0a0a]">
-          <div className="h-8 w-8 animate-spin rounded-full border-2 border-white/20 border-t-white" />
-        </div>
-      }
-    >
-      <Routes>
-        <Route path="/" element={<PortfolioPage />} />
-        <Route path="/admin-login-x7" element={<LoginPage />} />
-        <Route
-          path="/dashboard-ctrl-x7"
-          element={
-            <ProtectedRoute>
-              <AdminPage />
-            </ProtectedRoute>
-          }
-        />
-        <Route path="*" element={<Navigate to="/" replace />} />
-      </Routes>
-    </Suspense>
+    <BrowserRouter>
+      <Navbar />
+      <AnimatePresence mode="wait">
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/projects" element={<Projects />} />
+          <Route path="/admin/login" element={<AdminLogin />} />
+          <Route
+            path="/admin"
+            element={
+              <ProtectedRoute>
+                <Admin />
+              </ProtectedRoute>
+            }
+          />
+          <Route path="*" element={<Navigate to="/" replace />} />
+        </Routes>
+      </AnimatePresence>
+    </BrowserRouter>
   )
 }
 

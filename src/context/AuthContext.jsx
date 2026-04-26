@@ -1,10 +1,5 @@
 import { createContext, useContext, useEffect, useMemo, useState } from 'react'
-import {
-  GoogleAuthProvider,
-  onAuthStateChanged,
-  signInWithPopup,
-  signOut,
-} from 'firebase/auth'
+import { GoogleAuthProvider, onAuthStateChanged, signInWithPopup, signOut } from 'firebase/auth'
 import { auth } from '../firebase.js'
 
 const AuthContext = createContext(null)
@@ -16,8 +11,8 @@ export function AuthProvider({ children }) {
 
   useEffect(() => {
     const unsubscribe = onAuthStateChanged(auth, (currentUser) => {
-      const isAllowedAdmin = currentUser?.email?.toLowerCase() === ADMIN_EMAIL
-      if (currentUser && !isAllowedAdmin) {
+      const allowed = currentUser?.email?.toLowerCase() === ADMIN_EMAIL
+      if (currentUser && !allowed) {
         signOut(auth).catch(() => {})
         setUser(null)
       } else {
@@ -32,12 +27,10 @@ export function AuthProvider({ children }) {
     const provider = new GoogleAuthProvider()
     const result = await signInWithPopup(auth, provider)
     const email = result.user?.email?.toLowerCase()
-
     if (email !== ADMIN_EMAIL) {
       await signOut(auth)
       throw new Error('auth/not-admin')
     }
-
     return result
   }
 
@@ -45,11 +38,9 @@ export function AuthProvider({ children }) {
     return signOut(auth)
   }
 
-  const isAdmin = user?.email?.toLowerCase() === ADMIN_EMAIL
-
   const value = useMemo(
-    () => ({ user, loading, loginWithGoogle, logout, isAdmin, adminEmail: ADMIN_EMAIL }),
-    [user, loading, isAdmin],
+    () => ({ user, loading, loginWithGoogle, logout, adminEmail: ADMIN_EMAIL }),
+    [user, loading],
   )
 
   return <AuthContext.Provider value={value}>{children}</AuthContext.Provider>
