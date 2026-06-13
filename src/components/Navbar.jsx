@@ -1,64 +1,223 @@
-import { useMemo } from 'react'
-import { useLocation, useNavigate } from 'react-router-dom'
-import { useTheme } from '../hooks/useTheme.js'
-import StaggeredMenu from './StaggeredMenu.jsx'
+import { useEffect, useRef, useState } from 'react'
+import { Link, useLocation } from 'react-router-dom'
+import gsap from 'gsap'
 
 function Navbar() {
-  const { theme, toggle } = useTheme()
   const location = useLocation()
-  const navigate = useNavigate()
+  const [menuOpen, setMenuOpen] = useState(false)
+  const overlayRef = useRef(null)
+  const navItemsRef = useRef(null)
+  const tlRef = useRef(null)
 
-  const goToSection = (sectionId) => {
-    if (location.pathname === '/') {
-      document.getElementById(sectionId)?.scrollIntoView({ behavior: 'smooth' })
+  const currentPath = location.pathname
+
+  const links = [
+    { label: 'Projects', path: '/' },
+    { label: 'About', path: '/about' },
+    { label: 'Contact', path: '/contact' },
+  ]
+
+  // Close menu on route change
+  useEffect(() => {
+    if (menuOpen) setMenuOpen(false)
+  }, [location.pathname])
+
+  // Animate menu overlay
+  useEffect(() => {
+    const prefersReduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches
+
+    if (prefersReduced) {
+      if (overlayRef.current) {
+        overlayRef.current.style.display = menuOpen ? 'flex' : 'none'
+      }
       return
     }
-    navigate(`/#${sectionId}`)
-  }
-  const logoSvgUrl = useMemo(() => {
-    const fill = theme === 'dark' ? '%23f0ede8' : '%230a0a0a'
-    return `data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='220' height='48'><text x='0' y='34' fill='${fill}' font-family='Arial' font-size='28' font-weight='700' letter-spacing='5'>SOLKINGS</text></svg>`
-  }, [theme])
 
-  const menuItems = [
-    { label: 'Home', ariaLabel: 'Go home', link: '/#home', onClick: () => goToSection('home') },
-    { label: 'Projects', ariaLabel: 'Open projects', link: '/projects', onClick: () => navigate('/projects') },
-    { label: 'Skills', ariaLabel: 'Go to skills', link: '/#skills', onClick: () => goToSection('skills') },
-    { label: 'About', ariaLabel: 'Go to about', link: '/#about', onClick: () => goToSection('about') },
-    { label: 'Contact', ariaLabel: 'Go to contact', link: '/#contact', onClick: () => goToSection('contact') },
-  ]
+    if (menuOpen) {
+      // Open animation
+      if (overlayRef.current) {
+        overlayRef.current.style.display = 'flex'
+      }
 
-  const socialItems = [
-    { label: 'GitHub', link: 'https://github.com' },
-    { label: 'LinkedIn', link: 'https://linkedin.com' },
-    { label: 'Dribbble', link: 'https://dribbble.com' },
-  ]
+      tlRef.current = gsap.timeline()
+
+      tlRef.current.fromTo(
+        overlayRef.current,
+        { clipPath: 'inset(0 0 100% 0)' },
+        { clipPath: 'inset(0 0 0% 0)', duration: 0.5, ease: 'power3.inOut' },
+      )
+
+      if (navItemsRef.current) {
+        const items = navItemsRef.current.querySelectorAll('.menu-item')
+        tlRef.current.fromTo(
+          items,
+          { yPercent: 110, opacity: 0 },
+          {
+            yPercent: 0,
+            opacity: 1,
+            duration: 0.5,
+            stagger: 0.06,
+            ease: 'power3.out',
+          },
+          '-=0.2',
+        )
+      }
+    } else {
+      // Close animation
+      if (tlRef.current) {
+        tlRef.current.kill()
+      }
+
+      if (overlayRef.current && overlayRef.current.style.display === 'flex') {
+        gsap.to(overlayRef.current, {
+          clipPath: 'inset(0 0 100% 0)',
+          duration: 0.4,
+          ease: 'power3.inOut',
+          onComplete: () => {
+            if (overlayRef.current) {
+              overlayRef.current.style.display = 'none'
+            }
+          },
+        })
+      }
+    }
+  }, [menuOpen])
 
   return (
-    <header className="relative z-50">
-      <button
-        onClick={toggle}
-        aria-label="toggle theme"
-        className="fixed right-[5.7rem] top-[1.1rem] z-[70] rounded-full border p-2"
-        style={{ borderColor: 'var(--border)', background: 'var(--bg)', color: 'var(--text)' }}
+    <>
+      {/* ── Fixed Header ── */}
+      <header
+        style={{
+          position: 'fixed',
+          top: 0,
+          left: 0,
+          right: 0,
+          zIndex: 50,
+          display: 'flex',
+          alignItems: 'center',
+          justifyContent: 'space-between',
+          padding: '24px 32px',
+          background: 'rgba(255,255,255,0.9)',
+          backdropFilter: 'blur(8px)',
+          borderBottom: menuOpen ? 'none' : '1px solid rgba(0,0,0,0.05)',
+        }}
       >
-        {theme === 'dark' ? '☀' : '☾'}
-      </button>
-      <StaggeredMenu
-        position="right"
-        isFixed
-        items={menuItems}
-        socialItems={socialItems}
-        displaySocials
-        displayItemNumbering
-        menuButtonColor={theme === 'dark' ? '#f0ede8' : '#0a0a0a'}
-        openMenuButtonColor={theme === 'dark' ? '#f0ede8' : '#0a0a0a'}
-        changeMenuColorOnOpen
-        colors={theme === 'dark' ? ['#1a1a1a', '#0a0a0a'] : ['#e6e2db', '#f5f2ed']}
-        logoUrl={logoSvgUrl}
-        accentColor={theme === 'dark' ? '#ffffff' : '#0a0a0a'}
-      />
-    </header>
+        {/* Logo */}
+        <Link
+          to="/"
+          style={{
+            fontFamily: 'var(--font-body)',
+            fontSize: '24px',
+            fontWeight: 700,
+            color: '#000',
+            textDecoration: 'none',
+            letterSpacing: '0.05em',
+          }}
+        >
+          P
+        </Link>
+
+        {/* Desktop Nav */}
+        <nav
+          style={{
+            display: 'flex',
+            alignItems: 'center',
+            gap: '32px',
+          }}
+          className="hidden md:flex"
+        >
+          {links.map((link) => (
+            <Link
+              key={link.path}
+              to={link.path}
+              className={`nav-link ${currentPath === link.path ? 'nav-link--active' : ''}`}
+            >
+              {link.label}
+            </Link>
+          ))}
+        </nav>
+
+        {/* Hamburger (Mobile) */}
+        <button
+          onClick={() => setMenuOpen((v) => !v)}
+          aria-label={menuOpen ? 'Close menu' : 'Open menu'}
+          style={{
+            display: 'flex',
+            flexDirection: 'column',
+            gap: '6px',
+            background: 'none',
+            border: 'none',
+            cursor: 'pointer',
+            padding: '8px',
+            zIndex: 70,
+          }}
+          className="md:hidden"
+        >
+          <span
+            style={{
+              display: 'block',
+              width: '24px',
+              height: '1.5px',
+              background: menuOpen ? '#000' : '#000',
+              transition: 'transform 0.3s ease',
+              transform: menuOpen ? 'translateY(7.5px) rotate(45deg)' : 'none',
+            }}
+          />
+          <span
+            style={{
+              display: 'block',
+              width: '24px',
+              height: '1.5px',
+              background: menuOpen ? '#000' : '#000',
+              transition: 'transform 0.3s ease',
+              transform: menuOpen ? 'translateY(-7.5px) rotate(-45deg)' : 'none',
+            }}
+          />
+        </button>
+      </header>
+
+      {/* ── Mobile Menu Overlay ── */}
+      <div
+        ref={overlayRef}
+        className="menu-overlay"
+        style={{
+          display: 'none',
+          flexDirection: 'column',
+          alignItems: 'center',
+          justifyContent: 'center',
+          gap: '32px',
+          clipPath: 'inset(0 0 100% 0)',
+        }}
+      >
+        <nav
+          ref={navItemsRef}
+          style={{
+            display: 'flex',
+            flexDirection: 'column',
+            alignItems: 'center',
+            gap: '24px',
+          }}
+        >
+          {links.map((link) => (
+            <Link
+              key={link.path}
+              to={link.path}
+              className="menu-item"
+              style={{
+                fontFamily: 'var(--font-body)',
+                fontSize: '32px',
+                fontWeight: currentPath === link.path ? 700 : 400,
+                color: '#000',
+                textDecoration: 'none',
+                overflow: 'hidden',
+              }}
+            >
+              <span style={{ display: 'inline-block' }}>{link.label}</span>
+            </Link>
+          ))}
+        </nav>
+      </div>
+    </>
   )
 }
 
