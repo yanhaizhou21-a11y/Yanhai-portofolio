@@ -145,7 +145,7 @@ function About() {
                             }}
                         >
                             {bio ||
-                                `I\u2019m ${heroName}, a creative developer with experience in web and mobile development. My background across design agencies, advertising agencies, and multinational companies has shaped the way I build digital experiences: with creativity, clarity, and attention to detail.`}
+                                `I'm ${heroName}, a creative developer with experience in web and mobile development. My background across design agencies, advertising agencies, and multinational companies has shaped the way I build digital experiences: with creativity, clarity, and attention to detail.`}
                         </p>
                         <p
                             style={{
@@ -154,7 +154,7 @@ function About() {
                                 color: '#6b7280',
                             }}
                         >
-                            I\u2019m a proactive person who enjoys creating through both design and development,
+                            I'm a proactive person who enjoys creating through both design and development,
                             always driven by curiosity, improvement, and new ideas. That same mindset shapes the
                             way I approach life, with a deep appreciation for nature, meaningful experiences, and
                             the people I care about most.
@@ -315,7 +315,7 @@ function About() {
                         I partner with brands and studios that care about clarity, craft and a point of view.
                     </p>
                     <p style={{ fontSize: '16px', fontWeight: 700, marginBottom: '8px' }}>
-                        Let\u2019s talk
+                        Let's talk
                     </p>
                     <a
                         href={`mailto:${data.contact?.email || 'hello@yourdomain.com'}`}

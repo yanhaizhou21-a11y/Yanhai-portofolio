@@ -14,7 +14,7 @@ function Contact() {
     const heroName = data.hero?.name || '[YOUR NAME]'
     const heroTitle = data.hero?.title || 'Creative Developer'
     const email = data.contact?.email || 'hello@yourdomain.com'
-    const cta = data.contact?.cta || "Let\u2019s build something minimal and memorable."
+    const cta = data.contact?.cta || "Let's build something minimal and memorable."
 
     return (
         <main style={{ paddingTop: '80px' }}>
