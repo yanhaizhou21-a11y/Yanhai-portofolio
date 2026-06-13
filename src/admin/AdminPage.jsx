@@ -119,6 +119,196 @@ const compressImage = (file) => {
   })
 }
 
+const s = {
+  page: {
+    minHeight: '100vh',
+    background: '#fff',
+    color: '#000',
+    padding: '32px',
+    fontFamily: "var(--font-body), -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif",
+  },
+  layout: {
+    maxWidth: '1200px',
+    margin: '0 auto',
+    display: 'grid',
+    gap: '24px',
+    gridTemplateColumns: '240px 1fr',
+  },
+  sidebar: {
+    border: '1px solid rgba(0,0,0,0.1)',
+    padding: '24px',
+  },
+  sidebarTitle: {
+    fontSize: '20px',
+    fontWeight: 700,
+    marginBottom: '16px',
+  },
+  sidebarEmail: {
+    fontSize: '12px',
+    color: '#6b7280',
+    marginBottom: '16px',
+    overflow: 'hidden',
+    textOverflow: 'ellipsis',
+  },
+  navBtn: (active) => ({
+    display: 'block',
+    width: '100%',
+    padding: '10px 12px',
+    fontSize: '14px',
+    textAlign: 'left',
+    border: active ? '1px solid #000' : '1px solid rgba(0,0,0,0.1)',
+    background: active ? '#000' : 'transparent',
+    color: active ? '#fff' : '#000',
+    cursor: 'pointer',
+    fontFamily: 'inherit',
+    marginBottom: '8px',
+  }),
+  actionBtn: {
+    display: 'block',
+    width: '100%',
+    padding: '10px 12px',
+    fontSize: '14px',
+    border: '1px solid rgba(0,0,0,0.1)',
+    background: 'transparent',
+    color: '#000',
+    cursor: 'pointer',
+    fontFamily: 'inherit',
+    textAlign: 'center',
+    textDecoration: 'none',
+    marginBottom: '8px',
+  },
+  main: {
+    border: '1px solid rgba(0,0,0,0.1)',
+    padding: '32px',
+  },
+  mainHeader: {
+    display: 'flex',
+    alignItems: 'center',
+    justifyContent: 'space-between',
+    marginBottom: '24px',
+  },
+  mainTitle: {
+    fontSize: '24px',
+    fontWeight: 700,
+  },
+  newBtn: {
+    padding: '10px 16px',
+    fontSize: '14px',
+    border: '1px solid rgba(0,0,0,0.2)',
+    background: 'transparent',
+    color: '#000',
+    cursor: 'pointer',
+    fontFamily: 'inherit',
+  },
+  form: {
+    marginBottom: '24px',
+    padding: '24px',
+    border: '1px solid rgba(0,0,0,0.1)',
+    display: 'grid',
+    gap: '16px',
+  },
+  label: {
+    fontSize: '14px',
+  },
+  labelText: {
+    display: 'block',
+    fontSize: '12px',
+    fontWeight: 500,
+    color: '#6b7280',
+    marginBottom: '4px',
+    textTransform: 'uppercase',
+    letterSpacing: '0.05em',
+  },
+  input: {
+    width: '100%',
+    padding: '10px 12px',
+    fontSize: '14px',
+    border: '1px solid rgba(0,0,0,0.15)',
+    background: '#fff',
+    color: '#000',
+    fontFamily: 'inherit',
+  },
+  textarea: {
+    width: '100%',
+    padding: '10px 12px',
+    fontSize: '14px',
+    border: '1px solid rgba(0,0,0,0.15)',
+    background: '#fff',
+    color: '#000',
+    fontFamily: 'inherit',
+    minHeight: '80px',
+    resize: 'vertical',
+  },
+  uploadBtn: {
+    padding: '8px 12px',
+    fontSize: '13px',
+    border: '1px solid rgba(0,0,0,0.15)',
+    background: '#fafafa',
+    color: '#000',
+    cursor: 'pointer',
+    fontFamily: 'inherit',
+  },
+  submitBtn: {
+    padding: '12px 24px',
+    fontSize: '14px',
+    fontWeight: 700,
+    border: '1px solid #000',
+    background: '#000',
+    color: '#fff',
+    cursor: 'pointer',
+    fontFamily: 'inherit',
+    marginTop: '8px',
+  },
+  card: {
+    display: 'flex',
+    flexWrap: 'wrap',
+    alignItems: 'center',
+    justifyContent: 'space-between',
+    gap: '12px',
+    padding: '16px',
+    border: '1px solid rgba(0,0,0,0.1)',
+    marginBottom: '8px',
+  },
+  cardTitle: {
+    fontWeight: 700,
+    fontSize: '14px',
+  },
+  cardSub: {
+    fontSize: '12px',
+    color: '#6b7280',
+  },
+  editBtn: {
+    padding: '6px 12px',
+    fontSize: '13px',
+    border: '1px solid rgba(0,0,0,0.15)',
+    background: 'transparent',
+    color: '#000',
+    cursor: 'pointer',
+    fontFamily: 'inherit',
+  },
+  deleteBtn: {
+    padding: '6px 12px',
+    fontSize: '13px',
+    border: '1px solid rgba(0,0,0,0.15)',
+    background: 'transparent',
+    color: '#6b7280',
+    cursor: 'pointer',
+    fontFamily: 'inherit',
+  },
+  signOutBtn: {
+    display: 'block',
+    width: '100%',
+    padding: '10px 12px',
+    fontSize: '14px',
+    border: '1px solid rgba(200,0,0,0.2)',
+    background: 'transparent',
+    color: '#c00',
+    cursor: 'pointer',
+    fontFamily: 'inherit',
+    textAlign: 'center',
+  },
+}
+
 function AdminPage() {
   const { data, replaceSection, resetData } = usePortfolio()
   const { user, logout } = useAuth()
@@ -190,7 +380,7 @@ function AdminPage() {
           await replaceSection(activeTab, activeForm)
         }
         setFormState({})
-        alert('Berhasil disimpan!')
+        alert('Saved!')
         return
       }
 
@@ -204,10 +394,10 @@ function AdminPage() {
       await replaceSection(activeTab, nextItems)
       setEditId(null)
       setFormState(emptyState)
-      alert('Berhasil disimpan!')
+      alert('Saved!')
     } catch (err) {
       console.error(err)
-      alert('Gagal menyimpan data! Pastikan Firestore rules Anda sudah benar (allow read, write).')
+      alert('Failed to save data!')
     }
   }
 
@@ -223,22 +413,18 @@ function AdminPage() {
   }
 
   return (
-    <div className="min-h-screen bg-[#0a0a0a] px-4 py-8 text-white !cursor-auto [&_*]:!cursor-auto md:px-8">
+    <div style={s.page}>
       <DeleteModal
         open={deleteState.open}
         label={deleteState.label}
         onCancel={() => setDeleteState({ open: false, id: null, label: '' })}
         onConfirm={confirmDelete}
       />
-      <div className="mx-auto grid w-full max-w-7xl gap-5 md:grid-cols-[16rem_1fr]">
-        <aside className="rounded-xl border border-white/10 bg-[#141414] p-4">
-          <h1 className="mb-4 text-xl font-bold text-white">Admin Panel</h1>
-          {user && (
-            <p className="mb-4 truncate text-xs text-gray-500" title={user.email}>
-              {user.email}
-            </p>
-          )}
-          <nav className="space-y-2">
+      <div style={s.layout}>
+        <aside style={s.sidebar}>
+          <h1 style={s.sidebarTitle}>Admin Panel</h1>
+          {user && <p style={s.sidebarEmail}>{user.email}</p>}
+          <nav>
             {Object.entries(sectionConfig).map(([key, value]) => (
               <button
                 key={key}
@@ -248,28 +434,17 @@ function AdminPage() {
                   setEditId(null)
                   setFormState({})
                 }}
-                className={`w-full rounded-lg border px-3 py-2 text-left text-sm transition ${
-                  activeTab === key
-                    ? 'border-white bg-white text-black'
-                    : 'border-white/10 text-gray-400 hover:border-white/20 hover:text-white'
-                }`}
+                style={s.navBtn(activeTab === key)}
               >
                 {value.title}
               </button>
             ))}
           </nav>
-          <div className="mt-6 flex flex-col gap-2">
-            <button
-              type="button"
-              onClick={resetData}
-              className="rounded-lg border border-white/10 px-3 py-2 text-sm text-gray-400 transition hover:border-white/20 hover:text-white"
-            >
+          <div style={{ marginTop: '24px' }}>
+            <button type="button" onClick={resetData} style={s.actionBtn}>
               Reset to Defaults
             </button>
-            <Link
-              to="/"
-              className="rounded-lg bg-white px-3 py-2 text-center text-sm text-black transition hover:bg-gray-200"
-            >
+            <Link to="/" style={s.actionBtn}>
               Back to Portfolio
             </Link>
             <button
@@ -278,59 +453,58 @@ function AdminPage() {
                 await logout()
                 navigate('/xon2-admin/login', { replace: true })
               }}
-              className="rounded-lg border border-red-900/30 px-3 py-2 text-sm text-red-400 transition hover:border-red-500 hover:text-red-300"
+              style={s.signOutBtn}
             >
               Sign Out
             </button>
           </div>
         </aside>
 
-        <section className="rounded-xl border border-white/10 bg-[#141414] p-5">
-          <div className="mb-5 flex items-center justify-between">
-            <h2 className="text-2xl font-semibold text-white">{config.title}</h2>
+        <section style={s.main}>
+          <div style={s.mainHeader}>
+            <h2 style={s.mainTitle}>{config.title}</h2>
             {!isSingleSection && (
-              <button
-                type="button"
-                className="rounded-lg border border-white/15 px-4 py-2 text-sm text-gray-400 transition hover:border-white hover:text-white"
-                onClick={startNew}
-              >
+              <button type="button" style={s.newBtn} onClick={startNew}>
                 + New Item
               </button>
             )}
           </div>
 
-          <form className="mb-6 grid gap-3 rounded-xl border border-white/10 bg-[#0d0d0d] p-4" onSubmit={saveItem}>
+          <form style={s.form} onSubmit={saveItem}>
             {config.fields.map((field) => (
-              <label key={field.key} className="text-sm">
-                <span className="mb-1 block font-medium text-gray-400">{field.label}</span>
+              <label key={field.key} style={s.label}>
+                <span style={s.labelText}>{field.label}</span>
                 {field.type === 'textarea' ? (
                   <textarea
                     value={activeForm[field.key] ?? ''}
                     onChange={(event) => setField(field.key, event.target.value)}
-                    rows={3}
-                    className="w-full rounded-lg border border-white/10 bg-[#1a1a1a] px-3 py-2 text-white placeholder-gray-600 focus:border-white/30 focus:outline-none"
+                    style={s.textarea}
                   />
                 ) : field.type === 'image' ? (
-                  <div className="space-y-2">
+                  <div>
                     <input
                       type="text"
                       placeholder="Paste Image URL or upload below..."
                       value={activeForm[field.key] ?? ''}
                       onChange={(event) => setField(field.key, event.target.value)}
-                      className="w-full rounded-lg border border-white/10 bg-[#1a1a1a] px-3 py-2 text-white placeholder-gray-600 focus:border-white/30 focus:outline-none"
+                      style={s.input}
                     />
-                    <div className="flex items-center gap-3">
-                      <label className="cursor-pointer rounded-lg border border-white/10 bg-[#2a2a2a] px-3 py-2 text-sm text-gray-300 transition hover:bg-[#333]">
+                    <div style={{ display: 'flex', alignItems: 'center', gap: '12px', marginTop: '8px' }}>
+                      <label style={s.uploadBtn}>
                         Upload Image
                         <input
                           type="file"
                           accept="image/*"
-                          className="hidden"
+                          style={{ display: 'none' }}
                           onChange={(e) => handleImageUpload(field.key, e.target.files[0])}
                         />
                       </label>
                       {activeForm[field.key] && (
-                        <img src={activeForm[field.key]} alt="Preview" className="h-10 w-10 rounded object-cover border border-white/10" />
+                        <img
+                          src={activeForm[field.key]}
+                          alt="Preview"
+                          style={{ height: '40px', width: '40px', objectFit: 'cover', border: '1px solid rgba(0,0,0,0.1)' }}
+                        />
                       )}
                     </div>
                   </div>
@@ -339,66 +513,66 @@ function AdminPage() {
                     type="text"
                     value={activeForm[field.key] ?? ''}
                     onChange={(event) => setField(field.key, event.target.value)}
-                    className="w-full rounded-lg border border-white/10 bg-[#1a1a1a] px-3 py-2 text-white placeholder-gray-600 focus:border-white/30 focus:outline-none"
+                    style={s.input}
                   />
                 )}
               </label>
             ))}
-            <button
-              type="submit"
-              className="mt-2 rounded-lg bg-white px-4 py-2 text-sm font-medium text-black transition hover:bg-gray-200"
-            >
+            <button type="submit" style={s.submitBtn}>
               {isSingleSection ? 'Save Changes' : editId ? 'Update Item' : 'Add Item'}
             </button>
           </form>
 
-          {!isSingleSection && <div className="space-y-3">
-            {items.map((item) => (
-              <article
-                key={item.id}
-                className="flex flex-wrap items-center justify-between gap-3 rounded-lg border border-white/10 bg-[#0d0d0d] p-3"
-              >
-                <div className="flex items-center gap-3">
-                  {/* Show icon preview for skills, image thumbnail for others with images */}
-                  {activeTab === 'skills' && item.icon && (
-                    <img src={item.icon} alt={item.name} className="h-8 w-8 object-contain" />
-                  )}
-                  {activeTab !== 'skills' && item.image && (
-                    <img src={item.image} alt="" className="h-10 w-14 rounded object-cover border border-white/10" />
-                  )}
-                  <div>
-                    <h3 className="font-semibold text-white">{item[config.labelKey]}</h3>
-                    <p className="text-sm text-gray-600">
-                      {config.fields
-                        .map((f) => f.key)
-                        .filter((key) => key !== config.labelKey && key !== 'icon' && key !== 'image')
-                        .map((key) => item[key])
-                        .filter(Boolean)
-                        .join(' • ')}
-                    </p>
+          {!isSingleSection && (
+            <div>
+              {items.map((item) => (
+                <article key={item.id} style={s.card}>
+                  <div style={{ display: 'flex', alignItems: 'center', gap: '12px' }}>
+                    {activeTab === 'skills' && item.icon && (
+                      <img src={item.icon} alt={item.name} style={{ height: '28px', width: '28px', objectFit: 'contain' }} />
+                    )}
+                    {activeTab !== 'skills' && item.image && (
+                      <img
+                        src={item.image}
+                        alt=""
+                        style={{ height: '40px', width: '56px', objectFit: 'cover', border: '1px solid rgba(0,0,0,0.1)' }}
+                      />
+                    )}
+                    <div>
+                      <h3 style={s.cardTitle}>{item[config.labelKey]}</h3>
+                      <p style={s.cardSub}>
+                        {config.fields
+                          .map((f) => f.key)
+                          .filter((key) => key !== config.labelKey && key !== 'icon' && key !== 'image')
+                          .map((key) => item[key])
+                          .filter(Boolean)
+                          .join(' \u2022 ')}
+                      </p>
+                    </div>
                   </div>
-                </div>
-                <div className="flex gap-2">
-                  <button
-                    type="button"
-                    className="rounded-md border border-white/10 px-3 py-1 text-sm text-gray-400 transition hover:border-white/20 hover:text-white"
-                    onClick={() => startEdit(item)}
-                  >
-                    Edit
-                  </button>
-                  <button
-                    type="button"
-                    className="rounded-md border border-red-900/30 px-3 py-1 text-sm text-red-400 transition hover:border-red-500 hover:text-red-300"
-                    onClick={() => requestDelete(item)}
-                  >
-                    Delete
-                  </button>
-                </div>
-              </article>
-            ))}
-          </div>}
+                  <div style={{ display: 'flex', gap: '8px' }}>
+                    <button type="button" style={s.editBtn} onClick={() => startEdit(item)}>
+                      Edit
+                    </button>
+                    <button type="button" style={s.deleteBtn} onClick={() => requestDelete(item)}>
+                      Delete
+                    </button>
+                  </div>
+                </article>
+              ))}
+            </div>
+          )}
         </section>
       </div>
+
+      {/* Mobile responsive */}
+      <style>{`
+        @media (max-width: 768px) {
+          div[style*="grid-template-columns: 240px 1fr"] {
+            grid-template-columns: 1fr !important;
+          }
+        }
+      `}</style>
     </div>
   )
 }

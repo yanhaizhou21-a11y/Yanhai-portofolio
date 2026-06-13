@@ -24,24 +24,70 @@ function AdminLogin() {
   }
 
   return (
-    <main className="section-wrap border-t-0">
-      <div className="container max-w-md">
-        <p className="label">// ADMIN</p>
-        <h1 className="title">Sign in with Google</h1>
-        <div className="mt-2 text-sm" style={{ color: 'var(--text-muted)' }}>
+    <main
+      style={{
+        minHeight: '100vh',
+        display: 'flex',
+        alignItems: 'center',
+        justifyContent: 'center',
+        background: '#fff',
+        padding: '32px',
+        fontFamily: "var(--font-body), -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif",
+      }}
+    >
+      <div style={{ width: '100%', maxWidth: '400px' }}>
+        <p
+          style={{
+            fontSize: '12px',
+            textTransform: 'uppercase',
+            letterSpacing: '0.14em',
+            color: '#9ca3af',
+            marginBottom: '8px',
+          }}
+        >
+          // Admin
+        </p>
+        <h1 style={{ fontSize: '32px', fontWeight: 700, color: '#000', lineHeight: '1.1' }}>
+          Sign in with Google
+        </h1>
+        <p style={{ fontSize: '14px', color: '#6b7280', marginTop: '8px' }}>
           Allowed admin: {adminEmail}
-        </div>
-        <div className="mt-6 grid gap-3">
-          {error && <p className="text-sm text-red-400">{error}</p>}
+        </p>
+
+        <div style={{ marginTop: '32px', display: 'grid', gap: '12px' }}>
+          {error && (
+            <p style={{ fontSize: '14px', color: '#c00', padding: '12px', border: '1px solid rgba(200,0,0,0.2)' }}>
+              {error}
+            </p>
+          )}
           <button
-            className="rounded px-3 py-2"
-            style={{ background: 'var(--accent)', color: 'var(--bg)' }}
             onClick={onGoogle}
+            style={{
+              padding: '12px 24px',
+              fontSize: '16px',
+              fontWeight: 700,
+              background: '#000',
+              color: '#fff',
+              border: '1px solid #000',
+              cursor: 'pointer',
+              fontFamily: 'inherit',
+            }}
           >
             Continue with Google
           </button>
         </div>
-        <Link className="mt-4 inline-block text-sm" to="/">
+
+        <Link
+          to="/"
+          style={{
+            display: 'inline-block',
+            marginTop: '16px',
+            fontSize: '14px',
+            color: '#000',
+            textDecoration: 'underline',
+            textUnderlineOffset: '4px',
+          }}
+        >
           Back to home
         </Link>
       </div>

@@ -8,7 +8,6 @@ function LoginPage() {
   const [error, setError] = useState('')
   const [submitting, setSubmitting] = useState(false)
 
-  // Already logged in → go to dashboard
   if (!loading && user) {
     return <Navigate to="/dashboard-ctrl-x7" replace />
   }
@@ -32,24 +31,61 @@ function LoginPage() {
 
   if (loading) {
     return (
-      <div className="flex min-h-screen items-center justify-center bg-[#0a0a0a] !cursor-auto [&_*]:!cursor-auto">
-        <div className="h-8 w-8 animate-spin rounded-full border-2 border-white/20 border-t-white" />
+      <div
+        style={{
+          display: 'flex',
+          alignItems: 'center',
+          justifyContent: 'center',
+          minHeight: '100vh',
+          background: '#fff',
+        }}
+      >
+        <div
+          style={{
+            width: '32px',
+            height: '32px',
+            border: '2px solid rgba(0,0,0,0.1)',
+            borderTop: '2px solid #000',
+            borderRadius: '50%',
+            animation: 'spin 0.8s linear infinite',
+          }}
+        />
+        <style>{`@keyframes spin { to { transform: rotate(360deg); } }`}</style>
       </div>
     )
   }
 
   return (
-    <div className="flex min-h-screen items-center justify-center bg-[#0a0a0a] px-4 !cursor-auto [&_*]:!cursor-auto">
-      <div className="w-full max-w-sm">
-        {/* Header */}
-        <div className="mb-8 text-center">
-          <h1 className="text-2xl font-bold tracking-tight text-white">Admin Access</h1>
-          <p className="mt-2 text-sm text-gray-500">Sign in with Google as {adminEmail}</p>
+    <div
+      style={{
+        display: 'flex',
+        alignItems: 'center',
+        justifyContent: 'center',
+        minHeight: '100vh',
+        background: '#fff',
+        padding: '16px',
+        fontFamily: "var(--font-body), -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif",
+      }}
+    >
+      <div style={{ width: '100%', maxWidth: '380px' }}>
+        <div style={{ marginBottom: '32px', textAlign: 'center' }}>
+          <h1 style={{ fontSize: '24px', fontWeight: 700, color: '#000' }}>Admin Access</h1>
+          <p style={{ fontSize: '14px', color: '#6b7280', marginTop: '8px' }}>
+            Sign in with Google as {adminEmail}
+          </p>
         </div>
 
-        <div className="rounded-xl border border-white/10 bg-[#141414] p-6 space-y-4">
+        <div style={{ border: '1px solid rgba(0,0,0,0.1)', padding: '24px' }}>
           {error && (
-            <div className="rounded-lg border border-red-900/30 bg-red-950/30 px-4 py-3 text-sm text-red-400">
+            <div
+              style={{
+                padding: '12px',
+                fontSize: '14px',
+                color: '#c00',
+                border: '1px solid rgba(200,0,0,0.2)',
+                marginBottom: '16px',
+              }}
+            >
               {error}
             </div>
           )}
@@ -58,19 +94,26 @@ function LoginPage() {
             type="button"
             onClick={handleGoogleSignIn}
             disabled={submitting}
-            className="w-full rounded-lg bg-white py-2.5 text-sm font-medium text-black transition hover:bg-gray-200 disabled:opacity-50 disabled:cursor-not-allowed"
+            style={{
+              width: '100%',
+              padding: '12px',
+              fontSize: '14px',
+              fontWeight: 700,
+              background: '#000',
+              color: '#fff',
+              border: '1px solid #000',
+              cursor: submitting ? 'not-allowed' : 'pointer',
+              opacity: submitting ? 0.5 : 1,
+              fontFamily: 'inherit',
+            }}
           >
             {submitting ? 'Signing in...' : 'Continue with Google'}
           </button>
         </div>
 
-        {/* Back link */}
-        <p className="mt-6 text-center">
-          <a
-            href="/"
-            className="text-sm text-gray-600 transition hover:text-white"
-          >
-            ← Back to Portfolio
+        <p style={{ marginTop: '24px', textAlign: 'center' }}>
+          <a href="/" style={{ fontSize: '14px', color: '#6b7280', textDecoration: 'underline', textUnderlineOffset: '4px' }}>
+            Back to Portfolio
           </a>
         </p>
       </div>

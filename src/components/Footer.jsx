@@ -1,64 +1,191 @@
+import { useRef } from 'react'
+import { Link } from 'react-router-dom'
+import { usePortfolio } from '../context/PortfolioContext.jsx'
+import { useStaggerReveal } from '../hooks/useGsap.js'
+
 function Footer() {
+  const { data } = usePortfolio()
+  const footerRef = useRef(null)
+
+  useStaggerReveal(footerRef, '.footer-col', 0.1)
+
+  const socials = data.contact?.socials || [
+    { label: 'GitHub', url: 'https://github.com' },
+    { label: 'LinkedIn', url: 'https://linkedin.com' },
+  ]
+
+  const email = data.contact?.email || 'hello@yourdomain.com'
+
+  const pages = [
+    { label: 'Projects', path: '/' },
+    { label: 'About', path: '/about' },
+    { label: 'Contact', path: '/contact' },
+  ]
+
+  const scrollToTop = () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' })
+  }
+
   return (
-    <footer id="contact" className="section-wrap">
-      <div
-        className="container rounded-2xl border p-8"
-        style={{ borderColor: 'var(--border)', background: 'var(--bg-secondary)' }}
-      >
-        <div className="grid gap-8 md:grid-cols-[1.2fr_1fr]">
-          <div>
-            <div className="mb-6 flex items-center gap-2">
-              <span className="h-3 w-3 rounded-full" style={{ background: 'var(--accent)' }} />
-              <p className="font-medium" style={{ color: 'var(--text)' }}>
-                SOLKINGS
-              </p>
-            </div>
-            <p className="mb-4 max-w-md text-sm" style={{ color: 'var(--text-muted)' }}>
-              Creative developer portfolio showcasing immersive web, design systems, motion,
-              and brand-focused digital products.
+    <footer
+      ref={footerRef}
+      style={{
+        padding: '56px 32px 32px',
+        borderTop: '1px solid rgba(0,0,0,0.1)',
+      }}
+    >
+      <div className="container">
+        {/* ── Three Columns ── */}
+        <div
+          style={{
+            display: 'grid',
+            gridTemplateColumns: 'repeat(3, 1fr)',
+            gap: '40px',
+            marginBottom: '80px',
+          }}
+        >
+          {/* Social */}
+          <div className="footer-col">
+            <p
+              style={{
+                fontSize: '12px',
+                textTransform: 'uppercase',
+                letterSpacing: '0.14em',
+                color: '#9ca3af',
+                marginBottom: '16px',
+              }}
+            >
+              Social
             </p>
-            <div className="flex flex-wrap gap-6 text-sm" style={{ color: 'var(--text-muted)' }}>
-              <a href="#home">Overview</a>
-              <a href="#projects">Features</a>
-              <a href="#skills">Pricing</a>
-              <a href="#about">Help</a>
-              <a href="#contact">Privacy</a>
+            <div style={{ display: 'flex', flexDirection: 'column', gap: '8px' }}>
+              {socials.map((s) => (
+                <a
+                  key={s.label}
+                  href={s.url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  style={{
+                    fontSize: '16px',
+                    color: '#000',
+                    textDecoration: 'none',
+                  }}
+                >
+                  {s.label}
+                </a>
+              ))}
+              <a
+                href={`mailto:${email}`}
+                style={{
+                  fontSize: '16px',
+                  color: '#000',
+                  textDecoration: 'none',
+                }}
+              >
+                Mail
+              </a>
             </div>
           </div>
-          <div>
-            <p className="text-sm" style={{ color: 'var(--text)' }}>
-              Stay up to date
+
+          {/* Pages */}
+          <div className="footer-col">
+            <p
+              style={{
+                fontSize: '12px',
+                textTransform: 'uppercase',
+                letterSpacing: '0.14em',
+                color: '#9ca3af',
+                marginBottom: '16px',
+              }}
+            >
+              Pages
             </p>
-            <div className="mt-3 flex gap-3">
-              <input
-                type="email"
-                placeholder="Enter your email"
-                className="w-full rounded-lg border px-3 py-2 text-sm placeholder:text-white/40"
+            <div style={{ display: 'flex', flexDirection: 'column', gap: '8px' }}>
+              {pages.map((p) => (
+                <Link
+                  key={p.path}
+                  to={p.path}
+                  style={{
+                    fontSize: '16px',
+                    color: '#000',
+                    textDecoration: 'none',
+                  }}
+                >
+                  {p.label}
+                </Link>
+              ))}
+            </div>
+          </div>
+
+          {/* Contact */}
+          <div className="footer-col">
+            <p
+              style={{
+                fontSize: '12px',
+                textTransform: 'uppercase',
+                letterSpacing: '0.14em',
+                color: '#9ca3af',
+                marginBottom: '16px',
+              }}
+            >
+              Contact
+            </p>
+            <div style={{ display: 'flex', flexDirection: 'column', gap: '8px' }}>
+              <a
+                href={`mailto:${email}`}
                 style={{
-                  color: 'var(--text)',
-                  borderColor: 'var(--border)',
-                  background: 'transparent',
+                  fontSize: '16px',
+                  color: '#000',
+                  textDecoration: 'none',
                 }}
-              />
-              <button
-                className="rounded-lg px-4 py-2 text-sm font-medium"
-                style={{ background: 'var(--accent)', color: 'var(--bg)' }}
               >
-                Subscribe
-              </button>
+                {email}
+              </a>
             </div>
           </div>
         </div>
-        <hr className="my-8 border-0 border-t" style={{ borderColor: 'var(--border)' }} />
-        <div className="flex flex-wrap items-center justify-between gap-4 text-sm" style={{ color: 'var(--text-muted)' }}>
-          <p>© {new Date().getFullYear()} SOLKINGS. All rights reserved.</p>
-          <div className="flex gap-4">
-            <a href="#terms">Terms</a>
-            <a href="#privacy">Privacy</a>
-            <a href="#cookies">Cookies</a>
-          </div>
+
+        {/* ── Bottom Row ── */}
+        <div
+          style={{
+            display: 'flex',
+            justifyContent: 'space-between',
+            alignItems: 'center',
+            paddingTop: '24px',
+            borderTop: '1px solid rgba(0,0,0,0.1)',
+            flexWrap: 'wrap',
+            gap: '16px',
+          }}
+        >
+          <p style={{ fontSize: '14px', color: '#9ca3af' }}>
+            &copy; {new Date().getFullYear()} All rights reserved
+          </p>
+          <button
+            onClick={scrollToTop}
+            style={{
+              background: 'none',
+              border: 'none',
+              fontSize: '14px',
+              color: '#000',
+              cursor: 'pointer',
+              textDecoration: 'underline',
+              textUnderlineOffset: '4px',
+              fontFamily: 'var(--font-body)',
+            }}
+          >
+            Back to top
+          </button>
         </div>
       </div>
+
+      {/* ── Responsive: Stack on mobile ── */}
+      <style>{`
+        @media (max-width: 768px) {
+          footer > .container > div:first-child {
+            grid-template-columns: 1fr !important;
+            gap: 32px !important;
+          }
+        }
+      `}</style>
     </footer>
   )
 }

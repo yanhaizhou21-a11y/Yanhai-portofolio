@@ -2,25 +2,65 @@ function DeleteModal({ open, label, onCancel, onConfirm }) {
   if (!open) return null
 
   return (
-    <div className="fixed inset-0 z-[70] flex items-center justify-center bg-black/80 p-4 backdrop-blur-sm">
-      <div className="w-full max-w-md rounded-xl border border-white/10 bg-[#141414] p-6">
-        <h3 className="mb-3 text-xl font-semibold text-white">Delete Item?</h3>
-        <p className="mb-6 text-sm text-gray-400">
-          You are about to delete <span className="font-semibold text-white">{label}</span>. This
-          action cannot be undone.
+    <div
+      style={{
+        position: 'fixed',
+        inset: 0,
+        zIndex: 70,
+        display: 'flex',
+        alignItems: 'center',
+        justifyContent: 'center',
+        background: 'rgba(0,0,0,0.5)',
+        backdropFilter: 'blur(4px)',
+        padding: '16px',
+        fontFamily: 'var(--font-body)',
+      }}
+    >
+      <div
+        style={{
+          width: '100%',
+          maxWidth: '420px',
+          background: '#fff',
+          border: '1px solid rgba(0,0,0,0.1)',
+          padding: '32px',
+        }}
+      >
+        <h3 style={{ fontSize: '20px', fontWeight: 700, color: '#000', marginBottom: '12px' }}>
+          Delete Item?
+        </h3>
+        <p style={{ fontSize: '14px', color: '#6b7280', marginBottom: '24px' }}>
+          You are about to delete{' '}
+          <span style={{ fontWeight: 700, color: '#000' }}>{label}</span>. This action cannot be
+          undone.
         </p>
-        <div className="flex justify-end gap-3">
+        <div style={{ display: 'flex', justifyContent: 'flex-end', gap: '12px' }}>
           <button
             type="button"
-            className="rounded-lg border border-white/10 px-4 py-2 text-sm text-gray-400 transition hover:border-white/20 hover:text-white"
             onClick={onCancel}
+            style={{
+              padding: '10px 20px',
+              fontSize: '14px',
+              background: '#fff',
+              color: '#000',
+              border: '1px solid rgba(0,0,0,0.2)',
+              cursor: 'pointer',
+              fontFamily: 'var(--font-body)',
+            }}
           >
             Cancel
           </button>
           <button
             type="button"
-            className="rounded-lg bg-red-600 px-4 py-2 text-sm text-white transition hover:bg-red-500"
             onClick={onConfirm}
+            style={{
+              padding: '10px 20px',
+              fontSize: '14px',
+              background: '#000',
+              color: '#fff',
+              border: '1px solid #000',
+              cursor: 'pointer',
+              fontFamily: 'var(--font-body)',
+            }}
           >
             Delete
           </button>
