@@ -1,13 +1,18 @@
 import { useEffect, useRef, useState } from 'react'
 import { Link, useLocation } from 'react-router-dom'
 import gsap from 'gsap'
+import DecryptedText from './reactbits/DecryptedText.jsx'
+import { useTheme } from '../hooks/useTheme.js'
 
-function Navbar() {
+function Navbar({ preloaderDone }) {
   const location = useLocation()
   const [menuOpen, setMenuOpen] = useState(false)
   const overlayRef = useRef(null)
   const navItemsRef = useRef(null)
   const tlRef = useRef(null)
+  const headerRef = useRef(null)
+  const linksRef = useRef(null)
+  const { isDark, toggleTheme } = useTheme()
 
   const currentPath = location.pathname
 
@@ -16,6 +21,23 @@ function Navbar() {
     { label: 'About', path: '/about' },
     { label: 'Contact', path: '/contact' },
   ]
+
+  // Animate nav items in with stagger after preloader
+  useEffect(() => {
+    if (!preloaderDone || !linksRef.current) return
+    const prefersReduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches
+    if (prefersReduced) {
+      linksRef.current.querySelectorAll('.nav-link-mask').forEach((el) => el.classList.add('revealed'))
+      return
+    }
+
+    const maskLinks = linksRef.current.querySelectorAll('.nav-link-mask')
+    gsap.to(maskLinks, {
+      onStart: () => {
+        maskLinks.forEach((el) => el.classList.add('revealed'))
+      },
+    })
+  }, [preloaderDone])
 
   // Close menu on route change
   useEffect(() => {
@@ -34,7 +56,6 @@ function Navbar() {
     }
 
     if (menuOpen) {
-      // Open animation
       if (overlayRef.current) {
         overlayRef.current.style.display = 'flex'
       }
@@ -63,10 +84,7 @@ function Navbar() {
         )
       }
     } else {
-      // Close animation
-      if (tlRef.current) {
-        tlRef.current.kill()
-      }
+      if (tlRef.current) tlRef.current.kill()
 
       if (overlayRef.current && overlayRef.current.style.display === 'flex') {
         gsap.to(overlayRef.current, {
@@ -74,9 +92,7 @@ function Navbar() {
           duration: 0.4,
           ease: 'power3.inOut',
           onComplete: () => {
-            if (overlayRef.current) {
-              overlayRef.current.style.display = 'none'
-            }
+            if (overlayRef.current) overlayRef.current.style.display = 'none'
           },
         })
       }
@@ -87,6 +103,7 @@ function Navbar() {
     <>
       {/* ── Fixed Header ── */}
       <header
+        ref={headerRef}
         style={{
           position: 'fixed',
           top: 0,
@@ -97,9 +114,10 @@ function Navbar() {
           alignItems: 'center',
           justifyContent: 'space-between',
           padding: '24px 32px',
-          background: 'rgba(255,255,255,0.9)',
-          backdropFilter: 'blur(8px)',
-          borderBottom: menuOpen ? 'none' : '1px solid rgba(0,0,0,0.05)',
+          background: 'var(--bg-nav)',
+          backdropFilter: 'blur(12px)',
+          borderBottom: menuOpen ? 'none' : '1px solid var(--border)',
+          transition: 'background 0.4s ease, border-color 0.4s ease',
         }}
       >
         {/* Logo */}
@@ -109,9 +127,10 @@ function Navbar() {
             fontFamily: 'var(--font-body)',
             fontSize: '24px',
             fontWeight: 700,
-            color: '#000',
+            color: 'var(--text)',
             textDecoration: 'none',
             letterSpacing: '0.05em',
+            transition: 'color 0.3s ease',
           }}
         >
           P
@@ -119,61 +138,99 @@ function Navbar() {
 
         {/* Desktop Nav */}
         <nav
-          style={{
-            display: 'flex',
-            alignItems: 'center',
-            gap: '32px',
-          }}
+          ref={linksRef}
+          style={{ display: 'flex', alignItems: 'center', gap: '32px' }}
           className="hidden md:flex"
         >
-          {links.map((link) => (
+          {links.map((link, i) => (
             <Link
               key={link.path}
               to={link.path}
-              className={`nav-link ${currentPath === link.path ? 'nav-link--active' : ''}`}
+              className={`nav-link-mask ${currentPath === link.path ? 'active' : ''}`}
+              style={{
+                color: currentPath === link.path ? 'var(--text)' : 'var(--text-disabled)',
+                textDecoration: 'none',
+                fontSize: '14px',
+                fontWeight: 400,
+                position: 'relative',
+                transitionDelay: `${i * 0.05}s`,
+              }}
             >
-              {link.label}
+              <span
+                className="nav-label"
+                style={{ transitionDelay: `${i * 0.05}s` }}
+              >
+                <DecryptedText
+                  text={link.label}
+                  speed={40}
+                  maxIterations={8}
+                  animateOnMount={false}
+                  revealOnHover={true}
+                />
+              </span>
             </Link>
           ))}
+
+          {/* Dark Mode Toggle */}
+          <button
+            onClick={toggleTheme}
+            className="theme-toggle"
+            aria-label={isDark ? 'Switch to light mode' : 'Switch to dark mode'}
+            title={isDark ? 'Light mode' : 'Dark mode'}
+          >
+            {isDark ? '☀' : '☾'}
+          </button>
         </nav>
 
-        {/* Hamburger (Mobile) */}
-        <button
-          onClick={() => setMenuOpen((v) => !v)}
-          aria-label={menuOpen ? 'Close menu' : 'Open menu'}
-          style={{
-            display: 'flex',
-            flexDirection: 'column',
-            gap: '6px',
-            background: 'none',
-            border: 'none',
-            cursor: 'pointer',
-            padding: '8px',
-            zIndex: 70,
-          }}
-          className="md:hidden"
-        >
-          <span
+        {/* Right side: Theme toggle (mobile) + Hamburger */}
+        <div style={{ display: 'flex', alignItems: 'center', gap: '12px' }}>
+          <button
+            onClick={toggleTheme}
+            className="theme-toggle md:hidden"
+            aria-label={isDark ? 'Switch to light mode' : 'Switch to dark mode'}
+            style={{ width: '32px', height: '32px', fontSize: '14px' }}
+          >
+            {isDark ? '☀' : '☾'}
+          </button>
+
+          {/* Hamburger */}
+          <button
+            onClick={() => setMenuOpen((v) => !v)}
+            aria-label={menuOpen ? 'Close menu' : 'Open menu'}
             style={{
-              display: 'block',
-              width: '24px',
-              height: '1.5px',
-              background: menuOpen ? '#000' : '#000',
-              transition: 'transform 0.3s ease',
-              transform: menuOpen ? 'translateY(7.5px) rotate(45deg)' : 'none',
+              display: 'flex',
+              flexDirection: 'column',
+              gap: '6px',
+              background: 'none',
+              border: 'none',
+              cursor: 'pointer',
+              padding: '8px',
+              zIndex: 70,
             }}
-          />
-          <span
-            style={{
-              display: 'block',
-              width: '24px',
-              height: '1.5px',
-              background: menuOpen ? '#000' : '#000',
-              transition: 'transform 0.3s ease',
-              transform: menuOpen ? 'translateY(-7.5px) rotate(-45deg)' : 'none',
-            }}
-          />
-        </button>
+            className="md:hidden"
+          >
+            <span
+              style={{
+                display: 'block',
+                width: '24px',
+                height: '1.5px',
+                background: 'var(--text)',
+                transition: 'transform 0.3s ease, background 0.3s ease',
+                transform: menuOpen ? 'translateY(7.5px) rotate(45deg)' : 'none',
+              }}
+            />
+            <span
+              style={{
+                display: 'block',
+                width: '24px',
+                height: '1.5px',
+                background: 'var(--text)',
+                transition: 'transform 0.3s ease, background 0.3s ease',
+                transform: menuOpen ? 'translateY(-7.5px) rotate(-45deg)' : 'none',
+              }}
+            />
+          </button>
+        </div>
       </header>
 
       {/* ── Mobile Menu Overlay ── */}
@@ -207,12 +264,20 @@ function Navbar() {
                 fontFamily: 'var(--font-body)',
                 fontSize: '32px',
                 fontWeight: currentPath === link.path ? 700 : 400,
-                color: '#000',
+                color: 'var(--text)',
                 textDecoration: 'none',
                 overflow: 'hidden',
               }}
             >
-              <span style={{ display: 'inline-block' }}>{link.label}</span>
+              <span style={{ display: 'inline-block' }}>
+                <DecryptedText
+                  text={link.label}
+                  speed={50}
+                  maxIterations={12}
+                  animateOnMount={false}
+                  revealOnHover={true}
+                />
+              </span>
             </Link>
           ))}
         </nav>

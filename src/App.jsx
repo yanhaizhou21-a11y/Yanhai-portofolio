@@ -25,7 +25,7 @@ function App() {
 
         {loaded && (
           <>
-            <Navbar />
+            <Navbar preloaderDone={loaded} />
             <PageTransition>
               <Routes>
                 <Route path="/" element={<Home />} />
