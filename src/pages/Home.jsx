@@ -2,6 +2,7 @@ import { useMemo, useState, useRef, useEffect } from 'react'
 import { Link } from 'react-router-dom'
 import { usePortfolio } from '../context/PortfolioContext.jsx'
 import gsap from 'gsap'
+import Footer from '../components/Footer.jsx'
 
 function Home() {
   const { data } = usePortfolio()
@@ -92,7 +93,7 @@ function Home() {
             style={{
               display: 'inline-block',
               fontFamily: 'var(--font-body)',
-              fontSize: '12px',
+              fontSize: '13px',
               color: 'var(--text-muted)',
               fontWeight: 400,
               marginBottom: '24px',
@@ -219,7 +220,7 @@ function Home() {
                       <span
                         style={{
                           fontFamily: 'var(--font-body)',
-                          fontSize: '13px',
+                          fontSize: '14px',
                           color: 'var(--text-disabled)',
                           fontVariantNumeric: 'tabular-nums',
                           minWidth: '28px',
@@ -231,7 +232,7 @@ function Home() {
                       <h3
                         style={{
                           fontFamily: 'var(--font-body)',
-                          fontSize: 'clamp(1rem, 2vw, 1.4rem)',
+                          fontSize: 'clamp(1.1rem, 2.2vw, 1.6rem)',
                           fontWeight: 400,
                           color: 'var(--text)',
                           margin: 0,
@@ -247,10 +248,10 @@ function Home() {
                         <span
                           style={{
                             fontFamily: 'var(--font-body)',
-                            fontSize: '11px',
+                            fontSize: '12px',
                             color: 'var(--text-muted)',
                             textTransform: 'uppercase',
-                            letterSpacing: '0.08em',
+                            letterSpacing: '0.1em',
                           }}
                         >
                           {project.category}
@@ -259,7 +260,7 @@ function Home() {
                       <span
                         style={{
                           fontFamily: 'var(--font-body)',
-                          fontSize: '13px',
+                          fontSize: '14px',
                           color: 'var(--text-disabled)',
                         }}
                       >
@@ -440,6 +441,8 @@ function Home() {
           ))}
         </div>
       </section>
+
+      <Footer />
 
       <style>{`
         @media (max-width: 768px) {

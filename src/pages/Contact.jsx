@@ -2,6 +2,7 @@ import { useEffect, useRef } from 'react'
 import { usePortfolio } from '../context/PortfolioContext.jsx'
 import gsap from 'gsap'
 import Footer from '../components/Footer.jsx'
+import ScrollFloat from '../components/reactbits/ScrollFloat.jsx'
 
 function Contact() {
   const { data } = usePortfolio()
@@ -43,20 +44,14 @@ function Contact() {
         }}
       >
         <div className="container">
-          <div style={{ width: '75%', overflow: 'hidden' }}>
-            <p
-              className="contact-statement"
-              style={{
-                fontFamily: 'var(--font-display)',
-                fontSize: 'clamp(1.8rem, 4.5vw, 3.5rem)',
-                fontWeight: 700,
-                lineHeight: '1.15',
-                color: 'var(--text)',
-                letterSpacing: '-0.02em',
-              }}
+          <div style={{ width: '75%' }}>
+            <ScrollFloat
+              containerClassName="contact-statement"
+              stagger={0.04}
+              tag="p"
             >
               I partner with brands and studios that care about clarity, craft and a point of view.
-            </p>
+            </ScrollFloat>
           </div>
         </div>
       </section>

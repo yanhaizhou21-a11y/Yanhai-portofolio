@@ -1,24 +1,20 @@
-import { useEffect, useState, useRef } from 'react'
-import gsap from 'gsap'
+import { useState, useEffect } from 'react'
+import { motion, AnimatePresence } from 'framer-motion'
 
 function Preloader({ onComplete }) {
   const [count, setCount] = useState(0)
-  const [exiting, setExiting] = useState(false)
-  const [done, setDone] = useState(false)
-  const containerRef = useRef(null)
-  const lineRef = useRef(null)
-  const bottomRef = useRef(null)
-  const startedRef = useRef(false)
+  const [phase, setPhase] = useState('loading') // loading | exiting | done
+  const [started, setStarted] = useState(false)
 
   useEffect(() => {
-    if (startedRef.current) return
-    startedRef.current = true
+    if (started) return
+    setStarted(true)
 
     const prefersReduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches
 
     if (prefersReduced) {
       setCount(100)
-      setDone(true)
+      setPhase('done')
       onComplete?.()
       return
     }
@@ -33,144 +29,120 @@ function Preloader({ onComplete }) {
 
       if (current >= totalSteps) {
         clearInterval(interval)
-        setExiting(true)
+        setPhase('exiting')
         setTimeout(() => {
-          setDone(true)
+          setPhase('done')
           onComplete?.()
-        }, 700)
+        }, 800)
       }
     }, 25)
 
-    // GSAP entrance animations
-    const ctx = gsap.context(() => {
-      const tl = gsap.timeline()
-
-      // Line fill
-      if (lineRef.current) {
-        tl.fromTo(
-          lineRef.current,
-          { scaleX: 0 },
-          {
-            scaleX: 1,
-            duration: 1.2,
-            ease: 'power2.inOut',
-            transformOrigin: 'left center',
-          },
-          0
-        )
-      }
-
-      // Bottom text fade in
-      if (bottomRef.current) {
-        tl.fromTo(
-          bottomRef.current,
-          { opacity: 0, y: 10 },
-          { opacity: 1, y: 0, duration: 0.4, ease: 'power3.out' },
-          0.4
-        )
-      }
-    }, containerRef)
-
-    return () => {
-      clearInterval(interval)
-      ctx.revert()
-    }
+    return () => clearInterval(interval)
   }, []) // eslint-disable-line react-hooks/exhaustive-deps
 
-  if (done) return null
-
   return (
-    <div
-      ref={containerRef}
-      style={{
-        position: 'fixed',
-        inset: 0,
-        zIndex: 9999,
-        background: 'var(--preloader-bg, var(--bg, #fff))',
-        display: 'flex',
-        flexDirection: 'column',
-        justifyContent: 'space-between',
-        padding: '40px',
-        transform: exiting ? 'translateY(-100%)' : 'translateY(0)',
-        transition: exiting ? 'transform 0.7s cubic-bezier(0.65, 0, 0.35, 1)' : 'none',
-      }}
-    >
-      {/* Top: Brand + Counter */}
-      <div style={{ display: 'flex', justifyContent: 'space-between', width: '100%', alignItems: 'flex-start' }}>
-        <span
+    <AnimatePresence>
+      {phase !== 'done' && (
+        <motion.div
+          initial={{ y: 0 }}
+          exit={{ y: '-100%' }}
+          transition={{ duration: 0.7, ease: [0.65, 0, 0.35, 1] }}
           style={{
-            fontFamily: 'var(--font-body)',
-            fontSize: '16px',
-            fontWeight: 400,
-            color: 'var(--text)',
-            letterSpacing: '0.12em',
-            textTransform: 'uppercase',
+            position: 'fixed',
+            inset: 0,
+            zIndex: 9999,
+            background: 'var(--preloader-bg, var(--bg, #fff))',
+            display: 'flex',
+            flexDirection: 'column',
+            justifyContent: 'space-between',
+            padding: '40px',
           }}
         >
-          SOLKINGS
-        </span>
+          {/* Top: Brand + Counter */}
+          <div style={{ display: 'flex', justifyContent: 'space-between', width: '100%', alignItems: 'flex-start' }}>
+            <motion.span
+              initial={{ opacity: 0, y: -10 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.4, delay: 0.1 }}
+              style={{
+                fontFamily: 'var(--font-body)',
+                fontSize: '16px',
+                fontWeight: 400,
+                color: 'var(--text)',
+                letterSpacing: '0.12em',
+                textTransform: 'uppercase',
+              }}
+            >
+              SOLKINGS
+            </motion.span>
 
-        <span
-          style={{
-            fontFamily: 'var(--font-body)',
-            fontSize: '13px',
-            fontWeight: 400,
-            color: 'var(--text-disabled)',
-            fontVariantNumeric: 'tabular-nums',
-            letterSpacing: '0.05em',
-          }}
-        >
-          {String(count).padStart(3, '0')}%
-        </span>
-      </div>
+            <span
+              style={{
+                fontFamily: 'var(--font-body)',
+                fontSize: '13px',
+                fontWeight: 400,
+                color: 'var(--text-disabled)',
+                fontVariantNumeric: 'tabular-nums',
+                letterSpacing: '0.05em',
+              }}
+            >
+              {String(count).padStart(3, '0')}%
+            </span>
+          </div>
 
-      {/* Center: Progress line */}
-      <div
-        ref={lineRef}
-        style={{
-          width: '100%',
-          maxWidth: '200px',
-          height: '1px',
-          background: 'var(--text)',
-          transformOrigin: 'left center',
-          alignSelf: 'center',
-          opacity: 0.3,
-        }}
-      />
+          {/* Center: Progress line */}
+          <motion.div
+            initial={{ scaleX: 0 }}
+            animate={{ scaleX: count / 100 }}
+            transition={{ duration: 0.3, ease: 'easeOut' }}
+            style={{
+              width: '100%',
+              maxWidth: '200px',
+              height: '1px',
+              background: 'var(--text)',
+              transformOrigin: 'left center',
+              alignSelf: 'center',
+              opacity: 0.3,
+            }}
+          />
 
-      {/* Bottom: text */}
-      <div
-        ref={bottomRef}
-        style={{
-          display: 'flex',
-          justifyContent: 'space-between',
-          width: '100%',
-          alignItems: 'flex-end',
-        }}
-      >
-        <span
-          style={{
-            fontFamily: 'var(--font-body)',
-            fontSize: '11px',
-            color: 'var(--text-muted)',
-            letterSpacing: '0.12em',
-            textTransform: 'uppercase',
-          }}
-        >
-          Portfolio
-        </span>
-        <span
-          style={{
-            fontFamily: 'var(--font-body)',
-            fontSize: '11px',
-            color: 'var(--text-disabled)',
-            letterSpacing: '0.05em',
-          }}
-        >
-          Loading...
-        </span>
-      </div>
-    </div>
+          {/* Bottom: text */}
+          <motion.div
+            initial={{ opacity: 0, y: 10 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.4, delay: 0.3 }}
+            style={{
+              display: 'flex',
+              justifyContent: 'space-between',
+              width: '100%',
+              alignItems: 'flex-end',
+            }}
+          >
+            <span
+              style={{
+                fontFamily: 'var(--font-body)',
+                fontSize: '11px',
+                color: 'var(--text-muted)',
+                letterSpacing: '0.12em',
+                textTransform: 'uppercase',
+              }}
+            >
+              Portfolio
+            </span>
+            <span
+              style={{
+                fontFamily: 'var(--font-body)',
+                fontSize: '11px',
+                color: 'var(--text-disabled)',
+                letterSpacing: '0.05em',
+              }}
+            >
+              Loading...
+            </span>
+          </motion.div>
+        </motion.div>
+      )}
+    </AnimatePresence>
   )
 }
 

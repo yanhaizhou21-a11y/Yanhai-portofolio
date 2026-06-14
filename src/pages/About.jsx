@@ -1,7 +1,9 @@
-import { useEffect, useRef } from 'react'
+import { useEffect, useRef, useState } from 'react'
 import { usePortfolio } from '../context/PortfolioContext.jsx'
 import gsap from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
+import FlowingMenu from '../components/reactbits/FlowingMenu.jsx'
+import ScrollFloat from '../components/reactbits/ScrollFloat.jsx'
 
 gsap.registerPlugin(ScrollTrigger)
 
@@ -40,6 +42,7 @@ function About() {
   const aboutPhoto = data.about?.aboutPhotoUrl || ''
   const certificates = data.certificates || []
   const pageRef = useRef(null)
+  const [certPreview, setCertPreview] = useState(null)
 
   useEffect(() => {
     if (!pageRef.current) return
@@ -184,7 +187,7 @@ function About() {
               <p
                 style={{
                   fontFamily: 'var(--font-body)',
-                  fontSize: '16px',
+                  fontSize: '17px',
                   lineHeight: '1.7',
                   color: 'var(--text)',
                   marginBottom: '24px',
@@ -195,7 +198,7 @@ function About() {
               <p
                 style={{
                   fontFamily: 'var(--font-body)',
-                  fontSize: '16px',
+                  fontSize: '17px',
                   lineHeight: '1.7',
                   color: 'var(--text-muted)',
                 }}
@@ -219,7 +222,7 @@ function About() {
           <p
             style={{
               fontFamily: 'var(--font-body)',
-              fontSize: '12px',
+              fontSize: '13px',
               fontWeight: 400,
               marginBottom: 'var(--pt-small)',
               color: 'var(--text-muted)',
@@ -258,7 +261,7 @@ function About() {
               <h3
                 style={{
                   fontFamily: 'var(--font-body)',
-                  fontSize: '16px',
+                  fontSize: '17px',
                   fontWeight: 400,
                   color: 'var(--text)',
                 }}
@@ -268,7 +271,7 @@ function About() {
               <p
                 style={{
                   fontFamily: 'var(--font-body)',
-                  fontSize: '14px',
+                  fontSize: '16px',
                   lineHeight: '1.6',
                   color: 'var(--text-muted)',
                   textAlign: 'right',
@@ -284,7 +287,7 @@ function About() {
         </div>
       </section>
 
-      {/* Awards / Certificates */}
+      {/* Awards / Certificates with FlowingMenu */}
       {certificates.length > 0 && (
         <section
           style={{
@@ -296,7 +299,7 @@ function About() {
             <p
               style={{
                 fontFamily: 'var(--font-body)',
-                fontSize: '12px',
+                fontSize: '13px',
                 fontWeight: 400,
                 marginBottom: 'var(--pt-small)',
                 color: 'var(--text-muted)',
@@ -307,50 +310,67 @@ function About() {
               Awards & Certificates
             </p>
 
-            {certificates.map((cert, index) => (
+            {/* Certificate preview on click */}
+            {certPreview && (
               <div
-                key={cert.id}
-                className="award-item"
                 style={{
-                  display: 'grid',
-                  gridTemplateColumns: '80px 1fr 1fr',
-                  gap: '24px',
-                  padding: '20px 0',
-                  borderTop: index > 0 ? '1px solid var(--border)' : 'none',
-                  alignItems: 'baseline',
+                  position: 'relative',
+                  marginBottom: '24px',
+                  background: 'var(--bg-secondary)',
+                  overflow: 'hidden',
+                  aspectRatio: '16/9',
+                  maxWidth: '600px',
                 }}
               >
-                <span
+                <img
+                  src={certPreview.image}
+                  alt={certPreview.text}
+                  style={{ width: '100%', height: '100%', objectFit: 'contain' }}
+                />
+                <button
+                  onClick={() => setCertPreview(null)}
                   style={{
-                    fontFamily: 'var(--font-body)',
-                    fontSize: '13px',
-                    color: 'var(--text-disabled)',
-                  }}
-                >
-                  {cert.date?.split(' ').pop() || '2024'}
-                </span>
-                <span
-                  style={{
-                    fontFamily: 'var(--font-body)',
-                    fontSize: '15px',
-                    fontWeight: 400,
+                    position: 'absolute',
+                    top: '12px',
+                    right: '12px',
+                    background: 'var(--bg)',
+                    border: '1px solid var(--border)',
                     color: 'var(--text)',
-                  }}
-                >
-                  {cert.name}
-                </span>
-                <span
-                  style={{
+                    padding: '6px 12px',
+                    fontSize: '12px',
+                    cursor: 'pointer',
                     fontFamily: 'var(--font-body)',
-                    fontSize: '13px',
-                    color: 'var(--text-muted)',
-                    textAlign: 'right',
+                    borderRadius: '0',
                   }}
                 >
-                  {cert.issuer}
-                </span>
+                  Close
+                </button>
+                <p style={{
+                  padding: '12px 16px',
+                  fontFamily: 'var(--font-body)',
+                  fontSize: '14px',
+                  color: 'var(--text)',
+                }}>
+                  {certPreview.text} {certPreview.issuer && `— ${certPreview.issuer}`}
+                </p>
               </div>
-            ))}
+            )}
+
+            <div style={{ height: `${Math.max(certificates.length * 72, 200)}px`, minHeight: '200px' }}>
+              <FlowingMenu
+                items={certificates.map((cert) => ({
+                  text: cert.name,
+                  image: cert.image || '',
+                  link: '#',
+                  issuer: cert.issuer,
+                }))}
+                onItemClick={(item) => {
+                  if (item.image) {
+                    setCertPreview(item)
+                  }
+                }}
+              />
+            </div>
           </div>
         </section>
       )}
@@ -364,20 +384,14 @@ function About() {
         }}
       >
         <div className="container" style={{ maxWidth: '800px' }}>
-          <p
-            className="cta-text"
-            style={{
-              fontFamily: 'var(--font-display)',
-              fontSize: 'clamp(1.5rem, 3.5vw, 3rem)',
-              fontWeight: 700,
-              lineHeight: '1.2',
-              color: 'var(--text)',
-              marginBottom: '40px',
-              letterSpacing: '-0.02em',
-            }}
+          <ScrollFloat
+            containerClassName="cta-text"
+            textClassName=""
+            stagger={0.04}
+            tag="p"
           >
             I partner with brands and studios that care about clarity, craft and a point of view.
-          </p>
+          </ScrollFloat>
           <div>
             <p
               style={{
