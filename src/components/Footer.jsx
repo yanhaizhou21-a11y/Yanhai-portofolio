@@ -1,13 +1,7 @@
-import { useRef } from 'react'
-import { Link } from 'react-router-dom'
 import { usePortfolio } from '../context/PortfolioContext.jsx'
-import { useStaggerReveal } from '../hooks/useGsap.js'
 
 function Footer() {
   const { data } = usePortfolio()
-  const footerRef = useRef(null)
-
-  useStaggerReveal(footerRef, '.footer-col', 0.1)
 
   const socials = data.contact?.socials || [
     { label: 'GitHub', url: 'https://github.com' },
@@ -16,26 +10,19 @@ function Footer() {
 
   const email = data.contact?.email || 'hello@yourdomain.com'
 
-  const pages = [
-    { label: 'Projects', path: '/' },
-    { label: 'About', path: '/about' },
-    { label: 'Contact', path: '/contact' },
-  ]
-
   const scrollToTop = () => {
     window.scrollTo({ top: 0, behavior: 'smooth' })
   }
 
   return (
     <footer
-      ref={footerRef}
       style={{
         padding: '56px 32px 32px',
-        borderTop: '1px solid rgba(0,0,0,0.1)',
+        borderTop: '1px solid var(--border)',
+        transition: 'border-color 0.4s ease',
       }}
     >
       <div className="container">
-        {/* ── Three Columns ── */}
         <div
           style={{
             display: 'grid',
@@ -44,15 +31,15 @@ function Footer() {
             marginBottom: '80px',
           }}
         >
-          {/* Social */}
-          <div className="footer-col">
+          <div>
             <p
               style={{
                 fontSize: '12px',
                 textTransform: 'uppercase',
                 letterSpacing: '0.14em',
-                color: '#9ca3af',
+                color: 'var(--text-disabled)',
                 marginBottom: '16px',
+                fontWeight: 600,
               }}
             >
               Social
@@ -65,10 +52,13 @@ function Footer() {
                   target="_blank"
                   rel="noopener noreferrer"
                   style={{
-                    fontSize: '16px',
-                    color: '#000',
+                    fontSize: '15px',
+                    color: 'var(--text-muted)',
                     textDecoration: 'none',
+                    transition: 'color 0.2s ease',
                   }}
+                  onMouseEnter={(e) => e.target.style.color = 'var(--color-primary)'}
+                  onMouseLeave={(e) => e.target.style.color = 'var(--text-muted)'}
                 >
                   {s.label}
                 </a>
@@ -76,55 +66,63 @@ function Footer() {
               <a
                 href={`mailto:${email}`}
                 style={{
-                  fontSize: '16px',
-                  color: '#000',
+                  fontSize: '15px',
+                  color: 'var(--text-muted)',
                   textDecoration: 'none',
+                  transition: 'color 0.2s ease',
                 }}
+                onMouseEnter={(e) => e.target.style.color = 'var(--color-primary)'}
+                onMouseLeave={(e) => e.target.style.color = 'var(--text-muted)'}
               >
                 Mail
               </a>
             </div>
           </div>
 
-          {/* Pages */}
-          <div className="footer-col">
+          <div>
             <p
               style={{
                 fontSize: '12px',
                 textTransform: 'uppercase',
                 letterSpacing: '0.14em',
-                color: '#9ca3af',
+                color: 'var(--text-disabled)',
                 marginBottom: '16px',
+                fontWeight: 600,
               }}
             >
               Pages
             </p>
             <div style={{ display: 'flex', flexDirection: 'column', gap: '8px' }}>
-              {pages.map((p) => (
-                <Link
-                  key={p.path}
-                  to={p.path}
-                  style={{
-                    fontSize: '16px',
-                    color: '#000',
-                    textDecoration: 'none',
-                  }}
-                >
-                  {p.label}
-                </Link>
-              ))}
+              <a href="/" style={{ fontSize: '15px', color: 'var(--text-muted)', textDecoration: 'none',
+                transition: 'color 0.2s ease',
+              }}
+                onMouseEnter={(e) => e.target.style.color = 'var(--color-primary)'}
+                onMouseLeave={(e) => e.target.style.color = 'var(--text-muted)'}
+              >Projects</a>
+              <a href="/about" style={{ fontSize: '15px', color: 'var(--text-muted)', textDecoration: 'none',
+                transition: 'color 0.2s ease',
+              }}
+                onMouseEnter={(e) => e.target.style.color = 'var(--color-primary)'}
+                onMouseLeave={(e) => e.target.style.color = 'var(--text-muted)'}
+              >About</a>
+              <a href="/contact" style={{ fontSize: '15px', color: 'var(--text-muted)', textDecoration: 'none',
+                transition: 'color 0.2s ease',
+              }}
+                onMouseEnter={(e) => e.target.style.color = 'var(--color-primary)'}
+                onMouseLeave={(e) => e.target.style.color = 'var(--text-muted)'}
+              >Contact</a>
             </div>
           </div>
 
-          {/* Contact */}
-          <div className="footer-col">
+          <div>
             <p
               style={{
                 fontSize: '12px',
                 textTransform: 'uppercase',
                 letterSpacing: '0.14em',
-                color: '#9ca3af',
+                color: 'var(--text-disabled)',
                 marginBottom: '16px',
+                fontWeight: 600,
               }}
             >
               Contact
@@ -133,10 +131,13 @@ function Footer() {
               <a
                 href={`mailto:${email}`}
                 style={{
-                  fontSize: '16px',
-                  color: '#000',
+                  fontSize: '15px',
+                  color: 'var(--text-muted)',
                   textDecoration: 'none',
+                  transition: 'color 0.2s ease',
                 }}
+                onMouseEnter={(e) => e.target.style.color = 'var(--color-primary)'}
+                onMouseLeave={(e) => e.target.style.color = 'var(--text-muted)'}
               >
                 {email}
               </a>
@@ -144,19 +145,19 @@ function Footer() {
           </div>
         </div>
 
-        {/* ── Bottom Row ── */}
         <div
           style={{
             display: 'flex',
             justifyContent: 'space-between',
             alignItems: 'center',
             paddingTop: '24px',
-            borderTop: '1px solid rgba(0,0,0,0.1)',
+            borderTop: '1px solid var(--border)',
             flexWrap: 'wrap',
             gap: '16px',
+            transition: 'border-color 0.4s ease',
           }}
         >
-          <p style={{ fontSize: '14px', color: '#9ca3af' }}>
+          <p style={{ fontSize: '13px', color: 'var(--text-disabled)' }}>
             &copy; {new Date().getFullYear()} All rights reserved
           </p>
           <button
@@ -164,20 +165,20 @@ function Footer() {
             style={{
               background: 'none',
               border: 'none',
-              fontSize: '14px',
-              color: '#000',
+              fontSize: '13px',
+              color: 'var(--text-muted)',
               cursor: 'pointer',
-              textDecoration: 'underline',
-              textUnderlineOffset: '4px',
               fontFamily: 'var(--font-body)',
+              transition: 'color 0.2s ease',
             }}
+            onMouseEnter={(e) => e.target.style.color = 'var(--color-primary)'}
+            onMouseLeave={(e) => e.target.style.color = 'var(--text-muted)'}
           >
-            Back to top
+            Back to top &uarr;
           </button>
         </div>
       </div>
 
-      {/* ── Responsive: Stack on mobile ── */}
       <style>{`
         @media (max-width: 768px) {
           footer > .container > div:first-child {

@@ -12,8 +12,9 @@ function ProtectedRoute({ children }) {
           alignItems: 'center',
           justifyContent: 'center',
           minHeight: '100vh',
-          background: '#fff',
+          background: 'var(--bg)',
           fontFamily: 'var(--font-body)',
+          transition: 'background 0.4s ease',
         }}
       >
         <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '16px' }}>
@@ -21,13 +22,13 @@ function ProtectedRoute({ children }) {
             style={{
               width: '32px',
               height: '32px',
-              border: '2px solid rgba(0,0,0,0.1)',
-              borderTop: '2px solid #000',
+              border: '2px solid var(--border)',
+              borderTop: '2px solid var(--text)',
               borderRadius: '50%',
               animation: 'spin 0.8s linear infinite',
             }}
           />
-          <p style={{ fontSize: '14px', color: '#6b7280' }}>Verifying access...</p>
+          <p style={{ fontSize: '14px', color: 'var(--text-muted)' }}>Verifying access...</p>
         </div>
         <style>{`@keyframes spin { to { transform: rotate(360deg); } }`}</style>
       </div>
