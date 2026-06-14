@@ -64,7 +64,7 @@ function Navbar() {
           to="/"
           style={{
             fontFamily: 'var(--font-body)',
-            fontSize: '18px',
+            fontSize: '22px',
             fontWeight: 400,
             color: '#ffffff',
             textDecoration: 'none',
@@ -83,7 +83,7 @@ function Navbar() {
                 to={link.path}
                 style={{
                   fontFamily: 'var(--font-body)',
-                  fontSize: '14px',
+                  fontSize: '16px',
                   fontWeight: 400,
                   color: '#ffffff',
                   textDecoration: 'none',

@@ -54,7 +54,7 @@ function AdminLogin() {
         >
           // Admin
         </p>
-        <h1 style={{ fontSize: '32px', fontWeight: 700, color: 'var(--text)', lineHeight: '1.1' }}>
+        <h1 style={{ fontSize: '24px', fontWeight: 400, color: 'var(--text)', lineHeight: '1.1', fontFamily: 'var(--font-body)', letterSpacing: '0.08em', textTransform: 'uppercase' }}>
           Sign in with Google
         </h1>
         <p style={{ fontSize: '14px', color: 'var(--text-muted)', marginTop: '8px' }}>
@@ -71,16 +71,19 @@ function AdminLogin() {
             onClick={onGoogle}
             style={{
               padding: '12px 24px',
-              fontSize: '16px',
-              fontWeight: 700,
+              fontSize: '14px',
+              fontWeight: 400,
               background: 'var(--text)',
               color: 'var(--bg)',
               border: '1px solid var(--text)',
               cursor: 'pointer',
-              fontFamily: 'inherit',
+              fontFamily: 'var(--font-body)',
+              borderRadius: '0',
+              letterSpacing: '0.08em',
+              textTransform: 'uppercase',
             }}
-            whileHover={{ scale: 1.02 }}
-            whileTap={{ scale: 0.98 }}
+            whileHover={{ opacity: 0.8 }}
+            whileTap={{ opacity: 0.6 }}
           >
             Continue with Google
           </motion.button>

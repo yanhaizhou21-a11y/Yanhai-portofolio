@@ -6,8 +6,6 @@ function Preloader({ onComplete }) {
   const [exiting, setExiting] = useState(false)
   const [done, setDone] = useState(false)
   const containerRef = useRef(null)
-  const logoPathRef = useRef(null)
-  const logoCircleRef = useRef(null)
   const lineRef = useRef(null)
   const bottomRef = useRef(null)
   const startedRef = useRef(false)
@@ -25,9 +23,9 @@ function Preloader({ onComplete }) {
       return
     }
 
-    // --- Counter using setInterval (bulletproof) ---
+    // Counter using setInterval
     let current = 0
-    const totalSteps = 60 // ~60 frames over 1.5s at 25ms interval
+    const totalSteps = 60
     const interval = setInterval(() => {
       current++
       const pct = Math.min(Math.round((current / totalSteps) * 100), 100)
@@ -35,50 +33,40 @@ function Preloader({ onComplete }) {
 
       if (current >= totalSteps) {
         clearInterval(interval)
-        // Start exit
         setExiting(true)
         setTimeout(() => {
           setDone(true)
           onComplete?.()
         }, 700)
       }
-    }, 25) // 25ms per step = ~1.5s total
+    }, 25)
 
-    // --- GSAP entrance animations ---
+    // GSAP entrance animations
     const ctx = gsap.context(() => {
       const tl = gsap.timeline()
 
-      // SVG path draw
-      if (logoPathRef.current) {
-        const path = logoPathRef.current
-        const len = path.getTotalLength()
-        gsap.set(path, { strokeDasharray: len, strokeDashoffset: len })
-        tl.to(path, { strokeDashoffset: 0, duration: 1.2, ease: 'power2.inOut' }, 0)
-      }
-
-      if (logoCircleRef.current) {
-        const circle = logoCircleRef.current
-        const len = circle.getTotalLength()
-        gsap.set(circle, { strokeDasharray: len, strokeDashoffset: len })
-        tl.to(circle, { strokeDashoffset: 0, duration: 0.8, ease: 'power2.inOut' }, 0.4)
-      }
-
       // Line fill
       if (lineRef.current) {
-        tl.fromTo(lineRef.current, { scaleX: 0 }, {
-          scaleX: 1,
-          duration: 1.2,
-          ease: 'power2.inOut',
-          transformOrigin: 'left center',
-        }, 0)
+        tl.fromTo(
+          lineRef.current,
+          { scaleX: 0 },
+          {
+            scaleX: 1,
+            duration: 1.2,
+            ease: 'power2.inOut',
+            transformOrigin: 'left center',
+          },
+          0
+        )
       }
 
       // Bottom text fade in
       if (bottomRef.current) {
-        tl.fromTo(bottomRef.current,
+        tl.fromTo(
+          bottomRef.current,
           { opacity: 0, y: 10 },
           { opacity: 1, y: 0, duration: 0.4, ease: 'power3.out' },
-          0.6
+          0.4
         )
       }
     }, containerRef)
@@ -107,40 +95,27 @@ function Preloader({ onComplete }) {
         transition: exiting ? 'transform 0.7s cubic-bezier(0.65, 0, 0.35, 1)' : 'none',
       }}
     >
-      {/* Top: Logo + Counter */}
+      {/* Top: Brand + Counter */}
       <div style={{ display: 'flex', justifyContent: 'space-between', width: '100%', alignItems: 'flex-start' }}>
-        <svg
-          width="60"
-          height="60"
-          viewBox="0 0 80 80"
-          fill="none"
-          style={{ overflow: 'visible' }}
+        <span
+          style={{
+            fontFamily: 'var(--font-body)',
+            fontSize: '16px',
+            fontWeight: 400,
+            color: 'var(--text)',
+            letterSpacing: '0.12em',
+            textTransform: 'uppercase',
+          }}
         >
-          <path
-            ref={logoPathRef}
-            d="M10 70V10h20c11 0 20 5 20 16s-9 16-20 16H10"
-            stroke="var(--text, #000)"
-            strokeWidth="2.5"
-            strokeLinecap="square"
-            fill="none"
-          />
-          <circle
-            ref={logoCircleRef}
-            cx="60"
-            cy="60"
-            r="8"
-            stroke="var(--text, #000)"
-            strokeWidth="2.5"
-            fill="none"
-          />
-        </svg>
+          SOLKINGS
+        </span>
 
         <span
           style={{
             fontFamily: 'var(--font-body)',
-            fontSize: '14px',
+            fontSize: '13px',
             fontWeight: 400,
-            color: 'var(--text-disabled, #9ca3af)',
+            color: 'var(--text-disabled)',
             fontVariantNumeric: 'tabular-nums',
             letterSpacing: '0.05em',
           }}
@@ -156,10 +131,10 @@ function Preloader({ onComplete }) {
           width: '100%',
           maxWidth: '200px',
           height: '1px',
-          background: 'var(--text, #000)',
+          background: 'var(--text)',
           transformOrigin: 'left center',
           alignSelf: 'center',
-          opacity: 0.4,
+          opacity: 0.3,
         }}
       />
 
@@ -173,21 +148,25 @@ function Preloader({ onComplete }) {
           alignItems: 'flex-end',
         }}
       >
-        <span style={{
-          fontFamily: 'var(--font-body)',
-          fontSize: '12px',
-          color: 'var(--text-muted, #6b7280)',
-          letterSpacing: '0.14em',
-          textTransform: 'uppercase',
-        }}>
+        <span
+          style={{
+            fontFamily: 'var(--font-body)',
+            fontSize: '11px',
+            color: 'var(--text-muted)',
+            letterSpacing: '0.12em',
+            textTransform: 'uppercase',
+          }}
+        >
           Portfolio
         </span>
-        <span style={{
-          fontFamily: 'var(--font-body)',
-          fontSize: '12px',
-          color: 'var(--text-disabled, #9ca3af)',
-          letterSpacing: '0.05em',
-        }}>
+        <span
+          style={{
+            fontFamily: 'var(--font-body)',
+            fontSize: '11px',
+            color: 'var(--text-disabled)',
+            letterSpacing: '0.05em',
+          }}
+        >
           Loading...
         </span>
       </div>

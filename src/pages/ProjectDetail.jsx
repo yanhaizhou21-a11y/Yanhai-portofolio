@@ -20,7 +20,9 @@ function ProjectDetail() {
       <main style={{ paddingTop: '80px', display: 'flex', alignItems: 'center', justifyContent: 'center', minHeight: '60vh' }}>
         <div style={{ textAlign: 'center' }}>
           <p style={{ color: 'var(--text-muted)', fontSize: '16px', marginBottom: '16px' }}>Project not found</p>
-          <Link to="/" style={{ color: 'var(--color-primary)', textDecoration: 'none' }}>Back to projects</Link>
+          <Link to="/" style={{ color: 'var(--text)', textDecoration: 'none', borderBottom: '1px solid var(--border)', transition: 'opacity 0.25s ease' }}
+            onMouseEnter={(e) => e.target.style.opacity = '0.5'}
+            onMouseLeave={(e) => e.target.style.opacity = '1'}>Back to projects</Link>
         </div>
       </main>
     )
@@ -41,10 +43,10 @@ function ProjectDetail() {
               fontFamily: 'var(--font-body)',
               padding: '0',
               marginBottom: '24px',
-              transition: 'color 0.2s ease',
+              transition: 'opacity 0.25s ease',
             }}
-            onMouseEnter={(e) => e.target.style.color = 'var(--color-primary)'}
-            onMouseLeave={(e) => e.target.style.color = 'var(--text-muted)'}
+            onMouseEnter={(e) => e.target.style.opacity = '0.5'}
+            onMouseLeave={(e) => e.target.style.opacity = '1'}
           >
             &larr; Back
           </button>
@@ -71,7 +73,7 @@ function ProjectDetail() {
       {project.image && (
         <section style={{ padding: '0 32px 40px' }}>
           <div className="container">
-            <div style={{ borderRadius: '16px', overflow: 'hidden', background: 'var(--bg-secondary)', aspectRatio: '16/9' }}>
+            <div style={{ borderRadius: '0', overflow: 'hidden', background: 'var(--bg-secondary)', aspectRatio: '16/9' }}>
               <img
                 src={project.image}
                 alt={project.name || project.title}
@@ -110,7 +112,7 @@ function ProjectDetail() {
                         color: 'var(--tag-text)',
                         background: 'var(--tag-bg)',
                         padding: '4px 12px',
-                        borderRadius: '6px',
+                        borderRadius: '0',
                         fontWeight: 500,
                       }}>
                         {tech.trim()}
@@ -132,13 +134,16 @@ function ProjectDetail() {
                         target="_blank"
                         rel="noopener noreferrer"
                         style={{
-                          color: 'var(--color-primary)',
+                          color: 'var(--text)',
                           textDecoration: 'none',
                           fontSize: '15px',
-                          fontWeight: 500,
+                          fontWeight: 400,
+                          borderBottom: '1px solid var(--border)',
+                          paddingBottom: '2px',
+                          transition: 'opacity 0.25s ease',
                         }}
-                        onMouseEnter={(e) => e.target.style.textDecoration = 'underline'}
-                        onMouseLeave={(e) => e.target.style.textDecoration = 'none'}
+                        onMouseEnter={(e) => e.target.style.opacity = '0.5'}
+                        onMouseLeave={(e) => e.target.style.opacity = '1'}
                       >
                         Visit Live Site &rarr;
                       </a>
@@ -149,13 +154,16 @@ function ProjectDetail() {
                         target="_blank"
                         rel="noopener noreferrer"
                         style={{
-                          color: 'var(--color-primary)',
+                          color: 'var(--text)',
                           textDecoration: 'none',
                           fontSize: '15px',
-                          fontWeight: 500,
+                          fontWeight: 400,
+                          borderBottom: '1px solid var(--border)',
+                          paddingBottom: '2px',
+                          transition: 'opacity 0.25s ease',
                         }}
-                        onMouseEnter={(e) => e.target.style.textDecoration = 'underline'}
-                        onMouseLeave={(e) => e.target.style.textDecoration = 'none'}
+                        onMouseEnter={(e) => e.target.style.opacity = '0.5'}
+                        onMouseLeave={(e) => e.target.style.opacity = '1'}
                       >
                         View Source &rarr;
                       </a>

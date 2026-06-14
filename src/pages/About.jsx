@@ -1,141 +1,276 @@
+import { useEffect, useRef } from 'react'
 import { usePortfolio } from '../context/PortfolioContext.jsx'
+import gsap from 'gsap'
+import { ScrollTrigger } from 'gsap/ScrollTrigger'
+
+gsap.registerPlugin(ScrollTrigger)
 
 const defaultServices = [
   {
-    title: 'Web development',
-    description: 'Crafting custom websites using HTML, CSS, and JavaScript, whether from scratch or by enhancing existing platforms, to meet unique client needs and increase online presence effectively.',
+    title: 'Web Development',
+    description:
+      'Crafting custom websites using modern frameworks and technologies, whether from scratch or by enhancing existing platforms, to meet unique client needs and increase online presence.',
   },
   {
-    title: 'Mobile App development',
-    description: 'Creating custom mobile apps, leveraging various platforms and programming languages, to meet specific client requirements and deliver seamless user experiences on smartphones and tablets.',
+    title: 'Mobile App Development',
+    description:
+      'Creating custom mobile apps leveraging various platforms and programming languages to meet specific client requirements and deliver seamless user experiences.',
   },
   {
-    title: 'Performance & optimization',
-    description: 'Improving website speed with code optimization, image compression, and hosting services for faster loading times, ensuring smoother user experiences and better engagement for visitors.',
+    title: 'Performance & Optimization',
+    description:
+      'Improving website speed with code optimization, image compression, and hosting services for faster loading times and smoother user experiences.',
   },
   {
-    title: 'UX/UI design & prototype',
-    description: 'Offering comprehensive web design services, creating visually captivating and user-friendly websites tailored to clients\u2019 needs, utilizing modern design trends and responsive layouts to boost customer interaction and satisfaction.',
+    title: 'UX/UI Design & Prototype',
+    description:
+      'Creating visually captivating and user-friendly websites tailored to client needs, utilizing modern design trends and responsive layouts.',
   },
   {
-    title: 'Maintenance & support',
-    description: 'Offering continuous maintenance and support to ensure websites remain current and function seamlessly, ensuring uninterrupted operation and addressing any issues promptly.',
+    title: 'Maintenance & Support',
+    description:
+      'Offering continuous maintenance and support to ensure websites remain current and function seamlessly, addressing any issues promptly.',
   },
 ]
 
 function About() {
   const { data } = usePortfolio()
-  const heroName = data.hero?.name || '[YOUR NAME]'
+  const heroName = data.hero?.name || 'SOLKINGS'
   const bio = data.about?.bio || ''
   const aboutPhoto = data.about?.aboutPhotoUrl || ''
   const certificates = data.certificates || []
+  const pageRef = useRef(null)
+
+  useEffect(() => {
+    if (!pageRef.current) return
+    const ctx = gsap.context(() => {
+      // Hero mask reveal
+      gsap.fromTo(
+        '.about-hero-text',
+        { y: '102%' },
+        {
+          y: '0%',
+          duration: 0.8,
+          ease: 'power3.out',
+          stagger: 0.1,
+        }
+      )
+
+      // Service items border reveal on scroll
+      gsap.utils.toArray('.service-item').forEach((item) => {
+        gsap.fromTo(
+          item.querySelector('.service-line'),
+          { scaleX: 0 },
+          {
+            scaleX: 1,
+            duration: 0.8,
+            ease: 'power3.out',
+            transformOrigin: 'left center',
+            scrollTrigger: {
+              trigger: item,
+              start: 'top 85%',
+              toggleActions: 'play none none none',
+            },
+          }
+        )
+      })
+
+      // Awards items
+      gsap.utils.toArray('.award-item').forEach((item) => {
+        gsap.fromTo(
+          item,
+          { opacity: 0, y: 20 },
+          {
+            opacity: 1,
+            y: 0,
+            duration: 0.5,
+            ease: 'power2.out',
+            scrollTrigger: {
+              trigger: item,
+              start: 'top 90%',
+              toggleActions: 'play none none none',
+            },
+          }
+        )
+      })
+
+      // CTA section
+      gsap.fromTo(
+        '.cta-text',
+        { opacity: 0, y: 30 },
+        {
+          opacity: 1,
+          y: 0,
+          duration: 0.6,
+          ease: 'power2.out',
+          scrollTrigger: {
+            trigger: '.cta-section',
+            start: 'top 80%',
+          },
+        }
+      )
+    }, pageRef)
+    return () => ctx.revert()
+  }, [])
 
   return (
-    <main style={{ paddingTop: '80px' }}>
-      <section style={{ padding: '80px 32px 60px' }}>
+    <main ref={pageRef} style={{ paddingTop: '100px' }}>
+      {/* Hero heading - 10/16 columns */}
+      <section style={{ padding: 'var(--pt-medium) var(--grid-padding) var(--pt-medium-large)' }}>
         <div className="container">
-          <h1
+          <div style={{ width: '62.5%' }}>
+            <div style={{ overflow: 'hidden' }}>
+              <h1
+                className="about-hero-text"
+                style={{
+                  fontFamily: 'var(--font-display)',
+                  fontSize: 'clamp(2rem, 4vw, 3.5rem)',
+                  fontWeight: 700,
+                  lineHeight: '1.1',
+                  color: 'var(--text)',
+                  letterSpacing: '-0.02em',
+                }}
+              >
+                Creative developer helping brands achieve their goals in the digital world
+              </h1>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Image + Bio */}
+      <section style={{ padding: '0 var(--grid-padding) var(--pt-medium-large)' }}>
+        <div className="container">
+          <div
             style={{
-              fontFamily: 'var(--font-body)',
-              fontSize: 'clamp(1.8rem, 4vw, 40px)',
-              fontWeight: 700,
-              lineHeight: '1.15',
-              maxWidth: '700px',
-              color: 'var(--text)',
+              display: 'grid',
+              gridTemplateColumns: '1fr 1fr',
+              gap: 'var(--pt-small)',
+              alignItems: 'start',
             }}
           >
-            Creative developer helping brands achieve their goals in the digital world
-          </h1>
+            <div
+              style={{
+                aspectRatio: '3/4',
+                background: 'var(--bg-secondary)',
+                overflow: 'hidden',
+              }}
+            >
+              {aboutPhoto ? (
+                <img
+                  src={aboutPhoto}
+                  alt={heroName}
+                  style={{ width: '100%', height: '100%', objectFit: 'cover' }}
+                />
+              ) : (
+                <div
+                  style={{
+                    width: '100%',
+                    height: '100%',
+                    display: 'flex',
+                    alignItems: 'center',
+                    justifyContent: 'center',
+                    color: 'var(--text-disabled)',
+                    fontSize: '13px',
+                    fontFamily: 'var(--font-body)',
+                  }}
+                >
+                  Photo
+                </div>
+              )}
+            </div>
+
+            <div style={{ paddingTop: 'var(--pt-small)' }}>
+              <p
+                style={{
+                  fontFamily: 'var(--font-body)',
+                  fontSize: '16px',
+                  lineHeight: '1.7',
+                  color: 'var(--text)',
+                  marginBottom: '24px',
+                }}
+              >
+                {bio || `I'm ${heroName}, a creative developer with experience in web and mobile development.`}
+              </p>
+              <p
+                style={{
+                  fontFamily: 'var(--font-body)',
+                  fontSize: '16px',
+                  lineHeight: '1.7',
+                  color: 'var(--text-muted)',
+                }}
+              >
+                I'm a proactive person who enjoys creating through both design and development, always
+                driven by curiosity, improvement, and new ideas.
+              </p>
+            </div>
+          </div>
         </div>
       </section>
 
-      <section style={{ padding: '40px 32px 80px' }}>
-        <div
-          className="container"
-          style={{
-            display: 'grid',
-            gridTemplateColumns: '1fr 1fr',
-            gap: '56px',
-            alignItems: 'start',
-          }}
-        >
-          <div style={{ aspectRatio: '3/4', background: 'var(--bg-secondary)', borderRadius: '12px', overflow: 'hidden' }}>
-            {aboutPhoto ? (
-              <img src={aboutPhoto} alt={heroName} style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
-            ) : (
-              <div style={{ width: '100%', height: '100%', display: 'flex', alignItems: 'center', justifyContent: 'center', color: 'var(--text-disabled)', fontSize: '14px' }}>
-                Photo
-              </div>
-            )}
-          </div>
-
-          <div style={{ paddingTop: '24px' }}>
-            <p
-              style={{
-                fontSize: '16px',
-                lineHeight: '1.7',
-                color: 'var(--text)',
-                marginBottom: '24px',
-              }}
-            >
-              {bio || `I'm ${heroName}, a creative developer with experience in web and mobile development.`}
-            </p>
-            <p
-              style={{
-                fontSize: '16px',
-                lineHeight: '1.7',
-                color: 'var(--text-muted)',
-              }}
-            >
-              I'm a proactive person who enjoys creating through both design and development, always driven by curiosity, improvement, and new ideas.
-            </p>
-          </div>
-        </div>
-      </section>
-
-      <section style={{ padding: '80px 32px', borderTop: '1px solid var(--border)' }}>
+      {/* Services section */}
+      <section
+        style={{
+          padding: 'var(--pt-medium) var(--grid-padding)',
+          borderTop: '1px solid var(--border)',
+        }}
+      >
         <div className="container">
-          <h2 style={{ fontSize: '14px', fontWeight: 600, marginBottom: '40px', color: 'var(--text-muted)', textTransform: 'uppercase', letterSpacing: '0.1em' }}>
-            Services
-          </h2>
-
           <p
             style={{
               fontFamily: 'var(--font-body)',
-              fontSize: 'clamp(1.2rem, 2.5vw, 24px)',
-              fontWeight: 300,
-              lineHeight: '1.4',
-              maxWidth: '700px',
-              margin: '0 auto 56px',
-              textAlign: 'center',
-              color: 'var(--text)',
+              fontSize: '12px',
+              fontWeight: 400,
+              marginBottom: 'var(--pt-small)',
+              color: 'var(--text-muted)',
+              textTransform: 'uppercase',
+              letterSpacing: '0.12em',
             }}
           >
-            I bridge design and development, turning ideas into polished digital experiences.
+            Services
           </p>
 
           {defaultServices.map((service, index) => (
             <div
               key={index}
+              className="service-item"
               style={{
                 display: 'grid',
-                gridTemplateColumns: '1fr 2fr',
-                gap: '40px',
-                padding: '32px 0',
-                borderTop: index > 0 ? '1px solid var(--border)' : 'none',
-                alignItems: 'start',
+                gridTemplateColumns: '10fr 6fr',
+                gap: 'var(--pt-small)',
+                padding: '28px 0',
+                position: 'relative',
               }}
             >
-              <h3 style={{ fontSize: '16px', fontWeight: 600, color: 'var(--text)' }}>
+              {/* Animated border line */}
+              <div
+                className="service-line"
+                style={{
+                  position: 'absolute',
+                  top: 0,
+                  left: 0,
+                  right: 0,
+                  height: '1px',
+                  background: 'var(--border)',
+                  transformOrigin: 'left center',
+                }}
+              />
+              <h3
+                style={{
+                  fontFamily: 'var(--font-body)',
+                  fontSize: '16px',
+                  fontWeight: 400,
+                  color: 'var(--text)',
+                }}
+              >
                 {service.title}
               </h3>
               <p
                 style={{
-                  fontSize: '15px',
+                  fontFamily: 'var(--font-body)',
+                  fontSize: '14px',
                   lineHeight: '1.6',
                   color: 'var(--text-muted)',
-                  maxWidth: '560px',
-                  justifySelf: 'end',
                   textAlign: 'right',
                 }}
               >
@@ -143,35 +278,75 @@ function About() {
               </p>
             </div>
           ))}
+
+          {/* Bottom border */}
+          <div style={{ height: '1px', background: 'var(--border)' }} />
         </div>
       </section>
 
+      {/* Awards / Certificates */}
       {certificates.length > 0 && (
-        <section style={{ padding: '80px 32px', borderTop: '1px solid var(--border)' }}>
+        <section
+          style={{
+            padding: 'var(--pt-medium) var(--grid-padding)',
+            borderTop: '1px solid var(--border)',
+          }}
+        >
           <div className="container">
-            <h2 style={{ fontSize: '14px', fontWeight: 600, marginBottom: '40px', color: 'var(--text-muted)', textTransform: 'uppercase', letterSpacing: '0.1em' }}>
-              Awards
-            </h2>
+            <p
+              style={{
+                fontFamily: 'var(--font-body)',
+                fontSize: '12px',
+                fontWeight: 400,
+                marginBottom: 'var(--pt-small)',
+                color: 'var(--text-muted)',
+                textTransform: 'uppercase',
+                letterSpacing: '0.12em',
+              }}
+            >
+              Awards & Certificates
+            </p>
 
             {certificates.map((cert, index) => (
               <div
                 key={cert.id}
+                className="award-item"
                 style={{
                   display: 'grid',
                   gridTemplateColumns: '80px 1fr 1fr',
                   gap: '24px',
-                  padding: '24px 0',
+                  padding: '20px 0',
                   borderTop: index > 0 ? '1px solid var(--border)' : 'none',
                   alignItems: 'baseline',
                 }}
               >
-                <span style={{ fontSize: '14px', color: 'var(--text-disabled)' }}>
+                <span
+                  style={{
+                    fontFamily: 'var(--font-body)',
+                    fontSize: '13px',
+                    color: 'var(--text-disabled)',
+                  }}
+                >
                   {cert.date?.split(' ').pop() || '2024'}
                 </span>
-                <span style={{ fontSize: '16px', fontWeight: 500, color: 'var(--text)' }}>
+                <span
+                  style={{
+                    fontFamily: 'var(--font-body)',
+                    fontSize: '15px',
+                    fontWeight: 400,
+                    color: 'var(--text)',
+                  }}
+                >
                   {cert.name}
                 </span>
-                <span style={{ fontSize: '14px', color: 'var(--text-muted)', textAlign: 'right' }}>
+                <span
+                  style={{
+                    fontFamily: 'var(--font-body)',
+                    fontSize: '13px',
+                    color: 'var(--text-muted)',
+                    textAlign: 'right',
+                  }}
+                >
                   {cert.issuer}
                 </span>
               </div>
@@ -180,36 +355,59 @@ function About() {
         </section>
       )}
 
-      <section style={{ padding: '80px 32px', borderTop: '1px solid var(--border)' }}>
-        <div className="container" style={{ maxWidth: '700px' }}>
+      {/* CTA Section */}
+      <section
+        className="cta-section"
+        style={{
+          padding: 'var(--pt-large) var(--grid-padding)',
+          borderTop: '1px solid var(--border)',
+        }}
+      >
+        <div className="container" style={{ maxWidth: '800px' }}>
           <p
+            className="cta-text"
             style={{
-              fontFamily: 'var(--font-body)',
-              fontSize: 'clamp(1.2rem, 2.5vw, 24px)',
-              fontWeight: 300,
-              lineHeight: '1.4',
+              fontFamily: 'var(--font-display)',
+              fontSize: 'clamp(1.5rem, 3.5vw, 3rem)',
+              fontWeight: 700,
+              lineHeight: '1.2',
               color: 'var(--text)',
-              marginBottom: '32px',
+              marginBottom: '40px',
+              letterSpacing: '-0.02em',
             }}
           >
             I partner with brands and studios that care about clarity, craft and a point of view.
           </p>
-          <p style={{ fontSize: '16px', fontWeight: 600, marginBottom: '8px', color: 'var(--text)' }}>
-            Let&rsquo;s talk
-          </p>
-          <a
-            href={`mailto:${data.contact?.email || 'hello@yourdomain.com'}`}
-            style={{
-              fontSize: '16px',
-              color: 'var(--color-primary)',
-              textDecoration: 'none',
-              fontWeight: 500,
-            }}
-            onMouseEnter={(e) => e.target.style.textDecoration = 'underline'}
-            onMouseLeave={(e) => e.target.style.textDecoration = 'none'}
-          >
-            {data.contact?.email || 'hello@yourdomain.com'}
-          </a>
+          <div>
+            <p
+              style={{
+                fontFamily: 'var(--font-body)',
+                fontSize: '14px',
+                fontWeight: 400,
+                marginBottom: '8px',
+                color: 'var(--text)',
+              }}
+            >
+              Let&rsquo;s talk
+            </p>
+            <a
+              href={`mailto:${data.contact?.email || 'hello@yourdomain.com'}`}
+              style={{
+                fontFamily: 'var(--font-body)',
+                fontSize: '16px',
+                color: 'var(--text)',
+                textDecoration: 'none',
+                fontWeight: 400,
+                borderBottom: '1px solid var(--text)',
+                paddingBottom: '2px',
+                transition: 'opacity 0.25s ease',
+              }}
+              onMouseEnter={(e) => (e.target.style.opacity = '0.5')}
+              onMouseLeave={(e) => (e.target.style.opacity = '1')}
+            >
+              {data.contact?.email || 'hello@yourdomain.com'}
+            </a>
+          </div>
         </div>
       </section>
 
@@ -224,6 +422,9 @@ function About() {
           .container > div[style*="grid-template-columns: 80px 1fr 1fr"] > span:last-child {
             grid-column: 2;
             text-align: left !important;
+          }
+          section > .container > div[style*="width: 62.5%"] {
+            width: 100% !important;
           }
         }
       `}</style>
