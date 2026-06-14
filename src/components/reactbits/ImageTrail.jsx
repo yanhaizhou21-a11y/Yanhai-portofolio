@@ -23,7 +23,7 @@ function getMouseDistance(p1, p2) {
     return Math.hypot(dx, dy)
 }
 
-function ImageTrail({ items = [], variant = 1, imageWidth = 200, imageHeight = 160 }) {
+function ImageTrail({ items = [], variant = 1, imageWidth = 200, imageHeight = 160, style = {} }) {
     const containerRef = useRef(null)
 
     useEffect(() => {
@@ -36,7 +36,7 @@ function ImageTrail({ items = [], variant = 1, imageWidth = 200, imageHeight = 1
         let zIndexVal = 1
         let activeImagesCount = 0
         let isIdle = true
-        const threshold = 100
+        const threshold = 200
 
         let mousePos = { x: 0, y: 0 }
         let lastMousePos = { x: 0, y: 0 }
@@ -71,8 +71,8 @@ function ImageTrail({ items = [], variant = 1, imageWidth = 200, imageHeight = 1
                         y: cacheMousePos.y - imageHeight / 2,
                     },
                     {
-                        duration: 0.4,
-                        ease: 'power1',
+                        duration: 0.6,
+                        ease: 'power2',
                         x: mousePos.x - imageWidth / 2,
                         y: mousePos.y - imageHeight / 2,
                     },
@@ -81,20 +81,20 @@ function ImageTrail({ items = [], variant = 1, imageWidth = 200, imageHeight = 1
                 .to(
                     img,
                     {
-                        duration: 0.4,
+                        duration: 0.5,
                         ease: 'power3',
                         opacity: 0,
-                        scale: 0.2,
+                        scale: 0.6,
                     },
-                    0.4
+                    0.5
                 )
         }
 
         let rafId
         const render = () => {
             const distance = getMouseDistance(mousePos, lastMousePos)
-            cacheMousePos.x = lerp(cacheMousePos.x, mousePos.x, 0.15)
-            cacheMousePos.y = lerp(cacheMousePos.y, mousePos.y, 0.15)
+            cacheMousePos.x = lerp(cacheMousePos.x, mousePos.x, 0.06)
+            cacheMousePos.y = lerp(cacheMousePos.y, mousePos.y, 0.06)
 
             if (distance > threshold) {
                 showNextImage()
@@ -133,6 +133,7 @@ function ImageTrail({ items = [], variant = 1, imageWidth = 200, imageHeight = 1
                 zIndex: 1,
                 overflow: 'visible',
                 minHeight: '200px',
+                ...style,
             }}
         >
             {items.map((url, i) => (

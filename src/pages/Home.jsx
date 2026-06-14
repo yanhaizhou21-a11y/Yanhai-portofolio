@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom'
 import { usePortfolio } from '../context/PortfolioContext.jsx'
 import gsap from 'gsap'
 import Footer from '../components/Footer.jsx'
+import ImageTrail from '../components/reactbits/ImageTrail.jsx'
 
 function Home() {
   const { data } = usePortfolio()
@@ -191,16 +192,32 @@ function Home() {
       {/* Projects List View */}
       {view === 'list' && (
         <section
-          style={{ padding: '0 var(--grid-padding) var(--pt-medium)' }}
-          onMouseMove={handleMouseMove}
+          style={{ padding: '0 var(--grid-padding) var(--pt-medium)', position: 'relative' }}
         >
-          <div className="container">
-            <div style={{ borderTop: '1px solid var(--border)' }}>
+          <div className="container" style={{ position: 'relative', zIndex: 10 }}>
+            <div style={{ borderTop: '1px solid var(--border)', position: 'relative' }}>
+              {/* ImageTrail inside the list area */}
+              <div
+                style={{
+                  position: 'absolute',
+                  inset: 0,
+                  zIndex: 5,
+                  overflow: 'visible',
+                }}
+              >
+                <ImageTrail
+                  items={projects.filter((p) => p.image).map((p) => p.image)}
+                  variant={1}
+                  imageWidth={180}
+                  imageHeight={140}
+                  style={{ zIndex: 5 }}
+                />
+              </div>
               {projects.map((project, index) => (
                 <Link
                   key={project.id}
                   to={`/projects/${project.id}`}
-                  style={{ textDecoration: 'none' }}
+                  style={{ textDecoration: 'none', position: 'relative', zIndex: 10 }}
                 >
                   <div
                     onMouseEnter={() => setHoveredIndex(index)}
@@ -272,34 +289,6 @@ function Home() {
               ))}
             </div>
           </div>
-
-          {/* Floating hover preview */}
-          {hoveredIndex >= 0 && projects[hoveredIndex]?.image && (
-            <div
-              style={{
-                position: 'fixed',
-                top: mousePos.y - 200,
-                left: mousePos.x + 32,
-                width: '300px',
-                height: '380px',
-                pointerEvents: 'none',
-                zIndex: 80,
-                overflow: 'hidden',
-                borderRadius: '0',
-                boxShadow: 'none',
-              }}
-            >
-              <img
-                src={projects[hoveredIndex].image}
-                alt={projects[hoveredIndex].title}
-                style={{
-                  width: '100%',
-                  height: '100%',
-                  objectFit: 'cover',
-                }}
-              />
-            </div>
-          )}
         </section>
       )}
 
