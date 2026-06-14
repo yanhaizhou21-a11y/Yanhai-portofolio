@@ -120,7 +120,7 @@ const compressImage = (file) => {
   })
 }
 
-// Dynamic styles using CSS variables for dark mode
+// Monochromatic styles matching portfolio design system
 const s = {
   page: {
     minHeight: '100vh',
@@ -134,7 +134,7 @@ const s = {
     maxWidth: '1200px',
     margin: '0 auto',
     display: 'grid',
-    gap: '24px',
+    gap: '2px',
     gridTemplateColumns: '240px 1fr',
   },
   sidebar: {
@@ -142,13 +142,16 @@ const s = {
     padding: '24px',
     background: 'var(--bg)',
     transition: 'border-color 0.4s ease, background 0.4s ease',
-    borderRadius: '12px',
+    borderRadius: '0',
   },
   sidebarTitle: {
-    fontSize: '20px',
-    fontWeight: 700,
+    fontFamily: 'var(--font-body)',
+    fontSize: '16px',
+    fontWeight: 400,
     marginBottom: '16px',
     color: 'var(--text)',
+    letterSpacing: '0.12em',
+    textTransform: 'uppercase',
   },
   sidebarEmail: {
     fontSize: '12px',
@@ -161,37 +164,41 @@ const s = {
     display: 'block',
     width: '100%',
     padding: '10px 12px',
-    fontSize: '14px',
+    fontSize: '13px',
     textAlign: 'left',
-    border: active ? '1px solid var(--text)' : '1px solid var(--border)',
+    border: 'none',
+    borderBottom: '1px solid var(--border)',
     background: active ? 'var(--text)' : 'transparent',
     color: active ? 'var(--bg)' : 'var(--text)',
     cursor: 'pointer',
-    fontFamily: 'inherit',
-    marginBottom: '8px',
-    transition: 'all 0.2s ease',
+    fontFamily: 'var(--font-body)',
+    marginBottom: '0',
+    transition: 'all 0.25s ease',
+    borderRadius: '0',
+    letterSpacing: '0.02em',
   }),
   actionBtn: {
     display: 'block',
     width: '100%',
     padding: '10px 12px',
-    fontSize: '14px',
+    fontSize: '13px',
     border: '1px solid var(--border)',
     background: 'transparent',
     color: 'var(--text)',
     cursor: 'pointer',
-    fontFamily: 'inherit',
+    fontFamily: 'var(--font-body)',
     textAlign: 'center',
     textDecoration: 'none',
-    marginBottom: '8px',
-    transition: 'border-color 0.2s ease, color 0.2s ease',
+    marginBottom: '0',
+    transition: 'all 0.25s ease',
+    borderRadius: '0',
   },
   main: {
     border: '1px solid var(--border)',
     padding: '32px',
     background: 'var(--bg)',
     transition: 'border-color 0.4s ease, background 0.4s ease',
-    borderRadius: '12px',
+    borderRadius: '0',
   },
   mainHeader: {
     display: 'flex',
@@ -200,21 +207,24 @@ const s = {
     marginBottom: '24px',
   },
   mainTitle: {
-    fontSize: '24px',
-    fontWeight: 700,
+    fontFamily: 'var(--font-body)',
+    fontSize: '16px',
+    fontWeight: 400,
     color: 'var(--text)',
+    letterSpacing: '0.12em',
+    textTransform: 'uppercase',
   },
   newBtn: {
     padding: '10px 16px',
-    fontSize: '14px',
-    border: '1px solid var(--color-primary)',
+    fontSize: '13px',
+    border: '1px solid var(--text)',
     background: 'transparent',
-    color: 'var(--color-primary)',
+    color: 'var(--text)',
     cursor: 'pointer',
-    fontFamily: 'inherit',
-    transition: 'all 0.2s ease',
-    borderRadius: '8px',
-    fontWeight: 500,
+    fontFamily: 'var(--font-body)',
+    transition: 'all 0.25s ease',
+    borderRadius: '0',
+    fontWeight: 400,
   },
   form: {
     marginBottom: '24px',
@@ -222,9 +232,9 @@ const s = {
     border: '1px solid var(--border)',
     display: 'grid',
     gap: '16px',
-    background: 'var(--card-bg)',
+    background: 'var(--bg)',
     transition: 'border-color 0.4s ease, background 0.4s ease',
-    borderRadius: '12px',
+    borderRadius: '0',
   },
   label: {
     fontSize: '14px',
@@ -232,11 +242,11 @@ const s = {
   labelText: {
     display: 'block',
     fontSize: '11px',
-    fontWeight: 600,
+    fontWeight: 400,
     color: 'var(--text-muted)',
     marginBottom: '6px',
     textTransform: 'uppercase',
-    letterSpacing: '0.08em',
+    letterSpacing: '0.1em',
   },
   input: {
     width: '100%',
@@ -245,10 +255,10 @@ const s = {
     border: '1px solid var(--border)',
     background: 'var(--bg)',
     color: 'var(--text)',
-    fontFamily: 'inherit',
-    transition: 'border-color 0.2s ease, background 0.2s ease',
+    fontFamily: 'var(--font-body)',
+    transition: 'border-color 0.25s ease',
     outline: 'none',
-    borderRadius: '8px',
+    borderRadius: '0',
   },
   textarea: {
     width: '100%',
@@ -257,36 +267,38 @@ const s = {
     border: '1px solid var(--border)',
     background: 'var(--bg)',
     color: 'var(--text)',
-    fontFamily: 'inherit',
+    fontFamily: 'var(--font-body)',
     minHeight: '80px',
     resize: 'vertical',
-    transition: 'border-color 0.2s ease, background 0.2s ease',
+    transition: 'border-color 0.25s ease',
     outline: 'none',
-    borderRadius: '8px',
+    borderRadius: '0',
   },
   uploadBtn: {
     padding: '8px 14px',
-    fontSize: '13px',
+    fontSize: '12px',
     border: '1px solid var(--border)',
-    background: 'var(--bg-secondary)',
+    background: 'transparent',
     color: 'var(--text)',
     cursor: 'pointer',
-    fontFamily: 'inherit',
-    transition: 'all 0.2s ease',
-    borderRadius: '6px',
+    fontFamily: 'var(--font-body)',
+    transition: 'all 0.25s ease',
+    borderRadius: '0',
   },
   submitBtn: {
     padding: '12px 24px',
-    fontSize: '14px',
-    fontWeight: 600,
-    border: '1px solid var(--color-primary)',
-    background: 'var(--color-primary)',
-    color: '#ffffff',
+    fontSize: '13px',
+    fontWeight: 400,
+    border: '1px solid var(--text)',
+    background: 'var(--text)',
+    color: 'var(--bg)',
     cursor: 'pointer',
-    fontFamily: 'inherit',
+    fontFamily: 'var(--font-body)',
     marginTop: '8px',
-    transition: 'all 0.2s ease',
-    borderRadius: '8px',
+    transition: 'all 0.25s ease',
+    borderRadius: '0',
+    letterSpacing: '0.08em',
+    textTransform: 'uppercase',
   },
   card: {
     display: 'flex',
@@ -295,14 +307,16 @@ const s = {
     justifyContent: 'space-between',
     gap: '12px',
     padding: '16px',
-    border: '1px solid var(--border)',
-    marginBottom: '8px',
+    border: 'none',
+    borderBottom: '1px solid var(--border)',
+    marginBottom: '0',
     background: 'var(--bg)',
-    transition: 'all 0.3s ease',
-    borderRadius: '10px',
+    transition: 'all 0.25s ease',
+    borderRadius: '0',
   },
   cardTitle: {
-    fontWeight: 600,
+    fontFamily: 'var(--font-body)',
+    fontWeight: 400,
     fontSize: '14px',
     color: 'var(--text)',
   },
@@ -313,63 +327,63 @@ const s = {
   },
   editBtn: {
     padding: '6px 14px',
-    fontSize: '13px',
+    fontSize: '12px',
     border: '1px solid var(--border)',
     background: 'transparent',
     color: 'var(--text)',
     cursor: 'pointer',
-    fontFamily: 'inherit',
-    transition: 'all 0.2s ease',
-    borderRadius: '6px',
+    fontFamily: 'var(--font-body)',
+    transition: 'all 0.25s ease',
+    borderRadius: '0',
   },
   deleteBtn: {
     padding: '6px 14px',
-    fontSize: '13px',
+    fontSize: '12px',
     border: '1px solid var(--border)',
     background: 'transparent',
     color: 'var(--text-muted)',
     cursor: 'pointer',
-    fontFamily: 'inherit',
-    transition: 'all 0.2s ease',
-    borderRadius: '6px',
+    fontFamily: 'var(--font-body)',
+    transition: 'all 0.25s ease',
+    borderRadius: '0',
   },
   signOutBtn: {
     display: 'block',
     width: '100%',
     padding: '10px 12px',
-    fontSize: '14px',
-    border: '1px solid rgba(200,0,0,0.3)',
+    fontSize: '13px',
+    border: '1px solid var(--border)',
     background: 'transparent',
-    color: '#e53e3e',
+    color: 'var(--text-muted)',
     cursor: 'pointer',
-    fontFamily: 'inherit',
+    fontFamily: 'var(--font-body)',
     textAlign: 'center',
-    transition: 'all 0.2s ease',
-    borderRadius: '6px',
-    marginTop: '16px',
+    transition: 'all 0.25s ease',
+    borderRadius: '0',
+    marginTop: '0',
   },
   primaryBtn: {
     padding: '8px 16px',
-    fontSize: '13px',
-    border: '1px solid var(--color-primary)',
-    background: 'var(--color-primary)',
-    color: '#ffffff',
+    fontSize: '12px',
+    border: '1px solid var(--text)',
+    background: 'var(--text)',
+    color: 'var(--bg)',
     cursor: 'pointer',
-    fontFamily: 'inherit',
-    borderRadius: '6px',
-    transition: 'all 0.2s ease',
+    fontFamily: 'var(--font-body)',
+    borderRadius: '0',
+    transition: 'all 0.25s ease',
   },
 }
 
 // Card animation variants
 const cardVariants = {
-  hidden: { opacity: 0, y: 20 },
+  hidden: { opacity: 0, y: 12 },
   visible: (i) => ({
     opacity: 1,
     y: 0,
-    transition: { delay: i * 0.05, duration: 0.4, ease: [0.16, 1, 0.3, 1] },
+    transition: { delay: i * 0.04, duration: 0.35, ease: [0.16, 1, 0.3, 1] },
   }),
-  exit: { opacity: 0, x: -20, transition: { duration: 0.3 } },
+  exit: { opacity: 0, x: -12, transition: { duration: 0.25 } },
 }
 
 function AdminPage() {
@@ -479,7 +493,7 @@ function AdminPage() {
             </button>
           </div>
           {user && <p style={s.sidebarEmail}>{user.email}</p>}
-          <nav>
+          <nav style={{ borderTop: '1px solid var(--border)' }}>
             {Object.entries(sectionConfig).map(([key, value]) => (
               <motion.button
                 key={key}
@@ -490,20 +504,20 @@ function AdminPage() {
                   setFormState({})
                 }}
                 style={s.navBtn(activeTab === key)}
-                whileHover={{ scale: 1.02 }}
-                whileTap={{ scale: 0.98 }}
+                whileHover={{ opacity: 0.7 }}
+                whileTap={{ opacity: 0.5 }}
               >
                 {value.title}
               </motion.button>
             ))}
           </nav>
-          <div style={{ marginTop: '24px' }}>
+          <div style={{ marginTop: '24px', display: 'grid', gap: '2px' }}>
             <motion.button
               type="button"
               onClick={resetData}
               style={s.actionBtn}
-              whileHover={{ scale: 1.02 }}
-              whileTap={{ scale: 0.98 }}
+              whileHover={{ opacity: 0.7 }}
+              whileTap={{ opacity: 0.5 }}
             >
               Reset to Defaults
             </motion.button>
@@ -517,8 +531,8 @@ function AdminPage() {
                 navigate('/xon2-admin/login', { replace: true })
               }}
               style={s.signOutBtn}
-              whileHover={{ scale: 1.02 }}
-              whileTap={{ scale: 0.98 }}
+              whileHover={{ opacity: 0.7 }}
+              whileTap={{ opacity: 0.5 }}
             >
               Sign Out
             </motion.button>
@@ -528,9 +542,9 @@ function AdminPage() {
         <motion.section
           style={s.main}
           key={activeTab}
-          initial={{ opacity: 0, x: 20 }}
-          animate={{ opacity: 1, x: 0 }}
-          transition={{ duration: 0.4, ease: [0.16, 1, 0.3, 1] }}
+          initial={{ opacity: 0, y: 8 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.35, ease: [0.16, 1, 0.3, 1] }}
         >
           <div style={s.mainHeader}>
             <h2 style={s.mainTitle}>{config.title}</h2>
@@ -539,8 +553,8 @@ function AdminPage() {
                 type="button"
                 style={s.newBtn}
                 onClick={startNew}
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
+                whileHover={{ opacity: 0.7 }}
+                whileTap={{ opacity: 0.5 }}
               >
                 + New Item
               </motion.button>
@@ -550,9 +564,9 @@ function AdminPage() {
           <motion.form
             style={s.form}
             onSubmit={saveItem}
-            initial={{ opacity: 0, y: 10 }}
+            initial={{ opacity: 0, y: 8 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.3, delay: 0.1 }}
+            transition={{ duration: 0.3, delay: 0.05 }}
           >
             {config.fields.map((field) => (
               <label key={field.key} style={s.label}>
@@ -586,7 +600,13 @@ function AdminPage() {
                         <img
                           src={activeForm[field.key]}
                           alt="Preview"
-                          style={{ height: '40px', width: '40px', objectFit: 'cover', border: '1px solid var(--border)' }}
+                          style={{
+                            height: '40px',
+                            width: '40px',
+                            objectFit: 'cover',
+                            border: '1px solid var(--border)',
+                            borderRadius: '0',
+                          }}
                         />
                       )}
                     </div>
@@ -604,15 +624,15 @@ function AdminPage() {
             <motion.button
               type="submit"
               style={s.submitBtn}
-              whileHover={{ scale: 1.02 }}
-              whileTap={{ scale: 0.98 }}
+              whileHover={{ opacity: 0.85 }}
+              whileTap={{ opacity: 0.7 }}
             >
               {isSingleSection ? 'Save Changes' : editId ? 'Update Item' : 'Add Item'}
             </motion.button>
           </motion.form>
 
           {!isSingleSection && (
-            <div>
+            <div style={{ borderTop: '1px solid var(--border)' }}>
               <AnimatePresence mode="popLayout">
                 {items.map((item, i) => (
                   <motion.article
@@ -625,19 +645,28 @@ function AdminPage() {
                     custom={i}
                     layout
                     whileHover={{
-                      borderColor: 'var(--text)',
-                      boxShadow: '3px 3px 0 var(--text)',
+                      background: 'var(--hover-bg)',
                     }}
                   >
                     <div style={{ display: 'flex', alignItems: 'center', gap: '12px' }}>
                       {activeTab === 'skills' && item.icon && (
-                        <img src={item.icon} alt={item.name} style={{ height: '28px', width: '28px', objectFit: 'contain' }} />
+                        <img
+                          src={item.icon}
+                          alt={item.name}
+                          style={{ height: '28px', width: '28px', objectFit: 'contain' }}
+                        />
                       )}
                       {activeTab !== 'skills' && item.image && (
                         <img
                           src={item.image}
                           alt=""
-                          style={{ height: '40px', width: '56px', objectFit: 'cover', border: '1px solid var(--border)' }}
+                          style={{
+                            height: '40px',
+                            width: '56px',
+                            objectFit: 'cover',
+                            border: '1px solid var(--border)',
+                            borderRadius: '0',
+                          }}
                         />
                       )}
                       <div>
@@ -652,13 +681,13 @@ function AdminPage() {
                         </p>
                       </div>
                     </div>
-                    <div style={{ display: 'flex', gap: '8px' }}>
+                    <div style={{ display: 'flex', gap: '2px' }}>
                       <motion.button
                         type="button"
                         style={s.editBtn}
                         onClick={() => startEdit(item)}
-                        whileHover={{ scale: 1.05 }}
-                        whileTap={{ scale: 0.95 }}
+                        whileHover={{ opacity: 0.7 }}
+                        whileTap={{ opacity: 0.5 }}
                       >
                         Edit
                       </motion.button>
@@ -666,8 +695,8 @@ function AdminPage() {
                         type="button"
                         style={s.deleteBtn}
                         onClick={() => requestDelete(item)}
-                        whileHover={{ scale: 1.05, color: '#e53e3e' }}
-                        whileTap={{ scale: 0.95 }}
+                        whileHover={{ opacity: 0.7 }}
+                        whileTap={{ opacity: 0.5 }}
                       >
                         Delete
                       </motion.button>

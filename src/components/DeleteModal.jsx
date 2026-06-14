@@ -36,7 +36,7 @@ function DeleteModal({ open, label, onCancel, onConfirm }) {
               transition: 'background 0.4s ease, border-color 0.4s ease',
             }}
           >
-            <h3 style={{ fontSize: '20px', fontWeight: 700, color: 'var(--text)', marginBottom: '12px' }}>
+            <h3 style={{ fontSize: '16px', fontWeight: 400, color: 'var(--text)', marginBottom: '12px', fontFamily: 'var(--font-body)', letterSpacing: '0.08em', textTransform: 'uppercase' }}>
               Delete Item?
             </h3>
             <p style={{ fontSize: '14px', color: 'var(--text-muted)', marginBottom: '24px' }}>
@@ -50,15 +50,16 @@ function DeleteModal({ open, label, onCancel, onConfirm }) {
                 onClick={onCancel}
                 style={{
                   padding: '10px 20px',
-                  fontSize: '14px',
+                  fontSize: '13px',
                   background: 'var(--bg)',
                   color: 'var(--text)',
                   border: '1px solid var(--border)',
                   cursor: 'pointer',
                   fontFamily: 'var(--font-body)',
+                  borderRadius: '0',
                 }}
-                whileHover={{ scale: 1.03 }}
-                whileTap={{ scale: 0.97 }}
+                whileHover={{ opacity: 0.7 }}
+                whileTap={{ opacity: 0.5 }}
               >
                 Cancel
               </motion.button>
@@ -67,15 +68,16 @@ function DeleteModal({ open, label, onCancel, onConfirm }) {
                 onClick={onConfirm}
                 style={{
                   padding: '10px 20px',
-                  fontSize: '14px',
+                  fontSize: '13px',
                   background: 'var(--text)',
                   color: 'var(--bg)',
                   border: '1px solid var(--text)',
                   cursor: 'pointer',
                   fontFamily: 'var(--font-body)',
+                  borderRadius: '0',
                 }}
-                whileHover={{ scale: 1.03 }}
-                whileTap={{ scale: 0.97 }}
+                whileHover={{ opacity: 0.85 }}
+                whileTap={{ opacity: 0.7 }}
               >
                 Delete
               </motion.button>
