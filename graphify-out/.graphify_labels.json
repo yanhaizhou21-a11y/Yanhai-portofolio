@@ -1,1 +1,26 @@
-{"0": "Dev Dependencies", "1": "Pages and Portfolio Data", "2": "Dependencies", "3": "Auth and Routing", "4": "Admin UI and Navbar", "5": "Package Scripts", "6": "Firebase Integration", "7": "GSAP Animations", "8": "ImageTrail Component", "9": "FlipbookImage Component", "10": "PageTransition Component", "11": "DecryptedText Component", "12": "Magnet Component", "13": "SplitText Component", "14": "Spotlight Component", "15": "SmoothScroll Component", "16": "Vercel Config", "17": "ESLint Config", "18": "Vite Config"}
+{
+  "0": "devDependencies",
+  "1": "App.jsx",
+  "2": "dependencies",
+  "3": "AuthContext.jsx",
+  "4": "AdminPage.jsx",
+  "5": "package.json",
+  "6": "PortfolioContext.jsx",
+  "7": "useGsap.js",
+  "8": "ImageTrail.jsx",
+  "9": "FlipbookImage.jsx",
+  "10": "PageTransition.jsx",
+  "11": "DecryptedText.jsx",
+  "12": "Magnet.jsx",
+  "13": "SplitText.jsx",
+  "14": "Spotlight.jsx",
+  "15": "SmoothScroll.jsx",
+  "16": "vercel.json",
+  "17": "eslint.config.js",
+  "18": "vite.config.js",
+  "19": "React + Vite",
+  "20": "Preloader.jsx",
+  "21": "LiquidMetalButton.jsx",
+  "22": "CLAUDE.md",
+  "23": "READMEAGENTS.md"
+}

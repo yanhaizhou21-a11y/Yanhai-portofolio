@@ -1,0 +1,247 @@
+{
+  "eslint.config.js": {
+    "mtime": 1776831460.6259725,
+    "ast_hash": "49c8473bcfcec3aef596a5fb04a6df06",
+    "semantic_hash": ""
+  },
+  "package.json": {
+    "mtime": 1781359667.6974924,
+    "ast_hash": "76ef61f7d5b9ab7501506e2a17155b8f",
+    "semantic_hash": ""
+  },
+  "skills-lock.json": {
+    "mtime": 1781364072.8135152,
+    "ast_hash": "3f7865e7c7738e810c26931550221855",
+    "semantic_hash": ""
+  },
+  "src/App.jsx": {
+    "mtime": 1785941703.863077,
+    "ast_hash": "85d744e96f2273760d4551974b7d368a",
+    "semantic_hash": ""
+  },
+  "src/admin/AdminPage.jsx": {
+    "mtime": 1781444446.6849182,
+    "ast_hash": "ba72eb71225c4cf984b89b60f4c8c8eb",
+    "semantic_hash": ""
+  },
+  "src/components/AnimatedNavFramer.jsx": {
+    "mtime": 1785941567.5801187,
+    "ast_hash": "fc65f237736eaa904db389435d5e71ad",
+    "semantic_hash": ""
+  },
+  "src/components/DeleteModal.jsx": {
+    "mtime": 1781444447.5746336,
+    "ast_hash": "e5e0b8c0c94cd700b1622d35371af2fc",
+    "semantic_hash": ""
+  },
+  "src/components/Footer.jsx": {
+    "mtime": 1785940994.415652,
+    "ast_hash": "5667f7b21480f2e77ab06041557df342",
+    "semantic_hash": ""
+  },
+  "src/components/KineticTextLoader.jsx": {
+    "mtime": 1785940853.8148756,
+    "ast_hash": "d453e998bb0de9d0e3a9fe1b49f3850b",
+    "semantic_hash": ""
+  },
+  "src/components/LiquidMetalButton.jsx": {
+    "mtime": 1785939602.393366,
+    "ast_hash": "8da1a6575fa62fade343dddc7ae24fd1",
+    "semantic_hash": ""
+  },
+  "src/components/PageTransition.jsx": {
+    "mtime": 1781364858.5009215,
+    "ast_hash": "f7a1c08c352b4d6ba550b9744ed40455",
+    "semantic_hash": ""
+  },
+  "src/components/Preloader.jsx": {
+    "mtime": 1785941569.8457015,
+    "ast_hash": "a692eaf4e62da6533b255eb54efa9291",
+    "semantic_hash": ""
+  },
+  "src/components/ProtectedRoute.jsx": {
+    "mtime": 1781363981.9314828,
+    "ast_hash": "ce5058aa46c012a0557b8a49dc1ad083",
+    "semantic_hash": ""
+  },
+  "src/components/SmoothScroll.jsx": {
+    "mtime": 1781364862.7384975,
+    "ast_hash": "b9bd329d88dc9989229935e971ae092f",
+    "semantic_hash": ""
+  },
+  "src/components/reactbits/DecryptedText.jsx": {
+    "mtime": 1781363151.2453177,
+    "ast_hash": "ef61702888036ebbbb64f9364bc290d1",
+    "semantic_hash": ""
+  },
+  "src/components/reactbits/FlipbookImage.jsx": {
+    "mtime": 1781363417.6973152,
+    "ast_hash": "2677a961bb98e608a87a76cab5735123",
+    "semantic_hash": ""
+  },
+  "src/components/reactbits/FlowingMenu.jsx": {
+    "mtime": 1781445632.3922167,
+    "ast_hash": "094002b12f023f0d351a80a8719c86a8",
+    "semantic_hash": ""
+  },
+  "src/components/reactbits/ImageTrail.jsx": {
+    "mtime": 1781446141.523399,
+    "ast_hash": "b22cc822266086cd46ccadb2fbdfac5a",
+    "semantic_hash": ""
+  },
+  "src/components/reactbits/Magnet.jsx": {
+    "mtime": 1781363195.4690137,
+    "ast_hash": "3af14f813f9b0349d07c70fe56b46f9c",
+    "semantic_hash": ""
+  },
+  "src/components/reactbits/ScrollFloat.jsx": {
+    "mtime": 1781445678.1886103,
+    "ast_hash": "9d5bacc0cc584012b38a6e4fdea120aa",
+    "semantic_hash": ""
+  },
+  "src/components/reactbits/SplitText.jsx": {
+    "mtime": 1781363195.0363896,
+    "ast_hash": "a72a9a116661927b7a84deb5b82b7244",
+    "semantic_hash": ""
+  },
+  "src/components/reactbits/Spotlight.jsx": {
+    "mtime": 1781363194.455246,
+    "ast_hash": "26dec68795908ee0b03c45c7a35aba1d",
+    "semantic_hash": ""
+  },
+  "src/context/AuthContext.jsx": {
+    "mtime": 1778594381.0210004,
+    "ast_hash": "eea7b028b2325710caa4279d42572671",
+    "semantic_hash": ""
+  },
+  "src/context/PortfolioContext.jsx": {
+    "mtime": 1781363982.590637,
+    "ast_hash": "b72c47211b85ee892a8bab1757bc5d81",
+    "semantic_hash": ""
+  },
+  "src/data/defaultData.js": {
+    "mtime": 1777197393.8688364,
+    "ast_hash": "dbca6a8a2c75b1a3205d4b5eab3398e1",
+    "semantic_hash": ""
+  },
+  "src/firebase.js": {
+    "mtime": 1778594381.0153115,
+    "ast_hash": "8af5027ab470521e1b644f1b21289b14",
+    "semantic_hash": ""
+  },
+  "src/hooks/useFirestore.js": {
+    "mtime": 1777196753.6708097,
+    "ast_hash": "f15202be2d74838e749b4d3e9c6bdea0",
+    "semantic_hash": ""
+  },
+  "src/hooks/useGsap.js": {
+    "mtime": 1781359860.9926612,
+    "ast_hash": "a3ae4becf7a82b986bbc87d5c0e1f02a",
+    "semantic_hash": ""
+  },
+  "src/hooks/useTheme.js": {
+    "mtime": 1781363151.4311826,
+    "ast_hash": "30138ba93b617aa6e0b88d0ab8c6a87e",
+    "semantic_hash": ""
+  },
+  "src/main.jsx": {
+    "mtime": 1778594381.0153115,
+    "ast_hash": "3f07d60b594a649270498494eb3eb679",
+    "semantic_hash": ""
+  },
+  "src/pages/About.jsx": {
+    "mtime": 1781445812.630555,
+    "ast_hash": "e4a92d2404c3935a06d03160cb2ff5a5",
+    "semantic_hash": ""
+  },
+  "src/pages/AdminLogin.jsx": {
+    "mtime": 1781444447.1970172,
+    "ast_hash": "0b8b4bcd4540efa40f5f3416600f9841",
+    "semantic_hash": ""
+  },
+  "src/pages/Contact.jsx": {
+    "mtime": 1781445813.109804,
+    "ast_hash": "c844aaadf2bd950d55952308df95c155",
+    "semantic_hash": ""
+  },
+  "src/pages/Home.jsx": {
+    "mtime": 1785940945.187135,
+    "ast_hash": "26890c1fe53b5bfa0b15993385bcaa66",
+    "semantic_hash": ""
+  },
+  "src/pages/LoginPage.jsx": {
+    "mtime": 1781360541.701631,
+    "ast_hash": "00876b0cbaff6e00aa653de5f93f376f",
+    "semantic_hash": ""
+  },
+  "src/pages/ProjectDetail.jsx": {
+    "mtime": 1781446243.4136226,
+    "ast_hash": "dc28f4bdc778acb90560163f1ffc9772",
+    "semantic_hash": ""
+  },
+  "src/pages/Projects.jsx": {
+    "mtime": 1785940937.7620137,
+    "ast_hash": "0616589c8114553bd8f8be9aa7f32a2e",
+    "semantic_hash": ""
+  },
+  "vercel.json": {
+    "mtime": 1776860692.0226583,
+    "ast_hash": "6411d2fbb5f0e00aaff0ca0ded84e0b6",
+    "semantic_hash": ""
+  },
+  "vite.config.js": {
+    "mtime": 1776861798.9543698,
+    "ast_hash": "5b641ab5f85eff4b0b9acec3417ca9b5",
+    "semantic_hash": ""
+  },
+  "CLAUDE.md": {
+    "mtime": 1785932020.3186197,
+    "ast_hash": "8a6643a420fdad6bfb583523bc6cef16",
+    "semantic_hash": ""
+  },
+  "README.md": {
+    "mtime": 1776831460.822548,
+    "ast_hash": "a28dc4cb878325f3e9e5649f3e1469ac",
+    "semantic_hash": ""
+  },
+  "READMEAGENTS.md": {
+    "mtime": 1781445235.5212498,
+    "ast_hash": "3e94744579973ca5a6e4028975c39d4b",
+    "semantic_hash": ""
+  },
+  "index.html": {
+    "mtime": 1785941156.9109101,
+    "ast_hash": "e74aed2545f06707fb7d7545a129831c",
+    "semantic_hash": ""
+  },
+  "public/favicon.svg": {
+    "mtime": 1776831460.9672163,
+    "ast_hash": "7e840862161341271697daa99a40d76b",
+    "semantic_hash": ""
+  },
+  "public/icons.svg": {
+    "mtime": 1776831461.030541,
+    "ast_hash": "3b4fcfcf393eca4d264dca4a4663bc37",
+    "semantic_hash": ""
+  },
+  "public/images/reaching-hands.png": {
+    "mtime": 1785940739.1403494,
+    "ast_hash": "a138e926a1e72fdde73166a989c746d2",
+    "semantic_hash": ""
+  },
+  "src/assets/hero.png": {
+    "mtime": 1776831460.8828862,
+    "ast_hash": "aead493361b27e7510691c5d7072dfc1",
+    "semantic_hash": ""
+  },
+  "src/assets/react.svg": {
+    "mtime": 1776831461.09688,
+    "ast_hash": "f0402b67b6ce880f65666bb49e841696",
+    "semantic_hash": ""
+  },
+  "src/assets/vite.svg": {
+    "mtime": 1776831461.1535683,
+    "ast_hash": "9960a24288958394ac50e57ff638b036",
+    "semantic_hash": ""
+  }
+}

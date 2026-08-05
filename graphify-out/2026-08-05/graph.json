@@ -11,7 +11,6 @@
       "_origin": "ast",
       "id": "eslint_config",
       "community": 17,
-      "community_name": "eslint.config.js",
       "norm_label": "eslint.config.js"
     },
     {
@@ -22,7 +21,6 @@
       "_origin": "ast",
       "id": "package",
       "community": 5,
-      "community_name": "package.json",
       "norm_label": "package.json"
     },
     {
@@ -33,7 +31,6 @@
       "_origin": "ast",
       "id": "package_name",
       "community": 5,
-      "community_name": "package.json",
       "norm_label": "name"
     },
     {
@@ -44,7 +41,6 @@
       "_origin": "ast",
       "id": "package_private",
       "community": 5,
-      "community_name": "package.json",
       "norm_label": "private"
     },
     {
@@ -55,7 +51,6 @@
       "_origin": "ast",
       "id": "package_version",
       "community": 5,
-      "community_name": "package.json",
       "norm_label": "version"
     },
     {
@@ -66,7 +61,6 @@
       "_origin": "ast",
       "id": "package_type",
       "community": 5,
-      "community_name": "package.json",
       "norm_label": "type"
     },
     {
@@ -77,7 +71,6 @@
       "_origin": "ast",
       "id": "package_scripts",
       "community": 5,
-      "community_name": "package.json",
       "norm_label": "scripts"
     },
     {
@@ -88,7 +81,6 @@
       "_origin": "ast",
       "id": "package_scripts_dev",
       "community": 5,
-      "community_name": "package.json",
       "norm_label": "dev"
     },
     {
@@ -99,7 +91,6 @@
       "_origin": "ast",
       "id": "package_scripts_build",
       "community": 5,
-      "community_name": "package.json",
       "norm_label": "build"
     },
     {
@@ -110,7 +101,6 @@
       "_origin": "ast",
       "id": "package_scripts_lint",
       "community": 5,
-      "community_name": "package.json",
       "norm_label": "lint"
     },
     {
@@ -121,7 +111,6 @@
       "_origin": "ast",
       "id": "package_scripts_preview",
       "community": 5,
-      "community_name": "package.json",
       "norm_label": "preview"
     },
     {
@@ -132,7 +121,6 @@
       "_origin": "ast",
       "id": "package_dependencies",
       "community": 2,
-      "community_name": "dependencies",
       "norm_label": "dependencies"
     },
     {
@@ -143,7 +131,6 @@
       "_origin": "ast",
       "id": "package_dependencies_firebase",
       "community": 2,
-      "community_name": "dependencies",
       "norm_label": "firebase"
     },
     {
@@ -154,7 +141,6 @@
       "_origin": "ast",
       "id": "firebase",
       "community": 2,
-      "community_name": "dependencies",
       "norm_label": "firebase"
     },
     {
@@ -165,7 +151,6 @@
       "_origin": "ast",
       "id": "package_dependencies_framer_motion",
       "community": 2,
-      "community_name": "dependencies",
       "norm_label": "framer-motion"
     },
     {
@@ -176,7 +161,6 @@
       "_origin": "ast",
       "id": "framer_motion",
       "community": 2,
-      "community_name": "dependencies",
       "norm_label": "framer-motion"
     },
     {
@@ -187,7 +171,6 @@
       "_origin": "ast",
       "id": "package_dependencies_gsap",
       "community": 2,
-      "community_name": "dependencies",
       "norm_label": "gsap"
     },
     {
@@ -198,7 +181,6 @@
       "_origin": "ast",
       "id": "gsap",
       "community": 2,
-      "community_name": "dependencies",
       "norm_label": "gsap"
     },
     {
@@ -209,7 +191,6 @@
       "_origin": "ast",
       "id": "package_dependencies_lenis",
       "community": 2,
-      "community_name": "dependencies",
       "norm_label": "lenis"
     },
     {
@@ -220,7 +201,6 @@
       "_origin": "ast",
       "id": "lenis",
       "community": 2,
-      "community_name": "dependencies",
       "norm_label": "lenis"
     },
     {
@@ -231,7 +211,6 @@
       "_origin": "ast",
       "id": "package_dependencies_ogl",
       "community": 2,
-      "community_name": "dependencies",
       "norm_label": "ogl"
     },
     {
@@ -242,7 +221,6 @@
       "_origin": "ast",
       "id": "ogl",
       "community": 2,
-      "community_name": "dependencies",
       "norm_label": "ogl"
     },
     {
@@ -253,7 +231,6 @@
       "_origin": "ast",
       "id": "package_dependencies_react",
       "community": 2,
-      "community_name": "dependencies",
       "norm_label": "react"
     },
     {
@@ -264,7 +241,6 @@
       "_origin": "ast",
       "id": "react",
       "community": 2,
-      "community_name": "dependencies",
       "norm_label": "react"
     },
     {
@@ -275,7 +251,6 @@
       "_origin": "ast",
       "id": "package_dependencies_react_dom",
       "community": 2,
-      "community_name": "dependencies",
       "norm_label": "react-dom"
     },
     {
@@ -286,7 +261,6 @@
       "_origin": "ast",
       "id": "react_dom",
       "community": 2,
-      "community_name": "dependencies",
       "norm_label": "react-dom"
     },
     {
@@ -297,7 +271,6 @@
       "_origin": "ast",
       "id": "package_dependencies_react_icons",
       "community": 2,
-      "community_name": "dependencies",
       "norm_label": "react-icons"
     },
     {
@@ -308,7 +281,6 @@
       "_origin": "ast",
       "id": "react_icons",
       "community": 2,
-      "community_name": "dependencies",
       "norm_label": "react-icons"
     },
     {
@@ -319,7 +291,6 @@
       "_origin": "ast",
       "id": "package_dependencies_react_router_dom",
       "community": 2,
-      "community_name": "dependencies",
       "norm_label": "react-router-dom"
     },
     {
@@ -330,7 +301,6 @@
       "_origin": "ast",
       "id": "react_router_dom",
       "community": 2,
-      "community_name": "dependencies",
       "norm_label": "react-router-dom"
     },
     {
@@ -341,7 +311,6 @@
       "_origin": "ast",
       "id": "package_devdependencies",
       "community": 0,
-      "community_name": "devDependencies",
       "norm_label": "devdependencies"
     },
     {
@@ -352,7 +321,6 @@
       "_origin": "ast",
       "id": "package_devdependencies_eslint_js",
       "community": 0,
-      "community_name": "devDependencies",
       "norm_label": "@eslint/js"
     },
     {
@@ -363,7 +331,6 @@
       "_origin": "ast",
       "id": "eslint_js",
       "community": 0,
-      "community_name": "devDependencies",
       "norm_label": "@eslint/js"
     },
     {
@@ -374,7 +341,6 @@
       "_origin": "ast",
       "id": "package_devdependencies_tailwindcss_vite",
       "community": 0,
-      "community_name": "devDependencies",
       "norm_label": "@tailwindcss/vite"
     },
     {
@@ -385,7 +351,6 @@
       "_origin": "ast",
       "id": "tailwindcss_vite",
       "community": 0,
-      "community_name": "devDependencies",
       "norm_label": "@tailwindcss/vite"
     },
     {
@@ -396,7 +361,6 @@
       "_origin": "ast",
       "id": "package_devdependencies_types_react",
       "community": 0,
-      "community_name": "devDependencies",
       "norm_label": "@types/react"
     },
     {
@@ -407,7 +371,6 @@
       "_origin": "ast",
       "id": "types_react",
       "community": 0,
-      "community_name": "devDependencies",
       "norm_label": "@types/react"
     },
     {
@@ -418,7 +381,6 @@
       "_origin": "ast",
       "id": "package_devdependencies_types_react_dom",
       "community": 0,
-      "community_name": "devDependencies",
       "norm_label": "@types/react-dom"
     },
     {
@@ -429,7 +391,6 @@
       "_origin": "ast",
       "id": "types_react_dom",
       "community": 0,
-      "community_name": "devDependencies",
       "norm_label": "@types/react-dom"
     },
     {
@@ -440,7 +401,6 @@
       "_origin": "ast",
       "id": "package_devdependencies_vitejs_plugin_react",
       "community": 0,
-      "community_name": "devDependencies",
       "norm_label": "@vitejs/plugin-react"
     },
     {
@@ -451,7 +411,6 @@
       "_origin": "ast",
       "id": "vitejs_plugin_react",
       "community": 0,
-      "community_name": "devDependencies",
       "norm_label": "@vitejs/plugin-react"
     },
     {
@@ -462,7 +421,6 @@
       "_origin": "ast",
       "id": "package_devdependencies_eslint",
       "community": 0,
-      "community_name": "devDependencies",
       "norm_label": "eslint"
     },
     {
@@ -473,7 +431,6 @@
       "_origin": "ast",
       "id": "eslint",
       "community": 0,
-      "community_name": "devDependencies",
       "norm_label": "eslint"
     },
     {
@@ -484,7 +441,6 @@
       "_origin": "ast",
       "id": "package_devdependencies_eslint_plugin_react_hooks",
       "community": 0,
-      "community_name": "devDependencies",
       "norm_label": "eslint-plugin-react-hooks"
     },
     {
@@ -495,7 +451,6 @@
       "_origin": "ast",
       "id": "eslint_plugin_react_hooks",
       "community": 0,
-      "community_name": "devDependencies",
       "norm_label": "eslint-plugin-react-hooks"
     },
     {
@@ -506,7 +461,6 @@
       "_origin": "ast",
       "id": "package_devdependencies_eslint_plugin_react_refresh",
       "community": 0,
-      "community_name": "devDependencies",
       "norm_label": "eslint-plugin-react-refresh"
     },
     {
@@ -517,7 +471,6 @@
       "_origin": "ast",
       "id": "eslint_plugin_react_refresh",
       "community": 0,
-      "community_name": "devDependencies",
       "norm_label": "eslint-plugin-react-refresh"
     },
     {
@@ -528,7 +481,6 @@
       "_origin": "ast",
       "id": "package_devdependencies_globals",
       "community": 0,
-      "community_name": "devDependencies",
       "norm_label": "globals"
     },
     {
@@ -539,7 +491,6 @@
       "_origin": "ast",
       "id": "globals",
       "community": 0,
-      "community_name": "devDependencies",
       "norm_label": "globals"
     },
     {
@@ -550,7 +501,6 @@
       "_origin": "ast",
       "id": "package_devdependencies_tailwindcss",
       "community": 0,
-      "community_name": "devDependencies",
       "norm_label": "tailwindcss"
     },
     {
@@ -561,7 +511,6 @@
       "_origin": "ast",
       "id": "tailwindcss",
       "community": 0,
-      "community_name": "devDependencies",
       "norm_label": "tailwindcss"
     },
     {
@@ -572,7 +521,6 @@
       "_origin": "ast",
       "id": "package_devdependencies_vite",
       "community": 0,
-      "community_name": "devDependencies",
       "norm_label": "vite"
     },
     {
@@ -583,7 +531,6 @@
       "_origin": "ast",
       "id": "vite",
       "community": 0,
-      "community_name": "devDependencies",
       "norm_label": "vite"
     },
     {
@@ -593,52 +540,47 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "src_app",
-      "community": 1,
-      "community_name": "App.jsx",
+      "community": 3,
       "norm_label": "app.jsx"
     },
     {
       "label": "pageVariants",
       "file_type": "code",
       "source_file": "src/App.jsx",
-      "source_location": "L16",
+      "source_location": "L15",
       "_origin": "ast",
       "id": "src_app_pagevariants",
-      "community": 1,
-      "community_name": "App.jsx",
+      "community": 3,
       "norm_label": "pagevariants"
     },
     {
       "label": "pageTransition",
       "file_type": "code",
       "source_file": "src/App.jsx",
-      "source_location": "L31",
+      "source_location": "L30",
       "_origin": "ast",
       "id": "src_app_pagetransition",
-      "community": 1,
-      "community_name": "App.jsx",
+      "community": 3,
       "norm_label": "pagetransition"
     },
     {
       "label": "AnimatedRoutes()",
       "file_type": "code",
       "source_file": "src/App.jsx",
-      "source_location": "L37",
+      "source_location": "L36",
       "_origin": "ast",
       "id": "src_app_animatedroutes",
-      "community": 1,
-      "community_name": "App.jsx",
+      "community": 3,
       "norm_label": "animatedroutes()"
     },
     {
       "label": "App()",
       "file_type": "code",
       "source_file": "src/App.jsx",
-      "source_location": "L76",
+      "source_location": "L71",
       "_origin": "ast",
       "id": "src_app_app",
       "community": 3,
-      "community_name": "AuthContext.jsx",
       "norm_label": "app()"
     },
     {
@@ -649,7 +591,6 @@
       "_origin": "ast",
       "id": "src_admin_adminpage",
       "community": 4,
-      "community_name": "AdminPage.jsx",
       "norm_label": "adminpage.jsx"
     },
     {
@@ -660,7 +601,6 @@
       "_origin": "ast",
       "id": "src_admin_adminpage_sectionconfig",
       "community": 4,
-      "community_name": "AdminPage.jsx",
       "norm_label": "sectionconfig"
     },
     {
@@ -671,7 +611,6 @@
       "_origin": "ast",
       "id": "src_admin_adminpage_buildempty",
       "community": 4,
-      "community_name": "AdminPage.jsx",
       "norm_label": "buildempty()"
     },
     {
@@ -682,7 +621,6 @@
       "_origin": "ast",
       "id": "src_admin_adminpage_compressimage",
       "community": 4,
-      "community_name": "AdminPage.jsx",
       "norm_label": "compressimage()"
     },
     {
@@ -693,7 +631,6 @@
       "_origin": "ast",
       "id": "src_admin_adminpage_s",
       "community": 4,
-      "community_name": "AdminPage.jsx",
       "norm_label": "s"
     },
     {
@@ -704,7 +641,6 @@
       "_origin": "ast",
       "id": "src_admin_adminpage_cardvariants",
       "community": 4,
-      "community_name": "AdminPage.jsx",
       "norm_label": "cardvariants"
     },
     {
@@ -715,52 +651,7 @@
       "_origin": "ast",
       "id": "src_admin_adminpage_adminpage",
       "community": 4,
-      "community_name": "AdminPage.jsx",
       "norm_label": "adminpage()"
-    },
-    {
-      "label": "AnimatedNavFramer.jsx",
-      "file_type": "code",
-      "source_file": "src/components/AnimatedNavFramer.jsx",
-      "source_location": "L1",
-      "_origin": "ast",
-      "id": "src_components_animatednavframer",
-      "community": 4,
-      "community_name": "AdminPage.jsx",
-      "norm_label": "animatednavframer.jsx"
-    },
-    {
-      "label": "navLinks",
-      "file_type": "code",
-      "source_file": "src/components/AnimatedNavFramer.jsx",
-      "source_location": "L7",
-      "_origin": "ast",
-      "id": "src_components_animatednavframer_navlinks",
-      "community": 4,
-      "community_name": "AdminPage.jsx",
-      "norm_label": "navlinks"
-    },
-    {
-      "label": "ThemeIcon()",
-      "file_type": "code",
-      "source_file": "src/components/AnimatedNavFramer.jsx",
-      "source_location": "L14",
-      "_origin": "ast",
-      "id": "src_components_animatednavframer_themeicon",
-      "community": 4,
-      "community_name": "AdminPage.jsx",
-      "norm_label": "themeicon()"
-    },
-    {
-      "label": "AnimatedNavFramer()",
-      "file_type": "code",
-      "source_file": "src/components/AnimatedNavFramer.jsx",
-      "source_location": "L22",
-      "_origin": "ast",
-      "id": "src_components_animatednavframer_animatednavframer",
-      "community": 4,
-      "community_name": "AdminPage.jsx",
-      "norm_label": "animatednavframer()"
     },
     {
       "label": "DeleteModal.jsx",
@@ -770,7 +661,6 @@
       "_origin": "ast",
       "id": "src_components_deletemodal",
       "community": 4,
-      "community_name": "AdminPage.jsx",
       "norm_label": "deletemodal.jsx"
     },
     {
@@ -781,7 +671,6 @@
       "_origin": "ast",
       "id": "src_components_deletemodal_deletemodal",
       "community": 4,
-      "community_name": "AdminPage.jsx",
       "norm_label": "deletemodal()"
     },
     {
@@ -792,96 +681,37 @@
       "_origin": "ast",
       "id": "src_components_footer",
       "community": 1,
-      "community_name": "App.jsx",
       "norm_label": "footer.jsx"
-    },
-    {
-      "label": "buildCells()",
-      "file_type": "code",
-      "source_file": "src/components/Footer.jsx",
-      "source_location": "L8",
-      "_origin": "ast",
-      "id": "src_components_footer_buildcells",
-      "community": 1,
-      "community_name": "App.jsx",
-      "norm_label": "buildcells()"
-    },
-    {
-      "label": "FooterCanvas()",
-      "file_type": "code",
-      "source_file": "src/components/Footer.jsx",
-      "source_location": "L45",
-      "_origin": "ast",
-      "id": "src_components_footer_footercanvas",
-      "community": 1,
-      "community_name": "App.jsx",
-      "norm_label": "footercanvas()"
     },
     {
       "label": "Footer()",
       "file_type": "code",
       "source_file": "src/components/Footer.jsx",
-      "source_location": "L130",
+      "source_location": "L8",
       "_origin": "ast",
       "id": "src_components_footer_footer",
       "community": 1,
-      "community_name": "App.jsx",
       "norm_label": "footer()"
     },
     {
-      "label": "KineticTextLoader.jsx",
+      "label": "Navbar.jsx",
       "file_type": "code",
-      "source_file": "src/components/KineticTextLoader.jsx",
+      "source_file": "src/components/Navbar.jsx",
       "source_location": "L1",
       "_origin": "ast",
-      "id": "src_components_kinetictextloader",
-      "community": 20,
-      "community_name": "Preloader.jsx",
-      "norm_label": "kinetictextloader.jsx"
+      "id": "src_components_navbar",
+      "community": 4,
+      "norm_label": "navbar.jsx"
     },
     {
-      "label": "KineticTextLoader()",
+      "label": "Navbar()",
       "file_type": "code",
-      "source_file": "src/components/KineticTextLoader.jsx",
-      "source_location": "L25",
+      "source_file": "src/components/Navbar.jsx",
+      "source_location": "L6",
       "_origin": "ast",
-      "id": "src_components_kinetictextloader_kinetictextloader",
-      "community": 20,
-      "community_name": "Preloader.jsx",
-      "norm_label": "kinetictextloader()"
-    },
-    {
-      "label": "LiquidMetalButton.jsx",
-      "file_type": "code",
-      "source_file": "src/components/LiquidMetalButton.jsx",
-      "source_location": "L1",
-      "_origin": "ast",
-      "id": "src_components_liquidmetalbutton",
-      "community": 21,
-      "community_name": "LiquidMetalButton.jsx",
-      "norm_label": "liquidmetalbutton.jsx"
-    },
-    {
-      "label": "LiquidMetal",
-      "file_type": "code",
-      "source_file": "src/components/LiquidMetalButton.jsx",
-      "source_location": "L8",
-      "_origin": "ast",
-      "id": "src_components_liquidmetalbutton_liquidmetal",
-      "community": 21,
-      "community_name": "LiquidMetalButton.jsx",
-      "norm_label": "liquidmetal"
-    },
-    {
-      "label": "LiquidMetalButton",
-      "file_type": "code",
-      "source_file": "src/components/LiquidMetalButton.jsx",
-      "source_location": "L34",
-      "_origin": "ast",
-      "id": "src_components_liquidmetalbutton_liquidmetalbutton",
-      "community": 21,
-      "community_name": "LiquidMetalButton.jsx",
-      "norm_label": "liquidmetalbutton"
+      "id": "src_components_navbar_navbar",
+      "community": 4,
+      "norm_label": "navbar()"
     },
     {
       "label": "PageTransition.jsx",
@@ -891,7 +721,6 @@
       "_origin": "ast",
       "id": "src_components_pagetransition",
       "community": 10,
-      "community_name": "PageTransition.jsx",
       "norm_label": "pagetransition.jsx"
     },
     {
@@ -902,7 +731,6 @@
       "_origin": "ast",
       "id": "src_components_pagetransition_pagetransition",
       "community": 10,
-      "community_name": "PageTransition.jsx",
       "norm_label": "pagetransition()"
     },
     {
@@ -912,19 +740,17 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "src_components_preloader",
-      "community": 20,
-      "community_name": "Preloader.jsx",
+      "community": 3,
       "norm_label": "preloader.jsx"
     },
     {
       "label": "Preloader()",
       "file_type": "code",
       "source_file": "src/components/Preloader.jsx",
-      "source_location": "L5",
+      "source_location": "L4",
       "_origin": "ast",
       "id": "src_components_preloader_preloader",
-      "community": 20,
-      "community_name": "Preloader.jsx",
+      "community": 3,
       "norm_label": "preloader()"
     },
     {
@@ -935,7 +761,6 @@
       "_origin": "ast",
       "id": "src_components_protectedroute",
       "community": 3,
-      "community_name": "AuthContext.jsx",
       "norm_label": "protectedroute.jsx"
     },
     {
@@ -946,7 +771,6 @@
       "_origin": "ast",
       "id": "src_components_protectedroute_protectedroute",
       "community": 3,
-      "community_name": "AuthContext.jsx",
       "norm_label": "protectedroute()"
     },
     {
@@ -957,7 +781,6 @@
       "_origin": "ast",
       "id": "src_components_smoothscroll",
       "community": 15,
-      "community_name": "SmoothScroll.jsx",
       "norm_label": "smoothscroll.jsx"
     },
     {
@@ -968,7 +791,6 @@
       "_origin": "ast",
       "id": "src_components_smoothscroll_smoothscroll",
       "community": 15,
-      "community_name": "SmoothScroll.jsx",
       "norm_label": "smoothscroll()"
     },
     {
@@ -979,7 +801,6 @@
       "_origin": "ast",
       "id": "src_components_reactbits_decryptedtext",
       "community": 11,
-      "community_name": "DecryptedText.jsx",
       "norm_label": "decryptedtext.jsx"
     },
     {
@@ -990,7 +811,6 @@
       "_origin": "ast",
       "id": "src_components_reactbits_decryptedtext_decryptedtext",
       "community": 11,
-      "community_name": "DecryptedText.jsx",
       "norm_label": "decryptedtext()"
     },
     {
@@ -1001,7 +821,6 @@
       "_origin": "ast",
       "id": "src_components_reactbits_flipbookimage",
       "community": 9,
-      "community_name": "FlipbookImage.jsx",
       "norm_label": "flipbookimage.jsx"
     },
     {
@@ -1012,7 +831,6 @@
       "_origin": "ast",
       "id": "src_components_reactbits_flipbookimage_filter_presets",
       "community": 9,
-      "community_name": "FlipbookImage.jsx",
       "norm_label": "filter_presets"
     },
     {
@@ -1023,7 +841,6 @@
       "_origin": "ast",
       "id": "src_components_reactbits_flipbookimage_flipbookimage",
       "community": 9,
-      "community_name": "FlipbookImage.jsx",
       "norm_label": "flipbookimage()"
     },
     {
@@ -1034,7 +851,6 @@
       "_origin": "ast",
       "id": "src_components_reactbits_flowingmenu",
       "community": 1,
-      "community_name": "App.jsx",
       "norm_label": "flowingmenu.jsx"
     },
     {
@@ -1045,7 +861,6 @@
       "_origin": "ast",
       "id": "src_components_reactbits_flowingmenu_flowingmenu",
       "community": 1,
-      "community_name": "App.jsx",
       "norm_label": "flowingmenu()"
     },
     {
@@ -1056,7 +871,6 @@
       "_origin": "ast",
       "id": "src_components_reactbits_flowingmenu_menuitem",
       "community": 1,
-      "community_name": "App.jsx",
       "norm_label": "menuitem()"
     },
     {
@@ -1067,7 +881,6 @@
       "_origin": "ast",
       "id": "src_components_reactbits_imagetrail",
       "community": 8,
-      "community_name": "ImageTrail.jsx",
       "norm_label": "imagetrail.jsx"
     },
     {
@@ -1078,7 +891,6 @@
       "_origin": "ast",
       "id": "src_components_reactbits_imagetrail_lerp",
       "community": 8,
-      "community_name": "ImageTrail.jsx",
       "norm_label": "lerp()"
     },
     {
@@ -1089,7 +901,6 @@
       "_origin": "ast",
       "id": "src_components_reactbits_imagetrail_getlocalpointerpos",
       "community": 8,
-      "community_name": "ImageTrail.jsx",
       "norm_label": "getlocalpointerpos()"
     },
     {
@@ -1100,7 +911,6 @@
       "_origin": "ast",
       "id": "src_components_reactbits_imagetrail_getmousedistance",
       "community": 8,
-      "community_name": "ImageTrail.jsx",
       "norm_label": "getmousedistance()"
     },
     {
@@ -1111,7 +921,6 @@
       "_origin": "ast",
       "id": "src_components_reactbits_imagetrail_imagetrail",
       "community": 8,
-      "community_name": "ImageTrail.jsx",
       "norm_label": "imagetrail()"
     },
     {
@@ -1122,7 +931,6 @@
       "_origin": "ast",
       "id": "src_components_reactbits_magnet",
       "community": 12,
-      "community_name": "Magnet.jsx",
       "norm_label": "magnet.jsx"
     },
     {
@@ -1133,7 +941,6 @@
       "_origin": "ast",
       "id": "src_components_reactbits_magnet_magnet",
       "community": 12,
-      "community_name": "Magnet.jsx",
       "norm_label": "magnet()"
     },
     {
@@ -1144,7 +951,6 @@
       "_origin": "ast",
       "id": "src_components_reactbits_scrollfloat",
       "community": 1,
-      "community_name": "App.jsx",
       "norm_label": "scrollfloat.jsx"
     },
     {
@@ -1155,7 +961,6 @@
       "_origin": "ast",
       "id": "src_components_reactbits_scrollfloat_scrollfloat",
       "community": 1,
-      "community_name": "App.jsx",
       "norm_label": "scrollfloat()"
     },
     {
@@ -1166,7 +971,6 @@
       "_origin": "ast",
       "id": "src_components_reactbits_splittext",
       "community": 13,
-      "community_name": "SplitText.jsx",
       "norm_label": "splittext.jsx"
     },
     {
@@ -1177,7 +981,6 @@
       "_origin": "ast",
       "id": "src_components_reactbits_splittext_splittext",
       "community": 13,
-      "community_name": "SplitText.jsx",
       "norm_label": "splittext()"
     },
     {
@@ -1188,7 +991,6 @@
       "_origin": "ast",
       "id": "src_components_reactbits_spotlight",
       "community": 14,
-      "community_name": "Spotlight.jsx",
       "norm_label": "spotlight.jsx"
     },
     {
@@ -1199,7 +1001,6 @@
       "_origin": "ast",
       "id": "src_components_reactbits_spotlight_spotlight",
       "community": 14,
-      "community_name": "Spotlight.jsx",
       "norm_label": "spotlight()"
     },
     {
@@ -1210,7 +1011,6 @@
       "_origin": "ast",
       "id": "src_context_authcontext",
       "community": 3,
-      "community_name": "AuthContext.jsx",
       "norm_label": "authcontext.jsx"
     },
     {
@@ -1221,7 +1021,6 @@
       "_origin": "ast",
       "id": "src_context_authcontext_authcontext",
       "community": 3,
-      "community_name": "AuthContext.jsx",
       "norm_label": "authcontext"
     },
     {
@@ -1232,7 +1031,6 @@
       "_origin": "ast",
       "id": "src_context_authcontext_authprovider",
       "community": 3,
-      "community_name": "AuthContext.jsx",
       "norm_label": "authprovider()"
     },
     {
@@ -1243,7 +1041,6 @@
       "_origin": "ast",
       "id": "src_context_authcontext_useauth",
       "community": 3,
-      "community_name": "AuthContext.jsx",
       "norm_label": "useauth()"
     },
     {
@@ -1253,8 +1050,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "src_context_portfoliocontext",
-      "community": 6,
-      "community_name": "PortfolioContext.jsx",
+      "community": 1,
       "norm_label": "portfoliocontext.jsx"
     },
     {
@@ -1264,8 +1060,7 @@
       "source_location": "L5",
       "_origin": "ast",
       "id": "src_context_portfoliocontext_portfoliocontext",
-      "community": 6,
-      "community_name": "PortfolioContext.jsx",
+      "community": 1,
       "norm_label": "portfoliocontext"
     },
     {
@@ -1275,8 +1070,7 @@
       "source_location": "L7",
       "_origin": "ast",
       "id": "src_context_portfoliocontext_portfolioprovider",
-      "community": 6,
-      "community_name": "PortfolioContext.jsx",
+      "community": 1,
       "norm_label": "portfolioprovider()"
     },
     {
@@ -1287,7 +1081,6 @@
       "_origin": "ast",
       "id": "src_context_portfoliocontext_useportfolio",
       "community": 1,
-      "community_name": "App.jsx",
       "norm_label": "useportfolio()"
     },
     {
@@ -1298,7 +1091,6 @@
       "_origin": "ast",
       "id": "src_data_defaultdata",
       "community": 6,
-      "community_name": "PortfolioContext.jsx",
       "norm_label": "defaultdata.js"
     },
     {
@@ -1309,7 +1101,6 @@
       "_origin": "ast",
       "id": "src_data_defaultdata_defaultportfoliodata",
       "community": 6,
-      "community_name": "PortfolioContext.jsx",
       "norm_label": "defaultportfoliodata"
     },
     {
@@ -1320,7 +1111,6 @@
       "_origin": "ast",
       "id": "src_firebase",
       "community": 6,
-      "community_name": "PortfolioContext.jsx",
       "norm_label": "firebase.js"
     },
     {
@@ -1331,7 +1121,6 @@
       "_origin": "ast",
       "id": "src_firebase_firebaseconfig",
       "community": 6,
-      "community_name": "PortfolioContext.jsx",
       "norm_label": "firebaseconfig"
     },
     {
@@ -1342,7 +1131,6 @@
       "_origin": "ast",
       "id": "src_firebase_app",
       "community": 6,
-      "community_name": "PortfolioContext.jsx",
       "norm_label": "app"
     },
     {
@@ -1353,7 +1141,6 @@
       "_origin": "ast",
       "id": "src_firebase_auth",
       "community": 6,
-      "community_name": "PortfolioContext.jsx",
       "norm_label": "auth"
     },
     {
@@ -1364,7 +1151,6 @@
       "_origin": "ast",
       "id": "src_firebase_db",
       "community": 6,
-      "community_name": "PortfolioContext.jsx",
       "norm_label": "db"
     },
     {
@@ -1375,7 +1161,6 @@
       "_origin": "ast",
       "id": "src_firebase_storage",
       "community": 6,
-      "community_name": "PortfolioContext.jsx",
       "norm_label": "storage"
     },
     {
@@ -1386,7 +1171,6 @@
       "_origin": "ast",
       "id": "src_hooks_usefirestore",
       "community": 6,
-      "community_name": "PortfolioContext.jsx",
       "norm_label": "usefirestore.js"
     },
     {
@@ -1397,7 +1181,6 @@
       "_origin": "ast",
       "id": "src_hooks_usefirestore_doc_ref",
       "community": 6,
-      "community_name": "PortfolioContext.jsx",
       "norm_label": "doc_ref"
     },
     {
@@ -1407,8 +1190,7 @@
       "source_location": "L8",
       "_origin": "ast",
       "id": "src_hooks_usefirestore_usefirestore",
-      "community": 6,
-      "community_name": "PortfolioContext.jsx",
+      "community": 1,
       "norm_label": "usefirestore()"
     },
     {
@@ -1419,7 +1201,6 @@
       "_origin": "ast",
       "id": "src_hooks_usegsap",
       "community": 7,
-      "community_name": "useGsap.js",
       "norm_label": "usegsap.js"
     },
     {
@@ -1430,7 +1211,6 @@
       "_origin": "ast",
       "id": "src_hooks_usegsap_prefersreducedmotion",
       "community": 7,
-      "community_name": "useGsap.js",
       "norm_label": "prefersreducedmotion()"
     },
     {
@@ -1441,7 +1221,6 @@
       "_origin": "ast",
       "id": "src_hooks_usegsap_usemaskreveal",
       "community": 7,
-      "community_name": "useGsap.js",
       "norm_label": "usemaskreveal()"
     },
     {
@@ -1452,7 +1231,6 @@
       "_origin": "ast",
       "id": "src_hooks_usegsap_useparallax",
       "community": 7,
-      "community_name": "useGsap.js",
       "norm_label": "useparallax()"
     },
     {
@@ -1463,7 +1241,6 @@
       "_origin": "ast",
       "id": "src_hooks_usegsap_usescrollreveal",
       "community": 7,
-      "community_name": "useGsap.js",
       "norm_label": "usescrollreveal()"
     },
     {
@@ -1474,7 +1251,6 @@
       "_origin": "ast",
       "id": "src_hooks_usegsap_usestaggerreveal",
       "community": 7,
-      "community_name": "useGsap.js",
       "norm_label": "usestaggerreveal()"
     },
     {
@@ -1485,7 +1261,6 @@
       "_origin": "ast",
       "id": "src_hooks_usegsap_uselinereveal",
       "community": 7,
-      "community_name": "useGsap.js",
       "norm_label": "uselinereveal()"
     },
     {
@@ -1496,7 +1271,6 @@
       "_origin": "ast",
       "id": "src_hooks_usegsap_useimagereveal",
       "community": 7,
-      "community_name": "useGsap.js",
       "norm_label": "useimagereveal()"
     },
     {
@@ -1507,7 +1281,6 @@
       "_origin": "ast",
       "id": "src_hooks_usegsap_usepagetransition",
       "community": 7,
-      "community_name": "useGsap.js",
       "norm_label": "usepagetransition()"
     },
     {
@@ -1518,7 +1291,6 @@
       "_origin": "ast",
       "id": "src_hooks_usetheme",
       "community": 4,
-      "community_name": "AdminPage.jsx",
       "norm_label": "usetheme.js"
     },
     {
@@ -1529,7 +1301,6 @@
       "_origin": "ast",
       "id": "src_hooks_usetheme_usetheme",
       "community": 4,
-      "community_name": "AdminPage.jsx",
       "norm_label": "usetheme()"
     },
     {
@@ -1540,7 +1311,6 @@
       "_origin": "ast",
       "id": "src_main",
       "community": 3,
-      "community_name": "AuthContext.jsx",
       "norm_label": "main.jsx"
     },
     {
@@ -1551,7 +1321,6 @@
       "_origin": "ast",
       "id": "src_pages_about",
       "community": 1,
-      "community_name": "App.jsx",
       "norm_label": "about.jsx"
     },
     {
@@ -1562,7 +1331,6 @@
       "_origin": "ast",
       "id": "src_pages_about_defaultservices",
       "community": 1,
-      "community_name": "App.jsx",
       "norm_label": "defaultservices"
     },
     {
@@ -1573,7 +1341,6 @@
       "_origin": "ast",
       "id": "src_pages_about_about",
       "community": 1,
-      "community_name": "App.jsx",
       "norm_label": "about()"
     },
     {
@@ -1584,7 +1351,6 @@
       "_origin": "ast",
       "id": "src_pages_adminlogin",
       "community": 3,
-      "community_name": "AuthContext.jsx",
       "norm_label": "adminlogin.jsx"
     },
     {
@@ -1595,7 +1361,6 @@
       "_origin": "ast",
       "id": "src_pages_adminlogin_adminlogin",
       "community": 3,
-      "community_name": "AuthContext.jsx",
       "norm_label": "adminlogin()"
     },
     {
@@ -1606,7 +1371,6 @@
       "_origin": "ast",
       "id": "src_pages_contact",
       "community": 1,
-      "community_name": "App.jsx",
       "norm_label": "contact.jsx"
     },
     {
@@ -1617,7 +1381,6 @@
       "_origin": "ast",
       "id": "src_pages_contact_contact",
       "community": 1,
-      "community_name": "App.jsx",
       "norm_label": "contact()"
     },
     {
@@ -1628,29 +1391,16 @@
       "_origin": "ast",
       "id": "src_pages_home",
       "community": 1,
-      "community_name": "App.jsx",
       "norm_label": "home.jsx"
-    },
-    {
-      "label": "ArrowRight()",
-      "file_type": "code",
-      "source_file": "src/pages/Home.jsx",
-      "source_location": "L5",
-      "_origin": "ast",
-      "id": "src_pages_home_arrowright",
-      "community": 1,
-      "community_name": "App.jsx",
-      "norm_label": "arrowright()"
     },
     {
       "label": "Home()",
       "file_type": "code",
       "source_file": "src/pages/Home.jsx",
-      "source_location": "L13",
+      "source_location": "L8",
       "_origin": "ast",
       "id": "src_pages_home_home",
       "community": 1,
-      "community_name": "App.jsx",
       "norm_label": "home()"
     },
     {
@@ -1661,7 +1411,6 @@
       "_origin": "ast",
       "id": "src_pages_loginpage",
       "community": 3,
-      "community_name": "AuthContext.jsx",
       "norm_label": "loginpage.jsx"
     },
     {
@@ -1672,7 +1421,6 @@
       "_origin": "ast",
       "id": "src_pages_loginpage_loginpage",
       "community": 3,
-      "community_name": "AuthContext.jsx",
       "norm_label": "loginpage()"
     },
     {
@@ -1683,7 +1431,6 @@
       "_origin": "ast",
       "id": "src_pages_projectdetail",
       "community": 1,
-      "community_name": "App.jsx",
       "norm_label": "projectdetail.jsx"
     },
     {
@@ -1694,7 +1441,6 @@
       "_origin": "ast",
       "id": "src_pages_projectdetail_projectdetail",
       "community": 1,
-      "community_name": "App.jsx",
       "norm_label": "projectdetail()"
     },
     {
@@ -1705,30 +1451,7 @@
       "_origin": "ast",
       "id": "src_pages_projectdetail_nextproject",
       "community": 1,
-      "community_name": "App.jsx",
       "norm_label": "nextproject()"
-    },
-    {
-      "label": "Projects.jsx",
-      "file_type": "code",
-      "source_file": "src/pages/Projects.jsx",
-      "source_location": "L1",
-      "_origin": "ast",
-      "id": "src_pages_projects",
-      "community": 1,
-      "community_name": "App.jsx",
-      "norm_label": "projects.jsx"
-    },
-    {
-      "label": "Projects()",
-      "file_type": "code",
-      "source_file": "src/pages/Projects.jsx",
-      "source_location": "L6",
-      "_origin": "ast",
-      "id": "src_pages_projects_projects",
-      "community": 1,
-      "community_name": "App.jsx",
-      "norm_label": "projects()"
     },
     {
       "label": "vercel.json",
@@ -1738,7 +1461,6 @@
       "_origin": "ast",
       "id": "vercel",
       "community": 16,
-      "community_name": "vercel.json",
       "norm_label": "vercel.json"
     },
     {
@@ -1749,7 +1471,6 @@
       "_origin": "ast",
       "id": "vercel_rewrites",
       "community": 16,
-      "community_name": "vercel.json",
       "norm_label": "rewrites"
     },
     {
@@ -1760,85 +1481,7 @@
       "_origin": "ast",
       "id": "vite_config",
       "community": 18,
-      "community_name": "vite.config.js",
       "norm_label": "vite.config.js"
-    },
-    {
-      "label": "CLAUDE.md",
-      "file_type": "document",
-      "source_file": "CLAUDE.md",
-      "source_location": "L1",
-      "_origin": "ast",
-      "id": "claude",
-      "community": 22,
-      "community_name": "CLAUDE.md",
-      "norm_label": "claude.md"
-    },
-    {
-      "label": "graphify",
-      "file_type": "document",
-      "source_file": "CLAUDE.md",
-      "source_location": "L1",
-      "_origin": "ast",
-      "id": "claude_graphify",
-      "community": 22,
-      "community_name": "CLAUDE.md",
-      "norm_label": "graphify"
-    },
-    {
-      "label": "README.md",
-      "file_type": "document",
-      "source_file": "README.md",
-      "source_location": "L1",
-      "_origin": "ast",
-      "id": "readme",
-      "community": 19,
-      "community_name": "React + Vite",
-      "norm_label": "readme.md"
-    },
-    {
-      "label": "React + Vite",
-      "file_type": "document",
-      "source_file": "README.md",
-      "source_location": "L1",
-      "_origin": "ast",
-      "id": "readme_react_vite",
-      "community": 19,
-      "community_name": "React + Vite",
-      "norm_label": "react + vite"
-    },
-    {
-      "label": "React Compiler",
-      "file_type": "document",
-      "source_file": "README.md",
-      "source_location": "L10",
-      "_origin": "ast",
-      "id": "readme_react_compiler",
-      "community": 19,
-      "community_name": "React + Vite",
-      "norm_label": "react compiler"
-    },
-    {
-      "label": "Expanding the ESLint configuration",
-      "file_type": "document",
-      "source_file": "README.md",
-      "source_location": "L14",
-      "_origin": "ast",
-      "id": "readme_expanding_the_eslint_configuration",
-      "community": 19,
-      "community_name": "React + Vite",
-      "norm_label": "expanding the eslint configuration"
-    },
-    {
-      "label": "READMEAGENTS.md",
-      "file_type": "document",
-      "source_file": "READMEAGENTS.md",
-      "source_location": "L1",
-      "_origin": "ast",
-      "id": "readmeagents",
-      "community": 23,
-      "community_name": "READMEAGENTS.md",
-      "norm_label": "readmeagents.md"
     }
   ],
   "links": [
@@ -2428,7 +2071,7 @@
       "context": "import",
       "confidence": "EXTRACTED",
       "source_file": "src/App.jsx",
-      "source_location": "L12",
+      "source_location": "L11",
       "weight": 1.0,
       "_origin": "ast",
       "source": "src_app",
@@ -2440,7 +2083,7 @@
       "context": "import",
       "confidence": "EXTRACTED",
       "source_file": "src/App.jsx",
-      "source_location": "L12",
+      "source_location": "L11",
       "weight": 1.0,
       "_origin": "ast",
       "source": "src_app",
@@ -2451,7 +2094,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "src/App.jsx",
-      "source_location": "L37",
+      "source_location": "L36",
       "weight": 1.0,
       "_origin": "ast",
       "source": "src_app",
@@ -2462,7 +2105,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "src/App.jsx",
-      "source_location": "L76",
+      "source_location": "L71",
       "weight": 1.0,
       "_origin": "ast",
       "source": "src_app",
@@ -2473,7 +2116,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "src/App.jsx",
-      "source_location": "L31",
+      "source_location": "L30",
       "weight": 1.0,
       "_origin": "ast",
       "source": "src_app",
@@ -2484,7 +2127,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "src/App.jsx",
-      "source_location": "L16",
+      "source_location": "L15",
       "weight": 1.0,
       "_origin": "ast",
       "source": "src_app",
@@ -2500,7 +2143,7 @@
       "weight": 1.0,
       "_origin": "ast",
       "source": "src_app",
-      "target": "src_components_animatednavframer",
+      "target": "src_components_navbar",
       "confidence_score": 1.0
     },
     {
@@ -2512,7 +2155,7 @@
       "weight": 1.0,
       "_origin": "ast",
       "source": "src_app",
-      "target": "src_components_animatednavframer_animatednavframer",
+      "target": "src_components_navbar_navbar",
       "confidence_score": 1.0
     },
     {
@@ -2568,7 +2211,7 @@
       "context": "import",
       "confidence": "EXTRACTED",
       "source_file": "src/App.jsx",
-      "source_location": "L9",
+      "source_location": "L8",
       "weight": 1.0,
       "_origin": "ast",
       "source": "src_app",
@@ -2580,7 +2223,7 @@
       "context": "import",
       "confidence": "EXTRACTED",
       "source_file": "src/App.jsx",
-      "source_location": "L9",
+      "source_location": "L8",
       "weight": 1.0,
       "_origin": "ast",
       "source": "src_app",
@@ -2592,7 +2235,7 @@
       "context": "import",
       "confidence": "EXTRACTED",
       "source_file": "src/App.jsx",
-      "source_location": "L13",
+      "source_location": "L12",
       "weight": 1.0,
       "_origin": "ast",
       "source": "src_app",
@@ -2604,7 +2247,7 @@
       "context": "import",
       "confidence": "EXTRACTED",
       "source_file": "src/App.jsx",
-      "source_location": "L13",
+      "source_location": "L12",
       "weight": 1.0,
       "_origin": "ast",
       "source": "src_app",
@@ -2616,7 +2259,7 @@
       "context": "import",
       "confidence": "EXTRACTED",
       "source_file": "src/App.jsx",
-      "source_location": "L10",
+      "source_location": "L9",
       "weight": 1.0,
       "_origin": "ast",
       "source": "src_app",
@@ -2628,7 +2271,7 @@
       "context": "import",
       "confidence": "EXTRACTED",
       "source_file": "src/App.jsx",
-      "source_location": "L10",
+      "source_location": "L9",
       "weight": 1.0,
       "_origin": "ast",
       "source": "src_app",
@@ -2664,7 +2307,7 @@
       "context": "import",
       "confidence": "EXTRACTED",
       "source_file": "src/App.jsx",
-      "source_location": "L11",
+      "source_location": "L10",
       "weight": 1.0,
       "_origin": "ast",
       "source": "src_app",
@@ -2676,35 +2319,11 @@
       "context": "import",
       "confidence": "EXTRACTED",
       "source_file": "src/App.jsx",
-      "source_location": "L11",
+      "source_location": "L10",
       "weight": 1.0,
       "_origin": "ast",
       "source": "src_app",
       "target": "src_pages_projectdetail_projectdetail",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "imports_from",
-      "context": "import",
-      "confidence": "EXTRACTED",
-      "source_file": "src/App.jsx",
-      "source_location": "L8",
-      "weight": 1.0,
-      "_origin": "ast",
-      "source": "src_app",
-      "target": "src_pages_projects",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "imports",
-      "context": "import",
-      "confidence": "EXTRACTED",
-      "source_file": "src/App.jsx",
-      "source_location": "L8",
-      "weight": 1.0,
-      "_origin": "ast",
-      "source": "src_app",
-      "target": "src_pages_projects_projects",
       "confidence_score": 1.0
     },
     {
@@ -2956,111 +2575,6 @@
     {
       "relation": "contains",
       "confidence": "EXTRACTED",
-      "source_file": "src/components/AnimatedNavFramer.jsx",
-      "source_location": "L22",
-      "weight": 1.0,
-      "_origin": "ast",
-      "source": "src_components_animatednavframer",
-      "target": "src_components_animatednavframer_animatednavframer",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "src/components/AnimatedNavFramer.jsx",
-      "source_location": "L7",
-      "weight": 1.0,
-      "_origin": "ast",
-      "source": "src_components_animatednavframer",
-      "target": "src_components_animatednavframer_navlinks",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "src/components/AnimatedNavFramer.jsx",
-      "source_location": "L14",
-      "weight": 1.0,
-      "_origin": "ast",
-      "source": "src_components_animatednavframer",
-      "target": "src_components_animatednavframer_themeicon",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "imports_from",
-      "context": "import",
-      "confidence": "EXTRACTED",
-      "source_file": "src/components/AnimatedNavFramer.jsx",
-      "source_location": "L4",
-      "weight": 1.0,
-      "_origin": "ast",
-      "source": "src_components_animatednavframer",
-      "target": "src_context_portfoliocontext",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "imports",
-      "context": "import",
-      "confidence": "EXTRACTED",
-      "source_file": "src/components/AnimatedNavFramer.jsx",
-      "source_location": "L4",
-      "weight": 1.0,
-      "_origin": "ast",
-      "source": "src_components_animatednavframer",
-      "target": "src_context_portfoliocontext_useportfolio",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "imports_from",
-      "context": "import",
-      "confidence": "EXTRACTED",
-      "source_file": "src/components/AnimatedNavFramer.jsx",
-      "source_location": "L5",
-      "weight": 1.0,
-      "_origin": "ast",
-      "source": "src_components_animatednavframer",
-      "target": "src_hooks_usetheme",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "imports",
-      "context": "import",
-      "confidence": "EXTRACTED",
-      "source_file": "src/components/AnimatedNavFramer.jsx",
-      "source_location": "L5",
-      "weight": 1.0,
-      "_origin": "ast",
-      "source": "src_components_animatednavframer",
-      "target": "src_hooks_usetheme_usetheme",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "calls",
-      "context": "call",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "src/components/AnimatedNavFramer.jsx",
-      "source_location": "L24",
-      "weight": 1.0,
-      "_origin": "ast",
-      "source": "src_components_animatednavframer_animatednavframer",
-      "target": "src_context_portfoliocontext_useportfolio"
-    },
-    {
-      "relation": "calls",
-      "context": "call",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "src/components/AnimatedNavFramer.jsx",
-      "source_location": "L25",
-      "weight": 1.0,
-      "_origin": "ast",
-      "source": "src_components_animatednavframer_animatednavframer",
-      "target": "src_hooks_usetheme_usetheme"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
       "source_file": "src/components/DeleteModal.jsx",
       "source_location": "L3",
       "weight": 1.0,
@@ -3077,29 +2591,7 @@
       "weight": 1.0,
       "_origin": "ast",
       "source": "src_components_footer",
-      "target": "src_components_footer_buildcells",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "src/components/Footer.jsx",
-      "source_location": "L130",
-      "weight": 1.0,
-      "_origin": "ast",
-      "source": "src_components_footer",
       "target": "src_components_footer_footer",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "src/components/Footer.jsx",
-      "source_location": "L45",
-      "weight": 1.0,
-      "_origin": "ast",
-      "source": "src_components_footer",
-      "target": "src_components_footer_footercanvas",
       "confidence_score": 1.0
     },
     {
@@ -3107,7 +2599,7 @@
       "context": "import",
       "confidence": "EXTRACTED",
       "source_file": "src/components/Footer.jsx",
-      "source_location": "L3",
+      "source_location": "L2",
       "weight": 1.0,
       "_origin": "ast",
       "source": "src_components_footer",
@@ -3119,7 +2611,7 @@
       "context": "import",
       "confidence": "EXTRACTED",
       "source_file": "src/components/Footer.jsx",
-      "source_location": "L3",
+      "source_location": "L2",
       "weight": 1.0,
       "_origin": "ast",
       "source": "src_components_footer",
@@ -3143,7 +2635,7 @@
       "context": "import",
       "confidence": "EXTRACTED",
       "source_file": "src/pages/Home.jsx",
-      "source_location": "L2",
+      "source_location": "L5",
       "weight": 1.0,
       "_origin": "ast",
       "source": "src_pages_home",
@@ -3163,35 +2655,11 @@
       "confidence_score": 1.0
     },
     {
-      "relation": "imports_from",
-      "context": "import",
-      "confidence": "EXTRACTED",
-      "source_file": "src/pages/Projects.jsx",
-      "source_location": "L3",
-      "weight": 1.0,
-      "_origin": "ast",
-      "source": "src_pages_projects",
-      "target": "src_components_footer",
-      "confidence_score": 1.0
-    },
-    {
       "relation": "calls",
       "context": "call",
       "confidence": "EXTRACTED",
       "source_file": "src/components/Footer.jsx",
-      "source_location": "L108",
-      "weight": 1.0,
-      "_origin": "ast",
-      "source": "src_components_footer_footercanvas",
-      "target": "src_components_footer_buildcells",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "calls",
-      "context": "call",
-      "confidence": "EXTRACTED",
-      "source_file": "src/components/Footer.jsx",
-      "source_location": "L131",
+      "source_location": "L9",
       "weight": 1.0,
       "_origin": "ast",
       "source": "src_components_footer_footer",
@@ -3215,7 +2683,7 @@
       "context": "import",
       "confidence": "EXTRACTED",
       "source_file": "src/pages/Home.jsx",
-      "source_location": "L2",
+      "source_location": "L5",
       "weight": 1.0,
       "_origin": "ast",
       "source": "src_pages_home",
@@ -3235,72 +2703,50 @@
       "confidence_score": 1.0
     },
     {
-      "relation": "imports",
-      "context": "import",
-      "confidence": "EXTRACTED",
-      "source_file": "src/pages/Projects.jsx",
-      "source_location": "L3",
-      "weight": 1.0,
-      "_origin": "ast",
-      "source": "src_pages_projects",
-      "target": "src_components_footer_footer",
-      "confidence_score": 1.0
-    },
-    {
       "relation": "contains",
       "confidence": "EXTRACTED",
-      "source_file": "src/components/KineticTextLoader.jsx",
-      "source_location": "L25",
+      "source_file": "src/components/Navbar.jsx",
+      "source_location": "L6",
       "weight": 1.0,
       "_origin": "ast",
-      "source": "src_components_kinetictextloader",
-      "target": "src_components_kinetictextloader_kinetictextloader",
+      "source": "src_components_navbar",
+      "target": "src_components_navbar_navbar",
       "confidence_score": 1.0
     },
     {
       "relation": "imports_from",
       "context": "import",
       "confidence": "EXTRACTED",
-      "source_file": "src/components/Preloader.jsx",
+      "source_file": "src/components/Navbar.jsx",
       "source_location": "L3",
       "weight": 1.0,
       "_origin": "ast",
-      "source": "src_components_preloader",
-      "target": "src_components_kinetictextloader",
+      "source": "src_components_navbar",
+      "target": "src_hooks_usetheme",
       "confidence_score": 1.0
     },
     {
       "relation": "imports",
       "context": "import",
       "confidence": "EXTRACTED",
-      "source_file": "src/components/Preloader.jsx",
+      "source_file": "src/components/Navbar.jsx",
       "source_location": "L3",
       "weight": 1.0,
       "_origin": "ast",
-      "source": "src_components_preloader",
-      "target": "src_components_kinetictextloader_kinetictextloader",
+      "source": "src_components_navbar",
+      "target": "src_hooks_usetheme_usetheme",
       "confidence_score": 1.0
     },
     {
-      "relation": "contains",
+      "relation": "calls",
+      "context": "call",
       "confidence": "EXTRACTED",
-      "source_file": "src/components/LiquidMetalButton.jsx",
-      "source_location": "L8",
+      "source_file": "src/components/Navbar.jsx",
+      "source_location": "L9",
       "weight": 1.0,
       "_origin": "ast",
-      "source": "src_components_liquidmetalbutton",
-      "target": "src_components_liquidmetalbutton_liquidmetal",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "src/components/LiquidMetalButton.jsx",
-      "source_location": "L34",
-      "weight": 1.0,
-      "_origin": "ast",
-      "source": "src_components_liquidmetalbutton",
-      "target": "src_components_liquidmetalbutton_liquidmetalbutton",
+      "source": "src_components_navbar_navbar",
+      "target": "src_hooks_usetheme_usetheme",
       "confidence_score": 1.0
     },
     {
@@ -3318,7 +2764,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "src/components/Preloader.jsx",
-      "source_location": "L5",
+      "source_location": "L4",
       "weight": 1.0,
       "_origin": "ast",
       "source": "src_components_preloader",
@@ -3507,6 +2953,18 @@
       "confidence_score": 1.0
     },
     {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/pages/Home.jsx",
+      "source_location": "L6",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "src_pages_home",
+      "target": "src_components_reactbits_imagetrail",
+      "confidence_score": 1.0
+    },
+    {
       "relation": "calls",
       "context": "call",
       "confidence": "EXTRACTED",
@@ -3540,6 +2998,18 @@
       "_origin": "ast",
       "source": "src_components_reactbits_imagetrail_imagetrail",
       "target": "src_components_reactbits_imagetrail_getmousedistance",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/pages/Home.jsx",
+      "source_location": "L6",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "src_pages_home",
+      "target": "src_components_reactbits_imagetrail_imagetrail",
       "confidence_score": 1.0
     },
     {
@@ -3929,18 +3399,6 @@
       "confidence_score": 1.0
     },
     {
-      "relation": "imports_from",
-      "context": "import",
-      "confidence": "EXTRACTED",
-      "source_file": "src/pages/Projects.jsx",
-      "source_location": "L4",
-      "weight": 1.0,
-      "_origin": "ast",
-      "source": "src_pages_projects",
-      "target": "src_context_portfoliocontext",
-      "confidence_score": 1.0
-    },
-    {
       "relation": "calls",
       "context": "call",
       "confidence": "EXTRACTED",
@@ -4029,7 +3487,7 @@
       "context": "call",
       "confidence": "EXTRACTED",
       "source_file": "src/pages/Home.jsx",
-      "source_location": "L14",
+      "source_location": "L9",
       "weight": 1.0,
       "_origin": "ast",
       "source": "src_pages_home_home",
@@ -4057,30 +3515,6 @@
       "weight": 1.0,
       "_origin": "ast",
       "source": "src_pages_projectdetail_projectdetail",
-      "target": "src_context_portfoliocontext_useportfolio",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "imports",
-      "context": "import",
-      "confidence": "EXTRACTED",
-      "source_file": "src/pages/Projects.jsx",
-      "source_location": "L4",
-      "weight": 1.0,
-      "_origin": "ast",
-      "source": "src_pages_projects",
-      "target": "src_context_portfoliocontext_useportfolio",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "calls",
-      "context": "call",
-      "confidence": "EXTRACTED",
-      "source_file": "src/pages/Projects.jsx",
-      "source_location": "L7",
-      "weight": 1.0,
-      "_origin": "ast",
-      "source": "src_pages_projects_projects",
       "target": "src_context_portfoliocontext_useportfolio",
       "confidence_score": 1.0
     },
@@ -4451,18 +3885,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "src/pages/Home.jsx",
-      "source_location": "L5",
-      "weight": 1.0,
-      "_origin": "ast",
-      "source": "src_pages_home",
-      "target": "src_pages_home_arrowright",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "src/pages/Home.jsx",
-      "source_location": "L13",
+      "source_location": "L8",
       "weight": 1.0,
       "_origin": "ast",
       "source": "src_pages_home",
@@ -4505,17 +3928,6 @@
     {
       "relation": "contains",
       "confidence": "EXTRACTED",
-      "source_file": "src/pages/Projects.jsx",
-      "source_location": "L6",
-      "weight": 1.0,
-      "_origin": "ast",
-      "source": "src_pages_projects",
-      "target": "src_pages_projects_projects",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
       "source_file": "vercel.json",
       "source_location": "L2",
       "weight": 1.0,
@@ -4523,52 +3935,8 @@
       "source": "vercel",
       "target": "vercel_rewrites",
       "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "CLAUDE.md",
-      "source_location": "L1",
-      "weight": 1.0,
-      "_origin": "ast",
-      "source": "claude",
-      "target": "claude_graphify",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "README.md",
-      "source_location": "L1",
-      "weight": 1.0,
-      "_origin": "ast",
-      "source": "readme",
-      "target": "readme_react_vite",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "README.md",
-      "source_location": "L14",
-      "weight": 1.0,
-      "_origin": "ast",
-      "source": "readme_react_vite",
-      "target": "readme_expanding_the_eslint_configuration",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "README.md",
-      "source_location": "L10",
-      "weight": 1.0,
-      "_origin": "ast",
-      "source": "readme_react_vite",
-      "target": "readme_react_compiler",
-      "confidence_score": 1.0
     }
   ],
   "hyperedges": [],
-  "built_at_commit": "65bf4afc5c354d589523bc2649982de38ee9422c"
+  "built_at_commit": "d23d6220f10bb1d48b82e61a5bf3ebfad81710de"
 }

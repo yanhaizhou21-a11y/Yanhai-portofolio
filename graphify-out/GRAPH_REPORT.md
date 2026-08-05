@@ -1,36 +1,46 @@
-# Graph Report - c:/di/portofolio  (2026-08-05)
+# Graph Report - portofolio  (2026-08-05)
 
 ## Corpus Check
-- Corpus is ~20,031 words - fits in a single context window. You may not need a graph.
+- 42 files · ~87,297 words
+- Verdict: corpus is large enough that graph structure adds value.
 
 ## Summary
-- 148 nodes · 212 edges · 19 communities (17 shown, 2 thin omitted)
+- 167 nodes · 236 edges · 24 communities (19 shown, 5 thin omitted)
 - Extraction: 100% EXTRACTED · 0% INFERRED · 0% AMBIGUOUS
 - Token cost: 0 input · 0 output
 
+## Graph Freshness
+- Built from commit: `65bf4afc`
+- Run `git rev-parse HEAD` and compare to check if the graph is stale.
+- Run `graphify update .` after code changes (no API cost).
+
 ## Community Hubs (Navigation)
-- Dev Dependencies
-- Pages and Portfolio Data
-- Dependencies
-- Auth and Routing
-- Admin UI and Navbar
-- Package Scripts
-- Firebase Integration
-- GSAP Animations
-- ImageTrail Component
-- FlipbookImage Component
-- Vercel Config
+- devDependencies
+- App.jsx
+- dependencies
+- AuthContext.jsx
+- AdminPage.jsx
+- package.json
+- PortfolioContext.jsx
+- useGsap.js
+- ImageTrail.jsx
+- FlipbookImage.jsx
+- vercel.json
+- React + Vite
+- Preloader.jsx
+- LiquidMetalButton.jsx
+- CLAUDE.md
 
 ## God Nodes (most connected - your core abstractions)
-1. `usePortfolio()` - 13 edges
+1. `usePortfolio()` - 17 edges
 2. `useAuth()` - 9 edges
 3. `prefersReducedMotion()` - 8 edges
 4. `AdminPage()` - 7 edges
-5. `scripts` - 5 edges
-6. `Footer()` - 5 edges
-7. `ImageTrail()` - 5 edges
-8. `useTheme()` - 5 edges
-9. `Navbar()` - 3 edges
+5. `Footer()` - 6 edges
+6. `scripts` - 5 edges
+7. `useTheme()` - 5 edges
+8. `AnimatedNavFramer()` - 4 edges
+9. `ImageTrail()` - 4 edges
 10. `ProtectedRoute()` - 3 edges
 
 ## Surprising Connections (you probably didn't know these)
@@ -38,71 +48,75 @@
   src/admin/AdminPage.jsx → src/context/AuthContext.jsx
 - `AdminPage()` --calls--> `usePortfolio()`  [EXTRACTED]
   src/admin/AdminPage.jsx → src/context/PortfolioContext.jsx
+- `AnimatedNavFramer()` --calls--> `usePortfolio()`  [EXTRACTED]
+  src/components/AnimatedNavFramer.jsx → src/context/PortfolioContext.jsx
 - `LoginPage()` --calls--> `useAuth()`  [EXTRACTED]
   src/pages/LoginPage.jsx → src/context/AuthContext.jsx
 - `AdminPage()` --calls--> `useTheme()`  [EXTRACTED]
   src/admin/AdminPage.jsx → src/hooks/useTheme.js
-- `Footer()` --calls--> `usePortfolio()`  [EXTRACTED]
-  src/components/Footer.jsx → src/context/PortfolioContext.jsx
 
 ## Import Cycles
 - None detected.
 
-## Communities (19 total, 2 thin omitted)
+## Communities (24 total, 5 thin omitted)
 
-### Community 0 - "Dev Dependencies"
+### Community 0 - "devDependencies"
 Cohesion: 0.09
 Nodes (23): eslint, @eslint/js, eslint-plugin-react-hooks, eslint-plugin-react-refresh, globals, devDependencies, eslint, @eslint/js (+15 more)
 
-### Community 1 - "Pages and Portfolio Data"
-Cohesion: 0.18
-Nodes (12): Footer(), FlowingMenu(), ScrollFloat(), PortfolioContext, PortfolioProvider(), usePortfolio(), useFirestore(), About() (+4 more)
+### Community 1 - "App.jsx"
+Cohesion: 0.15
+Nodes (14): pageTransition, pageVariants, buildCells(), Footer(), FooterCanvas(), FlowingMenu(), ScrollFloat(), usePortfolio() (+6 more)
 
-### Community 2 - "Dependencies"
+### Community 2 - "dependencies"
 Cohesion: 0.11
 Nodes (19): firebase, framer-motion, gsap, lenis, ogl, dependencies, firebase, framer-motion (+11 more)
 
-### Community 3 - "Auth and Routing"
+### Community 3 - "AuthContext.jsx"
+Cohesion: 0.27
+Nodes (7): App(), ProtectedRoute(), AuthContext, AuthProvider(), useAuth(), AdminLogin(), LoginPage()
+
+### Community 4 - "AdminPage.jsx"
 Cohesion: 0.20
-Nodes (10): App(), pageTransition, pageVariants, Preloader(), ProtectedRoute(), AuthContext, AuthProvider(), useAuth() (+2 more)
+Nodes (10): AdminPage(), buildEmpty(), cardVariants, compressImage(), s, sectionConfig, AnimatedNavFramer(), navLinks (+2 more)
 
-### Community 4 - "Admin UI and Navbar"
-Cohesion: 0.24
-Nodes (9): AdminPage(), buildEmpty(), cardVariants, compressImage(), s, sectionConfig, DeleteModal(), Navbar() (+1 more)
-
-### Community 5 - "Package Scripts"
+### Community 5 - "package.json"
 Cohesion: 0.20
 Nodes (9): name, private, scripts, build, dev, lint, preview, type (+1 more)
 
-### Community 6 - "Firebase Integration"
-Cohesion: 0.24
-Nodes (7): defaultPortfolioData, app, auth, db, firebaseConfig, storage, DOC_REF
+### Community 6 - "PortfolioContext.jsx"
+Cohesion: 0.21
+Nodes (10): PortfolioContext, PortfolioProvider(), defaultPortfolioData, app, auth, db, firebaseConfig, storage (+2 more)
 
-### Community 7 - "GSAP Animations"
+### Community 7 - "useGsap.js"
 Cohesion: 0.42
 Nodes (8): prefersReducedMotion(), useImageReveal(), useLineReveal(), useMaskReveal(), usePageTransition(), useParallax(), useScrollReveal(), useStaggerReveal()
 
-### Community 8 - "ImageTrail Component"
+### Community 8 - "ImageTrail.jsx"
 Cohesion: 0.70
 Nodes (4): getLocalPointerPos(), getMouseDistance(), ImageTrail(), lerp()
 
+### Community 19 - "React + Vite"
+Cohesion: 0.50
+Nodes (3): Expanding the ESLint configuration, React Compiler, React + Vite
+
 ## Knowledge Gaps
-- **42 isolated node(s):** `name`, `private`, `version`, `type`, `dev` (+37 more)
+- **48 isolated node(s):** `name`, `private`, `version`, `type`, `dev` (+43 more)
   These have ≤1 connection - possible missing edges or undocumented components.
-- **2 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
+- **5 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
 
 ## Suggested Questions
 _Questions this graph is uniquely positioned to answer:_
 
-- **Why does `devDependencies` connect `Dev Dependencies` to `Package Scripts`?**
-  _High betweenness centrality (0.080) - this node is a cross-community bridge._
-- **Why does `dependencies` connect `Dependencies` to `Package Scripts`?**
-  _High betweenness centrality (0.069) - this node is a cross-community bridge._
-- **Why does `usePortfolio()` connect `Pages and Portfolio Data` to `Admin UI and Navbar`?**
-  _High betweenness centrality (0.021) - this node is a cross-community bridge._
+- **Why does `devDependencies` connect `devDependencies` to `package.json`?**
+  _High betweenness centrality (0.063) - this node is a cross-community bridge._
+- **Why does `dependencies` connect `dependencies` to `package.json`?**
+  _High betweenness centrality (0.054) - this node is a cross-community bridge._
+- **Why does `usePortfolio()` connect `App.jsx` to `AdminPage.jsx`, `PortfolioContext.jsx`?**
+  _High betweenness centrality (0.022) - this node is a cross-community bridge._
 - **What connects `name`, `private`, `version` to the rest of the system?**
-  _42 weakly-connected nodes found - possible documentation gaps or missing edges._
-- **Should `Dev Dependencies` be split into smaller, more focused modules?**
+  _48 weakly-connected nodes found - possible documentation gaps or missing edges._
+- **Should `devDependencies` be split into smaller, more focused modules?**
   _Cohesion score 0.08695652173913043 - nodes in this community are weakly interconnected._
-- **Should `Dependencies` be split into smaller, more focused modules?**
+- **Should `dependencies` be split into smaller, more focused modules?**
   _Cohesion score 0.10526315789473684 - nodes in this community are weakly interconnected._
