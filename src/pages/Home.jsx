@@ -9,7 +9,6 @@ function Home() {
   const { data } = usePortfolio()
   const [view, setView] = useState('list')
   const [hoveredIndex, setHoveredIndex] = useState(-1)
-  const [mousePos, setMousePos] = useState({ x: 0, y: 0 })
   const heroRef = useRef(null)
 
   const projects = useMemo(
@@ -69,11 +68,6 @@ function Home() {
     }, heroRef)
     return () => ctx.revert()
   }, [])
-
-  // Track mouse for hover preview
-  const handleMouseMove = (e) => {
-    setMousePos({ x: e.clientX, y: e.clientY })
-  }
 
   return (
     <main style={{ paddingTop: '0' }}>
