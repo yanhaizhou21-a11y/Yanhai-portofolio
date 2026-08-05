@@ -1,0 +1,352 @@
+{
+  "communities": {
+    "0": [
+      "eslint",
+      "eslint_js",
+      "eslint_plugin_react_hooks",
+      "eslint_plugin_react_refresh",
+      "globals",
+      "package_devdependencies",
+      "package_devdependencies_eslint",
+      "package_devdependencies_eslint_js",
+      "package_devdependencies_eslint_plugin_react_hooks",
+      "package_devdependencies_eslint_plugin_react_refresh",
+      "package_devdependencies_globals",
+      "package_devdependencies_tailwindcss",
+      "package_devdependencies_tailwindcss_vite",
+      "package_devdependencies_types_react",
+      "package_devdependencies_types_react_dom",
+      "package_devdependencies_vite",
+      "package_devdependencies_vitejs_plugin_react",
+      "tailwindcss",
+      "tailwindcss_vite",
+      "types_react",
+      "types_react_dom",
+      "vite",
+      "vitejs_plugin_react"
+    ],
+    "1": [
+      "src_components_footer",
+      "src_components_footer_footer",
+      "src_components_reactbits_flowingmenu",
+      "src_components_reactbits_flowingmenu_flowingmenu",
+      "src_components_reactbits_flowingmenu_menuitem",
+      "src_components_reactbits_scrollfloat",
+      "src_components_reactbits_scrollfloat_scrollfloat",
+      "src_context_portfoliocontext",
+      "src_context_portfoliocontext_portfoliocontext",
+      "src_context_portfoliocontext_portfolioprovider",
+      "src_context_portfoliocontext_useportfolio",
+      "src_hooks_usefirestore_usefirestore",
+      "src_pages_about",
+      "src_pages_about_about",
+      "src_pages_about_defaultservices",
+      "src_pages_contact",
+      "src_pages_contact_contact",
+      "src_pages_home",
+      "src_pages_home_home",
+      "src_pages_projectdetail",
+      "src_pages_projectdetail_nextproject",
+      "src_pages_projectdetail_projectdetail"
+    ],
+    "2": [
+      "firebase",
+      "framer_motion",
+      "gsap",
+      "lenis",
+      "ogl",
+      "package_dependencies",
+      "package_dependencies_firebase",
+      "package_dependencies_framer_motion",
+      "package_dependencies_gsap",
+      "package_dependencies_lenis",
+      "package_dependencies_ogl",
+      "package_dependencies_react",
+      "package_dependencies_react_dom",
+      "package_dependencies_react_icons",
+      "package_dependencies_react_router_dom",
+      "react",
+      "react_dom",
+      "react_icons",
+      "react_router_dom"
+    ],
+    "3": [
+      "src_app",
+      "src_app_animatedroutes",
+      "src_app_app",
+      "src_app_pagetransition",
+      "src_app_pagevariants",
+      "src_components_preloader",
+      "src_components_preloader_preloader",
+      "src_components_protectedroute",
+      "src_components_protectedroute_protectedroute",
+      "src_context_authcontext",
+      "src_context_authcontext_authcontext",
+      "src_context_authcontext_authprovider",
+      "src_context_authcontext_useauth",
+      "src_main",
+      "src_pages_adminlogin",
+      "src_pages_adminlogin_adminlogin",
+      "src_pages_loginpage",
+      "src_pages_loginpage_loginpage"
+    ],
+    "4": [
+      "src_admin_adminpage",
+      "src_admin_adminpage_adminpage",
+      "src_admin_adminpage_buildempty",
+      "src_admin_adminpage_cardvariants",
+      "src_admin_adminpage_compressimage",
+      "src_admin_adminpage_s",
+      "src_admin_adminpage_sectionconfig",
+      "src_components_deletemodal",
+      "src_components_deletemodal_deletemodal",
+      "src_components_navbar",
+      "src_components_navbar_navbar",
+      "src_hooks_usetheme",
+      "src_hooks_usetheme_usetheme"
+    ],
+    "5": [
+      "package",
+      "package_name",
+      "package_private",
+      "package_scripts",
+      "package_scripts_build",
+      "package_scripts_dev",
+      "package_scripts_lint",
+      "package_scripts_preview",
+      "package_type",
+      "package_version"
+    ],
+    "6": [
+      "src_data_defaultdata",
+      "src_data_defaultdata_defaultportfoliodata",
+      "src_firebase",
+      "src_firebase_app",
+      "src_firebase_auth",
+      "src_firebase_db",
+      "src_firebase_firebaseconfig",
+      "src_firebase_storage",
+      "src_hooks_usefirestore",
+      "src_hooks_usefirestore_doc_ref"
+    ],
+    "7": [
+      "src_hooks_usegsap",
+      "src_hooks_usegsap_prefersreducedmotion",
+      "src_hooks_usegsap_useimagereveal",
+      "src_hooks_usegsap_uselinereveal",
+      "src_hooks_usegsap_usemaskreveal",
+      "src_hooks_usegsap_usepagetransition",
+      "src_hooks_usegsap_useparallax",
+      "src_hooks_usegsap_usescrollreveal",
+      "src_hooks_usegsap_usestaggerreveal"
+    ],
+    "8": [
+      "src_components_reactbits_imagetrail",
+      "src_components_reactbits_imagetrail_getlocalpointerpos",
+      "src_components_reactbits_imagetrail_getmousedistance",
+      "src_components_reactbits_imagetrail_imagetrail",
+      "src_components_reactbits_imagetrail_lerp"
+    ],
+    "9": [
+      "src_components_reactbits_flipbookimage",
+      "src_components_reactbits_flipbookimage_filter_presets",
+      "src_components_reactbits_flipbookimage_flipbookimage"
+    ],
+    "10": [
+      "src_components_pagetransition",
+      "src_components_pagetransition_pagetransition"
+    ],
+    "11": [
+      "src_components_reactbits_decryptedtext",
+      "src_components_reactbits_decryptedtext_decryptedtext"
+    ],
+    "12": [
+      "src_components_reactbits_magnet",
+      "src_components_reactbits_magnet_magnet"
+    ],
+    "13": [
+      "src_components_reactbits_splittext",
+      "src_components_reactbits_splittext_splittext"
+    ],
+    "14": [
+      "src_components_reactbits_spotlight",
+      "src_components_reactbits_spotlight_spotlight"
+    ],
+    "15": [
+      "src_components_smoothscroll",
+      "src_components_smoothscroll_smoothscroll"
+    ],
+    "16": [
+      "vercel",
+      "vercel_rewrites"
+    ],
+    "17": [
+      "eslint_config"
+    ],
+    "18": [
+      "vite_config"
+    ]
+  },
+  "cohesion": {
+    "0": 0.08695652173913043,
+    "1": 0.18181818181818182,
+    "2": 0.10526315789473684,
+    "3": 0.19607843137254902,
+    "4": 0.24358974358974358,
+    "5": 0.2,
+    "6": 0.24444444444444444,
+    "7": 0.4166666666666667,
+    "8": 0.7,
+    "9": 0.6666666666666666,
+    "10": 1.0,
+    "11": 1.0,
+    "12": 1.0,
+    "13": 1.0,
+    "14": 1.0,
+    "15": 1.0,
+    "16": 1.0,
+    "17": 1.0,
+    "18": 1.0
+  },
+  "gods": [
+    {
+      "id": "src_context_portfoliocontext_useportfolio",
+      "label": "usePortfolio()",
+      "degree": 13
+    },
+    {
+      "id": "src_context_authcontext_useauth",
+      "label": "useAuth()",
+      "degree": 9
+    },
+    {
+      "id": "src_hooks_usegsap_prefersreducedmotion",
+      "label": "prefersReducedMotion()",
+      "degree": 8
+    },
+    {
+      "id": "src_admin_adminpage_adminpage",
+      "label": "AdminPage()",
+      "degree": 7
+    },
+    {
+      "id": "package_scripts",
+      "label": "scripts",
+      "degree": 5
+    },
+    {
+      "id": "src_components_footer_footer",
+      "label": "Footer()",
+      "degree": 5
+    },
+    {
+      "id": "src_components_reactbits_imagetrail_imagetrail",
+      "label": "ImageTrail()",
+      "degree": 5
+    },
+    {
+      "id": "src_hooks_usetheme_usetheme",
+      "label": "useTheme()",
+      "degree": 5
+    },
+    {
+      "id": "src_components_navbar_navbar",
+      "label": "Navbar()",
+      "degree": 3
+    },
+    {
+      "id": "src_components_protectedroute_protectedroute",
+      "label": "ProtectedRoute()",
+      "degree": 3
+    }
+  ],
+  "surprises": [
+    {
+      "source": "AdminPage()",
+      "target": "useAuth()",
+      "source_files": [
+        "src/admin/AdminPage.jsx",
+        "src/context/AuthContext.jsx"
+      ],
+      "confidence": "EXTRACTED",
+      "relation": "calls",
+      "why": "bridges separate communities"
+    },
+    {
+      "source": "AdminPage()",
+      "target": "usePortfolio()",
+      "source_files": [
+        "src/admin/AdminPage.jsx",
+        "src/context/PortfolioContext.jsx"
+      ],
+      "confidence": "EXTRACTED",
+      "relation": "calls",
+      "why": "bridges separate communities"
+    },
+    {
+      "source": "LoginPage()",
+      "target": "useAuth()",
+      "source_files": [
+        "src/pages/LoginPage.jsx",
+        "src/context/AuthContext.jsx"
+      ],
+      "confidence": "EXTRACTED",
+      "relation": "calls",
+      "why": "peripheral node `LoginPage()` unexpectedly reaches hub `useAuth()`"
+    },
+    {
+      "source": "AdminPage()",
+      "target": "useTheme()",
+      "source_files": [
+        "src/admin/AdminPage.jsx",
+        "src/hooks/useTheme.js"
+      ],
+      "confidence": "EXTRACTED",
+      "relation": "calls",
+      "why": "cross-file semantic connection"
+    },
+    {
+      "source": "Footer()",
+      "target": "usePortfolio()",
+      "source_files": [
+        "src/components/Footer.jsx",
+        "src/context/PortfolioContext.jsx"
+      ],
+      "confidence": "EXTRACTED",
+      "relation": "calls",
+      "why": "cross-file semantic connection"
+    }
+  ],
+  "questions": [
+    {
+      "type": "bridge_node",
+      "question": "Why does `devDependencies` connect `Community 0` to `Community 5`?",
+      "why": "High betweenness centrality (0.080) - this node is a cross-community bridge."
+    },
+    {
+      "type": "bridge_node",
+      "question": "Why does `dependencies` connect `Community 2` to `Community 5`?",
+      "why": "High betweenness centrality (0.069) - this node is a cross-community bridge."
+    },
+    {
+      "type": "bridge_node",
+      "question": "Why does `usePortfolio()` connect `Community 1` to `Community 4`?",
+      "why": "High betweenness centrality (0.021) - this node is a cross-community bridge."
+    },
+    {
+      "type": "isolated_nodes",
+      "question": "What connects `name`, `private`, `version` to the rest of the system?",
+      "why": "42 weakly-connected nodes found - possible documentation gaps or missing edges."
+    },
+    {
+      "type": "low_cohesion",
+      "question": "Should `Community 0` be split into smaller, more focused modules?",
+      "why": "Cohesion score 0.08695652173913043 - nodes in this community are weakly interconnected."
+    },
+    {
+      "type": "low_cohesion",
+      "question": "Should `Community 2` be split into smaller, more focused modules?",
+      "why": "Cohesion score 0.10526315789473684 - nodes in this community are weakly interconnected."
+    }
+  ]
+}

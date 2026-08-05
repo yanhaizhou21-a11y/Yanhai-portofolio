@@ -1,0 +1,9 @@
+C:\di\portofolio\CLAUDE.md
+C:\di\portofolio\README.md
+C:\di\portofolio\READMEAGENTS.md
+C:\di\portofolio\index.html
+C:\di\portofolio\public\favicon.svg
+C:\di\portofolio\public\icons.svg
+C:\di\portofolio\src\assets\hero.png
+C:\di\portofolio\src\assets\react.svg
+C:\di\portofolio\src\assets\vite.svg
