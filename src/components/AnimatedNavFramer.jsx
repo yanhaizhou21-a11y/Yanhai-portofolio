@@ -1,8 +1,10 @@
 import { useState } from 'react'
 import { AnimatePresence, motion as Motion, useMotionValueEvent, useScroll } from 'framer-motion'
-import { Link, useLocation } from 'react-router-dom'
+import { Link, useLocation, useNavigate } from 'react-router-dom'
 import { usePortfolio } from '../context/PortfolioContext.jsx'
 import { useTheme } from '../hooks/useTheme.js'
+import GlassDock from './ui/glass-dock.jsx'
+import { LiquidMetalButton } from './LiquidMetalButton.jsx'
 
 const navLinks = [
   { label: 'Home', path: '/' },
@@ -21,6 +23,7 @@ function ThemeIcon({ isDark }) {
 
 export function AnimatedNavFramer() {
   const location = useLocation()
+  const navigate = useNavigate()
   const { data } = usePortfolio()
   const { isDark, toggleTheme } = useTheme()
   const [menuOpen, setMenuOpen] = useState(false)
@@ -51,17 +54,17 @@ export function AnimatedNavFramer() {
           <span>{brand}</span>
         </Link>
 
-        <nav className="site-nav__links" aria-label="Primary navigation">
-          {navLinks.map((link) => (
-            <Link
-              key={link.path}
-              className={isActive(link.path) ? 'is-active' : ''}
-              to={link.path}
-            >
-              {link.label}
-            </Link>
-          ))}
-        </nav>
+        <div className="site-nav__dock flex justify-center flex-1 mx-4">
+          <GlassDock
+            items={[
+              { title: 'Home', onClick: () => navigate('/') },
+              { title: 'Projects', onClick: () => navigate('/projects') },
+              { title: 'About', onClick: () => navigate('/about') },
+              { title: 'Contact', onClick: () => navigate('/contact') },
+            ]}
+            tooltipPosition="bottom"
+          />
+        </div>
 
         <div className="site-nav__actions">
           <button
@@ -72,7 +75,9 @@ export function AnimatedNavFramer() {
           >
             <ThemeIcon isDark={isDark} />
           </button>
-          <Link className="site-nav__cta" to="/contact">Let&apos;s talk</Link>
+          <LiquidMetalButton size="sm" icon="💬" onClick={() => navigate('/contact')}>
+            Let&apos;s talk
+          </LiquidMetalButton>
           <button
             className="site-nav__menu"
             type="button"
