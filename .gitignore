@@ -27,3 +27,8 @@ dist-ssr
 /.claude
 /.agents
 portfolio memory/
+
+# Graphify
+graphify/
+graphify-out/
+.graphify/

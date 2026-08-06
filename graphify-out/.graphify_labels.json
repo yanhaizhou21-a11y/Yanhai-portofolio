@@ -2,8 +2,8 @@
   "0": "devDependencies",
   "1": "App.jsx",
   "2": "dependencies",
-  "3": "AuthContext.jsx",
-  "4": "AdminPage.jsx",
+  "3": "AdminPage.jsx",
+  "4": "hero-scroll-animation.jsx",
   "5": "package.json",
   "6": "PortfolioContext.jsx",
   "7": "useGsap.js",
@@ -19,8 +19,8 @@
   "17": "eslint.config.js",
   "18": "vite.config.js",
   "19": "React + Vite",
-  "20": "Preloader.jsx",
-  "21": "LiquidMetalButton.jsx",
+  "20": "cyberpunk-card.jsx",
+  "21": "utils.js",
   "22": "CLAUDE.md",
   "23": "READMEAGENTS.md"
 }

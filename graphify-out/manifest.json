@@ -5,8 +5,8 @@
     "semantic_hash": ""
   },
   "package.json": {
-    "mtime": 1781359667.6974924,
-    "ast_hash": "76ef61f7d5b9ab7501506e2a17155b8f",
+    "mtime": 1785984857.1870635,
+    "ast_hash": "128ae4457b7972435afc58f87b341bbd",
     "semantic_hash": ""
   },
   "skills-lock.json": {
@@ -25,8 +25,8 @@
     "semantic_hash": ""
   },
   "src/components/AnimatedNavFramer.jsx": {
-    "mtime": 1785941567.5801187,
-    "ast_hash": "fc65f237736eaa904db389435d5e71ad",
+    "mtime": 1785983341.191599,
+    "ast_hash": "8960ba759d54a0cf0a1f128457128f33",
     "semantic_hash": ""
   },
   "src/components/DeleteModal.jsx": {
@@ -35,8 +35,8 @@
     "semantic_hash": ""
   },
   "src/components/Footer.jsx": {
-    "mtime": 1785940994.415652,
-    "ast_hash": "5667f7b21480f2e77ab06041557df342",
+    "mtime": 1785983670.5833886,
+    "ast_hash": "1d1ae146b02549ecc077da13345de2cd",
     "semantic_hash": ""
   },
   "src/components/KineticTextLoader.jsx": {
@@ -140,8 +140,8 @@
     "semantic_hash": ""
   },
   "src/hooks/useTheme.js": {
-    "mtime": 1781363151.4311826,
-    "ast_hash": "30138ba93b617aa6e0b88d0ab8c6a87e",
+    "mtime": 1785984360.8591056,
+    "ast_hash": "8efa1b54969459570822f25036460d6c",
     "semantic_hash": ""
   },
   "src/main.jsx": {
@@ -165,8 +165,8 @@
     "semantic_hash": ""
   },
   "src/pages/Home.jsx": {
-    "mtime": 1785940945.187135,
-    "ast_hash": "26890c1fe53b5bfa0b15993385bcaa66",
+    "mtime": 1785983460.459023,
+    "ast_hash": "27662df448e690e6484d0c5ae59f55c5",
     "semantic_hash": ""
   },
   "src/pages/LoginPage.jsx": {
@@ -190,8 +190,8 @@
     "semantic_hash": ""
   },
   "vite.config.js": {
-    "mtime": 1776861798.9543698,
-    "ast_hash": "5b641ab5f85eff4b0b9acec3417ca9b5",
+    "mtime": 1785982445.9767065,
+    "ast_hash": "20b01102633024c22228da5b72bfc878",
     "semantic_hash": ""
   },
   "CLAUDE.md": {
@@ -242,6 +242,36 @@
   "src/assets/vite.svg": {
     "mtime": 1776831461.1535683,
     "ast_hash": "9960a24288958394ac50e57ff638b036",
+    "semantic_hash": ""
+  },
+  "src/components/ui/animated-footer.jsx": {
+    "mtime": 1785983998.2729642,
+    "ast_hash": "614d4a80d7421f02c19d5bea6d711077",
+    "semantic_hash": ""
+  },
+  "src/components/ui/cyberpunk-card.jsx": {
+    "mtime": 1785984482.227986,
+    "ast_hash": "cb3c606ff2befd443a4ae7d70d6bc6ba",
+    "semantic_hash": ""
+  },
+  "src/components/ui/expanding-cards.jsx": {
+    "mtime": 1785986106.8513372,
+    "ast_hash": "3c9021f288b3b63380305c115cedb5b4",
+    "semantic_hash": ""
+  },
+  "src/components/ui/glass-dock.jsx": {
+    "mtime": 1785983209.4306118,
+    "ast_hash": "16611e67ec8aab5f10ac0e3547e6fb3d",
+    "semantic_hash": ""
+  },
+  "src/components/ui/hero-scroll-animation.jsx": {
+    "mtime": 1785986179.7890208,
+    "ast_hash": "0a87bc49d45ada20c5e96706aa1b363a",
+    "semantic_hash": ""
+  },
+  "src/lib/utils.js": {
+    "mtime": 1785982435.6275733,
+    "ast_hash": "d1c4afdedf414ae731f58a28173db977",
     "semantic_hash": ""
   }
 }
