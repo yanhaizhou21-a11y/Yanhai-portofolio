@@ -1,79 +1,56 @@
 'use client';
 
 import React, { forwardRef, useRef } from 'react';
-import { motion as Motion, useReducedMotion, useScroll, useTransform } from 'motion/react';
+import { motion as Motion, useScroll, useTransform } from 'motion/react';
 import { useNavigate } from 'react-router-dom';
-import {
-  Boxes,
-  Braces,
-  CodeXml,
-  Component,
-  MousePointer2,
-  Sparkles,
-  WandSparkles,
-} from 'lucide-react';
 import { usePortfolio } from '../../context/PortfolioContext.jsx';
 import { useTheme } from '../../hooks/useTheme.js';
 import { LiquidMetalButton } from '../LiquidMetalButton.jsx';
-import ExpandingCards from './expanding-cards.jsx';
+import Carousel001 from './carousel-001.jsx';
+import StickyCard002 from './sticky-card-002.jsx';
 
 const practiceItems = [
   {
     id: 'interactive-systems',
-    title: 'Interactive Systems',
-    description: 'Interfaces shaped around clear states, useful feedback, and natural interaction.',
-    imgSrc: 'https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=1200&auto=format&fit=crop',
-    icon: <MousePointer2 size={24} strokeWidth={1.7} />,
+    image: 'https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=1600&auto=format&fit=crop',
+    alt: 'Modern architecture surrounded by trees',
   },
   {
     id: 'creative-coding',
-    title: 'Creative Coding',
-    description: 'Canvas, WebGL, and browser experiments turned into expressive visual systems.',
-    imgSrc: 'https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?w=1200&auto=format&fit=crop',
-    icon: <Braces size={24} strokeWidth={1.7} />,
+    image: 'https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?w=1600&auto=format&fit=crop',
+    alt: 'Abstract violet glass forms',
   },
   {
     id: 'motion-direction',
-    title: 'Motion Direction',
-    description: 'Purposeful motion that guides attention without competing with the work.',
-    imgSrc: 'https://images.unsplash.com/photo-1513694203232-719a280e022f?w=1200&auto=format&fit=crop',
-    icon: <WandSparkles size={24} strokeWidth={1.7} />,
+    image: 'https://images.unsplash.com/photo-1513694203232-719a280e022f?w=1600&auto=format&fit=crop',
+    alt: 'Minimal interior with graphic shadows',
   },
   {
     id: 'frontend-craft',
-    title: 'Frontend Craft',
-    description: 'Responsive React experiences built with performance and maintainability in mind.',
-    imgSrc: 'https://images.unsplash.com/photo-1607604276583-eef5d076aa5f?w=1200&auto=format&fit=crop',
-    icon: <CodeXml size={24} strokeWidth={1.7} />,
+    image: 'https://images.unsplash.com/photo-1607604276583-eef5d076aa5f?w=1600&auto=format&fit=crop',
+    alt: 'Animated interface artwork',
   },
   {
     id: 'design-systems',
-    title: 'Design Systems',
-    description: 'Reusable foundations that keep products coherent as teams and features grow.',
-    imgSrc: 'https://images.unsplash.com/photo-1558655146-9f40138edfeb?w=1200&auto=format&fit=crop',
-    icon: <Component size={24} strokeWidth={1.7} />,
+    image: 'https://images.unsplash.com/photo-1558655146-9f40138edfeb?w=1600&auto=format&fit=crop',
+    alt: 'Designer working with interface layouts',
   },
   {
     id: 'digital-products',
-    title: 'Digital Products',
-    description: 'Product thinking translated into focused screens, flows, and working software.',
-    imgSrc: 'https://images.unsplash.com/photo-1559028012-481c04fa702d?w=1200&auto=format&fit=crop',
-    icon: <Boxes size={24} strokeWidth={1.7} />,
+    image: 'https://images.unsplash.com/photo-1559028012-481c04fa702d?w=1600&auto=format&fit=crop',
+    alt: 'Digital product interface on a screen',
   },
   {
     id: 'visual-experiments',
-    title: 'Visual Experiments',
-    description: 'Small studies in typography, image, and motion that lead to new visual language.',
-    imgSrc: 'https://images.unsplash.com/photo-1549490349-8643362247b5?w=1200&auto=format&fit=crop',
-    icon: <Sparkles size={24} strokeWidth={1.7} />,
+    image: 'https://images.unsplash.com/photo-1549490349-8643362247b5?w=1600&auto=format&fit=crop',
+    alt: 'Purple abstract paint texture',
   },
 ];
 
 function HeroSection({ scrollYProgress, name, title }) {
   const navigate = useNavigate();
-  const reduceMotion = useReducedMotion();
-  const scale = useTransform(scrollYProgress, [0, 1], [1, reduceMotion ? 1 : 0.92]);
-  const y = useTransform(scrollYProgress, [0, 1], ['0%', reduceMotion ? '0%' : '-4%']);
+  const scale = useTransform(scrollYProgress, [0, 0.16], [1, 0.92]);
+  const y = useTransform(scrollYProgress, [0, 0.16], ['0%', '-4%']);
 
   return (
     <Motion.section style={{ scale, y }} className="portfolio-hero sticky top-0 rounded-b-[28px] border-b border-black/10 dark:border-white/10">
@@ -88,14 +65,11 @@ function HeroSection({ scrollYProgress, name, title }) {
         <div className="portfolio-hero__kicker rise-up" style={{ '--delay': '120ms' }}>
           <span /> Design &amp; Frontend Development <span />
         </div>
-
         <h1 className="rise-up" style={{ '--delay': '220ms' }}>
           <span>Ideas shaped with intent.</span>
           <strong>{name}</strong>
         </h1>
-
         <p className="rise-up" style={{ '--delay': '340ms' }}>{title}</p>
-
         <div className="rise-up" style={{ '--delay': '460ms' }}>
           <LiquidMetalButton size="lg" icon="→" onClick={() => navigate('/projects')}>
             View selected work
@@ -111,9 +85,8 @@ function HeroSection({ scrollYProgress, name, title }) {
 
 function PracticeSection({ scrollYProgress, isDark }) {
   const navigate = useNavigate();
-  const reduceMotion = useReducedMotion();
-  const scale = useTransform(scrollYProgress, [0, 1], [reduceMotion ? 1 : 0.94, 1]);
-  const y = useTransform(scrollYProgress, [0, 1], [reduceMotion ? '0%' : '4%', '0%']);
+  const scale = useTransform(scrollYProgress, [0.78, 1], [0.94, 1]);
+  const y = useTransform(scrollYProgress, [0.78, 1], ['4%', '0%']);
 
   return (
     <Motion.section
@@ -130,12 +103,15 @@ function PracticeSection({ scrollYProgress, isDark }) {
           Design that moves. Code that holds.
         </h2>
         <p className={`mt-4 max-w-2xl text-base leading-relaxed sm:text-lg ${isDark ? 'text-white/60' : 'text-black/60'}`}>
-          Hover, focus, or tap a card to see how visual identity and frontend engineering meet in the work.
+          Drag or use the arrows to browse selected visual experiments.
         </p>
 
-        <ExpandingCards items={practiceItems} defaultActiveIndex={0} className="mt-9" />
+        <Carousel001
+          className="mt-9"
+          images={practiceItems.map((item) => ({ id: item.id, src: item.image, alt: item.alt }))}
+        />
 
-        <div className="mt-9">
+        <div className="mt-7">
           <LiquidMetalButton size="md" icon="↗" onClick={() => navigate('/about')}>
             More about the practice
           </LiquidMetalButton>
@@ -149,10 +125,7 @@ export const HeroScrollAnimation = forwardRef(function HeroScrollAnimation(_prop
   const { data } = usePortfolio();
   const { isDark = true } = useTheme();
   const container = useRef(null);
-  const { scrollYProgress } = useScroll({
-    target: container,
-    offset: ['start start', 'end end'],
-  });
+  const { scrollYProgress } = useScroll({ target: container, offset: ['start start', 'end end'] });
 
   const rawName = data?.hero?.name;
   const name = rawName && !rawName.startsWith('[') ? rawName : 'SOLKINGS';
@@ -168,9 +141,14 @@ export const HeroScrollAnimation = forwardRef(function HeroScrollAnimation(_prop
         if (typeof ref === 'function') ref(node);
         else if (ref) ref.current = node;
       }}
-      className={`relative h-[200vh] ${isDark ? 'bg-black' : 'bg-[#f4f3ef]'}`}
+      className={`relative ${isDark ? 'bg-black' : 'bg-[#f4f3ef]'}`}
     >
       <HeroSection scrollYProgress={scrollYProgress} name={name} title={title} />
+      <StickyCard002
+        cards={practiceItems.slice(0, 5)}
+        className={isDark ? 'bg-[#090909]' : 'bg-[#eceae3]'}
+        imageClassName="border border-black/10 dark:border-white/15"
+      />
       <PracticeSection scrollYProgress={scrollYProgress} isDark={isDark} />
     </main>
   );
