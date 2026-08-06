@@ -444,10 +444,32 @@
       "norm_label": "react-use-measure"
     },
     {
-      "label": "tailwind-merge",
+      "label": "swiper",
       "file_type": "code",
       "source_file": "package.json",
       "source_location": "L27",
+      "_origin": "ast",
+      "id": "package_dependencies_swiper",
+      "community": 2,
+      "community_name": "dependencies",
+      "norm_label": "swiper"
+    },
+    {
+      "label": "swiper",
+      "file_type": "concept",
+      "source_file": "package.json",
+      "source_location": "L27",
+      "_origin": "ast",
+      "id": "swiper",
+      "community": 2,
+      "community_name": "dependencies",
+      "norm_label": "swiper"
+    },
+    {
+      "label": "tailwind-merge",
+      "file_type": "code",
+      "source_file": "package.json",
+      "source_location": "L28",
       "_origin": "ast",
       "id": "package_dependencies_tailwind_merge",
       "community": 2,
@@ -458,7 +480,7 @@
       "label": "tailwind-merge",
       "file_type": "concept",
       "source_file": "package.json",
-      "source_location": "L27",
+      "source_location": "L28",
       "_origin": "ast",
       "id": "tailwind_merge",
       "community": 2,
@@ -469,7 +491,7 @@
       "label": "devDependencies",
       "file_type": "code",
       "source_file": "package.json",
-      "source_location": "L29",
+      "source_location": "L30",
       "_origin": "ast",
       "id": "package_devdependencies",
       "community": 0,
@@ -480,7 +502,7 @@
       "label": "@eslint/js",
       "file_type": "code",
       "source_file": "package.json",
-      "source_location": "L30",
+      "source_location": "L31",
       "_origin": "ast",
       "id": "package_devdependencies_eslint_js",
       "community": 0,
@@ -491,7 +513,7 @@
       "label": "@eslint/js",
       "file_type": "concept",
       "source_file": "package.json",
-      "source_location": "L30",
+      "source_location": "L31",
       "_origin": "ast",
       "id": "eslint_js",
       "community": 0,
@@ -502,7 +524,7 @@
       "label": "@tailwindcss/vite",
       "file_type": "code",
       "source_file": "package.json",
-      "source_location": "L31",
+      "source_location": "L32",
       "_origin": "ast",
       "id": "package_devdependencies_tailwindcss_vite",
       "community": 0,
@@ -513,7 +535,7 @@
       "label": "@tailwindcss/vite",
       "file_type": "concept",
       "source_file": "package.json",
-      "source_location": "L31",
+      "source_location": "L32",
       "_origin": "ast",
       "id": "tailwindcss_vite",
       "community": 0,
@@ -524,7 +546,7 @@
       "label": "@types/react",
       "file_type": "code",
       "source_file": "package.json",
-      "source_location": "L32",
+      "source_location": "L33",
       "_origin": "ast",
       "id": "package_devdependencies_types_react",
       "community": 0,
@@ -535,7 +557,7 @@
       "label": "@types/react",
       "file_type": "concept",
       "source_file": "package.json",
-      "source_location": "L32",
+      "source_location": "L33",
       "_origin": "ast",
       "id": "types_react",
       "community": 0,
@@ -546,7 +568,7 @@
       "label": "@types/react-dom",
       "file_type": "code",
       "source_file": "package.json",
-      "source_location": "L33",
+      "source_location": "L34",
       "_origin": "ast",
       "id": "package_devdependencies_types_react_dom",
       "community": 0,
@@ -557,7 +579,7 @@
       "label": "@types/react-dom",
       "file_type": "concept",
       "source_file": "package.json",
-      "source_location": "L33",
+      "source_location": "L34",
       "_origin": "ast",
       "id": "types_react_dom",
       "community": 0,
@@ -568,7 +590,7 @@
       "label": "@vitejs/plugin-react",
       "file_type": "code",
       "source_file": "package.json",
-      "source_location": "L34",
+      "source_location": "L35",
       "_origin": "ast",
       "id": "package_devdependencies_vitejs_plugin_react",
       "community": 0,
@@ -579,7 +601,7 @@
       "label": "@vitejs/plugin-react",
       "file_type": "concept",
       "source_file": "package.json",
-      "source_location": "L34",
+      "source_location": "L35",
       "_origin": "ast",
       "id": "vitejs_plugin_react",
       "community": 0,
@@ -590,7 +612,7 @@
       "label": "eslint",
       "file_type": "code",
       "source_file": "package.json",
-      "source_location": "L35",
+      "source_location": "L36",
       "_origin": "ast",
       "id": "package_devdependencies_eslint",
       "community": 0,
@@ -601,7 +623,7 @@
       "label": "eslint",
       "file_type": "concept",
       "source_file": "package.json",
-      "source_location": "L35",
+      "source_location": "L36",
       "_origin": "ast",
       "id": "eslint",
       "community": 0,
@@ -612,7 +634,7 @@
       "label": "eslint-plugin-react-hooks",
       "file_type": "code",
       "source_file": "package.json",
-      "source_location": "L36",
+      "source_location": "L37",
       "_origin": "ast",
       "id": "package_devdependencies_eslint_plugin_react_hooks",
       "community": 0,
@@ -623,7 +645,7 @@
       "label": "eslint-plugin-react-hooks",
       "file_type": "concept",
       "source_file": "package.json",
-      "source_location": "L36",
+      "source_location": "L37",
       "_origin": "ast",
       "id": "eslint_plugin_react_hooks",
       "community": 0,
@@ -634,7 +656,7 @@
       "label": "eslint-plugin-react-refresh",
       "file_type": "code",
       "source_file": "package.json",
-      "source_location": "L37",
+      "source_location": "L38",
       "_origin": "ast",
       "id": "package_devdependencies_eslint_plugin_react_refresh",
       "community": 0,
@@ -645,7 +667,7 @@
       "label": "eslint-plugin-react-refresh",
       "file_type": "concept",
       "source_file": "package.json",
-      "source_location": "L37",
+      "source_location": "L38",
       "_origin": "ast",
       "id": "eslint_plugin_react_refresh",
       "community": 0,
@@ -656,7 +678,7 @@
       "label": "globals",
       "file_type": "code",
       "source_file": "package.json",
-      "source_location": "L38",
+      "source_location": "L39",
       "_origin": "ast",
       "id": "package_devdependencies_globals",
       "community": 0,
@@ -667,7 +689,7 @@
       "label": "globals",
       "file_type": "concept",
       "source_file": "package.json",
-      "source_location": "L38",
+      "source_location": "L39",
       "_origin": "ast",
       "id": "globals",
       "community": 0,
@@ -678,7 +700,7 @@
       "label": "tailwindcss",
       "file_type": "code",
       "source_file": "package.json",
-      "source_location": "L39",
+      "source_location": "L40",
       "_origin": "ast",
       "id": "package_devdependencies_tailwindcss",
       "community": 0,
@@ -689,7 +711,7 @@
       "label": "tailwindcss",
       "file_type": "concept",
       "source_file": "package.json",
-      "source_location": "L39",
+      "source_location": "L40",
       "_origin": "ast",
       "id": "tailwindcss",
       "community": 0,
@@ -700,7 +722,7 @@
       "label": "vite",
       "file_type": "code",
       "source_file": "package.json",
-      "source_location": "L40",
+      "source_location": "L41",
       "_origin": "ast",
       "id": "package_devdependencies_vite",
       "community": 0,
@@ -711,7 +733,7 @@
       "label": "vite",
       "file_type": "concept",
       "source_file": "package.json",
-      "source_location": "L40",
+      "source_location": "L41",
       "_origin": "ast",
       "id": "vite",
       "community": 0,
@@ -725,7 +747,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "src_app",
-      "community": 1,
+      "community": 3,
       "community_name": "App.jsx",
       "norm_label": "app.jsx"
     },
@@ -736,7 +758,7 @@
       "source_location": "L16",
       "_origin": "ast",
       "id": "src_app_pagevariants",
-      "community": 1,
+      "community": 3,
       "community_name": "App.jsx",
       "norm_label": "pagevariants"
     },
@@ -747,7 +769,7 @@
       "source_location": "L31",
       "_origin": "ast",
       "id": "src_app_pagetransition",
-      "community": 1,
+      "community": 3,
       "community_name": "App.jsx",
       "norm_label": "pagetransition"
     },
@@ -758,7 +780,7 @@
       "source_location": "L37",
       "_origin": "ast",
       "id": "src_app_animatedroutes",
-      "community": 1,
+      "community": 3,
       "community_name": "App.jsx",
       "norm_label": "animatedroutes()"
     },
@@ -770,7 +792,7 @@
       "_origin": "ast",
       "id": "src_app_app",
       "community": 3,
-      "community_name": "AdminPage.jsx",
+      "community_name": "App.jsx",
       "norm_label": "app()"
     },
     {
@@ -781,7 +803,7 @@
       "_origin": "ast",
       "id": "src_admin_adminpage",
       "community": 3,
-      "community_name": "AdminPage.jsx",
+      "community_name": "App.jsx",
       "norm_label": "adminpage.jsx"
     },
     {
@@ -792,7 +814,7 @@
       "_origin": "ast",
       "id": "src_admin_adminpage_sectionconfig",
       "community": 3,
-      "community_name": "AdminPage.jsx",
+      "community_name": "App.jsx",
       "norm_label": "sectionconfig"
     },
     {
@@ -803,7 +825,7 @@
       "_origin": "ast",
       "id": "src_admin_adminpage_buildempty",
       "community": 3,
-      "community_name": "AdminPage.jsx",
+      "community_name": "App.jsx",
       "norm_label": "buildempty()"
     },
     {
@@ -814,7 +836,7 @@
       "_origin": "ast",
       "id": "src_admin_adminpage_compressimage",
       "community": 3,
-      "community_name": "AdminPage.jsx",
+      "community_name": "App.jsx",
       "norm_label": "compressimage()"
     },
     {
@@ -825,7 +847,7 @@
       "_origin": "ast",
       "id": "src_admin_adminpage_s",
       "community": 3,
-      "community_name": "AdminPage.jsx",
+      "community_name": "App.jsx",
       "norm_label": "s"
     },
     {
@@ -836,7 +858,7 @@
       "_origin": "ast",
       "id": "src_admin_adminpage_cardvariants",
       "community": 3,
-      "community_name": "AdminPage.jsx",
+      "community_name": "App.jsx",
       "norm_label": "cardvariants"
     },
     {
@@ -847,7 +869,7 @@
       "_origin": "ast",
       "id": "src_admin_adminpage_adminpage",
       "community": 3,
-      "community_name": "AdminPage.jsx",
+      "community_name": "App.jsx",
       "norm_label": "adminpage()"
     },
     {
@@ -902,7 +924,7 @@
       "_origin": "ast",
       "id": "src_components_deletemodal",
       "community": 3,
-      "community_name": "AdminPage.jsx",
+      "community_name": "App.jsx",
       "norm_label": "deletemodal.jsx"
     },
     {
@@ -913,7 +935,7 @@
       "_origin": "ast",
       "id": "src_components_deletemodal_deletemodal",
       "community": 3,
-      "community_name": "AdminPage.jsx",
+      "community_name": "App.jsx",
       "norm_label": "deletemodal()"
     },
     {
@@ -924,7 +946,7 @@
       "_origin": "ast",
       "id": "src_components_footer",
       "community": 1,
-      "community_name": "App.jsx",
+      "community_name": "usePortfolio",
       "norm_label": "footer.jsx"
     },
     {
@@ -935,7 +957,7 @@
       "_origin": "ast",
       "id": "src_components_footer_footer",
       "community": 1,
-      "community_name": "App.jsx",
+      "community_name": "usePortfolio",
       "norm_label": "footer()"
     },
     {
@@ -945,7 +967,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "src_components_kinetictextloader",
-      "community": 1,
+      "community": 3,
       "community_name": "App.jsx",
       "norm_label": "kinetictextloader.jsx"
     },
@@ -956,7 +978,7 @@
       "source_location": "L25",
       "_origin": "ast",
       "id": "src_components_kinetictextloader_kinetictextloader",
-      "community": 1,
+      "community": 3,
       "community_name": "App.jsx",
       "norm_label": "kinetictextloader()"
     },
@@ -1022,7 +1044,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "src_components_preloader",
-      "community": 1,
+      "community": 3,
       "community_name": "App.jsx",
       "norm_label": "preloader.jsx"
     },
@@ -1033,7 +1055,7 @@
       "source_location": "L5",
       "_origin": "ast",
       "id": "src_components_preloader_preloader",
-      "community": 1,
+      "community": 3,
       "community_name": "App.jsx",
       "norm_label": "preloader()"
     },
@@ -1045,7 +1067,7 @@
       "_origin": "ast",
       "id": "src_components_protectedroute",
       "community": 3,
-      "community_name": "AdminPage.jsx",
+      "community_name": "App.jsx",
       "norm_label": "protectedroute.jsx"
     },
     {
@@ -1056,7 +1078,7 @@
       "_origin": "ast",
       "id": "src_components_protectedroute_protectedroute",
       "community": 3,
-      "community_name": "AdminPage.jsx",
+      "community_name": "App.jsx",
       "norm_label": "protectedroute()"
     },
     {
@@ -1144,7 +1166,7 @@
       "_origin": "ast",
       "id": "src_components_reactbits_flowingmenu",
       "community": 1,
-      "community_name": "App.jsx",
+      "community_name": "usePortfolio",
       "norm_label": "flowingmenu.jsx"
     },
     {
@@ -1155,7 +1177,7 @@
       "_origin": "ast",
       "id": "src_components_reactbits_flowingmenu_flowingmenu",
       "community": 1,
-      "community_name": "App.jsx",
+      "community_name": "usePortfolio",
       "norm_label": "flowingmenu()"
     },
     {
@@ -1166,7 +1188,7 @@
       "_origin": "ast",
       "id": "src_components_reactbits_flowingmenu_menuitem",
       "community": 1,
-      "community_name": "App.jsx",
+      "community_name": "usePortfolio",
       "norm_label": "menuitem()"
     },
     {
@@ -1254,7 +1276,7 @@
       "_origin": "ast",
       "id": "src_components_reactbits_scrollfloat",
       "community": 1,
-      "community_name": "App.jsx",
+      "community_name": "usePortfolio",
       "norm_label": "scrollfloat.jsx"
     },
     {
@@ -1265,7 +1287,7 @@
       "_origin": "ast",
       "id": "src_components_reactbits_scrollfloat_scrollfloat",
       "community": 1,
-      "community_name": "App.jsx",
+      "community_name": "usePortfolio",
       "norm_label": "scrollfloat()"
     },
     {
@@ -1368,6 +1390,28 @@
       "norm_label": "animatedfooter()"
     },
     {
+      "label": "carousel-001.jsx",
+      "file_type": "code",
+      "source_file": "src/components/ui/carousel-001.jsx",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "src_components_ui_carousel_001",
+      "community": 4,
+      "community_name": "hero-scroll-animation.jsx",
+      "norm_label": "carousel-001.jsx"
+    },
+    {
+      "label": "Carousel001()",
+      "file_type": "code",
+      "source_file": "src/components/ui/carousel-001.jsx",
+      "source_location": "L13",
+      "_origin": "ast",
+      "id": "src_components_ui_carousel_001_carousel001",
+      "community": 4,
+      "community_name": "hero-scroll-animation.jsx",
+      "norm_label": "carousel001()"
+    },
+    {
       "label": "cyberpunk-card.jsx",
       "file_type": "code",
       "source_file": "src/components/ui/cyberpunk-card.jsx",
@@ -1399,28 +1443,6 @@
       "community": 20,
       "community_name": "cyberpunk-card.jsx",
       "norm_label": "cyberpunkcard()"
-    },
-    {
-      "label": "expanding-cards.jsx",
-      "file_type": "code",
-      "source_file": "src/components/ui/expanding-cards.jsx",
-      "source_location": "L1",
-      "_origin": "ast",
-      "id": "src_components_ui_expanding_cards",
-      "community": 4,
-      "community_name": "hero-scroll-animation.jsx",
-      "norm_label": "expanding-cards.jsx"
-    },
-    {
-      "label": "ExpandingCards",
-      "file_type": "code",
-      "source_file": "src/components/ui/expanding-cards.jsx",
-      "source_location": "L6",
-      "_origin": "ast",
-      "id": "src_components_ui_expanding_cards_expandingcards",
-      "community": 4,
-      "community_name": "hero-scroll-animation.jsx",
-      "norm_label": "expandingcards"
     },
     {
       "label": "glass-dock.jsx",
@@ -1470,7 +1492,7 @@
       "label": "practiceItems",
       "file_type": "code",
       "source_file": "src/components/ui/hero-scroll-animation.jsx",
-      "source_location": "L20",
+      "source_location": "L12",
       "_origin": "ast",
       "id": "src_components_ui_hero_scroll_animation_practiceitems",
       "community": 4,
@@ -1481,7 +1503,7 @@
       "label": "HeroSection()",
       "file_type": "code",
       "source_file": "src/components/ui/hero-scroll-animation.jsx",
-      "source_location": "L72",
+      "source_location": "L50",
       "_origin": "ast",
       "id": "src_components_ui_hero_scroll_animation_herosection",
       "community": 4,
@@ -1492,7 +1514,7 @@
       "label": "PracticeSection()",
       "file_type": "code",
       "source_file": "src/components/ui/hero-scroll-animation.jsx",
-      "source_location": "L112",
+      "source_location": "L86",
       "_origin": "ast",
       "id": "src_components_ui_hero_scroll_animation_practicesection",
       "community": 4,
@@ -1503,12 +1525,34 @@
       "label": "HeroScrollAnimation",
       "file_type": "code",
       "source_file": "src/components/ui/hero-scroll-animation.jsx",
-      "source_location": "L148",
+      "source_location": "L124",
       "_origin": "ast",
       "id": "src_components_ui_hero_scroll_animation_heroscrollanimation",
       "community": 4,
       "community_name": "hero-scroll-animation.jsx",
       "norm_label": "heroscrollanimation"
+    },
+    {
+      "label": "sticky-card-002.jsx",
+      "file_type": "code",
+      "source_file": "src/components/ui/sticky-card-002.jsx",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "src_components_ui_sticky_card_002",
+      "community": 4,
+      "community_name": "hero-scroll-animation.jsx",
+      "norm_label": "sticky-card-002.jsx"
+    },
+    {
+      "label": "StickyCard002()",
+      "file_type": "code",
+      "source_file": "src/components/ui/sticky-card-002.jsx",
+      "source_location": "L10",
+      "_origin": "ast",
+      "id": "src_components_ui_sticky_card_002_stickycard002",
+      "community": 4,
+      "community_name": "hero-scroll-animation.jsx",
+      "norm_label": "stickycard002()"
     },
     {
       "label": "AuthContext.jsx",
@@ -1518,7 +1562,7 @@
       "_origin": "ast",
       "id": "src_context_authcontext",
       "community": 3,
-      "community_name": "AdminPage.jsx",
+      "community_name": "App.jsx",
       "norm_label": "authcontext.jsx"
     },
     {
@@ -1529,7 +1573,7 @@
       "_origin": "ast",
       "id": "src_context_authcontext_authcontext",
       "community": 3,
-      "community_name": "AdminPage.jsx",
+      "community_name": "App.jsx",
       "norm_label": "authcontext"
     },
     {
@@ -1540,7 +1584,7 @@
       "_origin": "ast",
       "id": "src_context_authcontext_authprovider",
       "community": 3,
-      "community_name": "AdminPage.jsx",
+      "community_name": "App.jsx",
       "norm_label": "authprovider()"
     },
     {
@@ -1551,7 +1595,7 @@
       "_origin": "ast",
       "id": "src_context_authcontext_useauth",
       "community": 3,
-      "community_name": "AdminPage.jsx",
+      "community_name": "App.jsx",
       "norm_label": "useauth()"
     },
     {
@@ -1595,7 +1639,7 @@
       "_origin": "ast",
       "id": "src_context_portfoliocontext_useportfolio",
       "community": 1,
-      "community_name": "App.jsx",
+      "community_name": "usePortfolio",
       "norm_label": "useportfolio()"
     },
     {
@@ -1881,7 +1925,7 @@
       "_origin": "ast",
       "id": "src_main",
       "community": 3,
-      "community_name": "AdminPage.jsx",
+      "community_name": "App.jsx",
       "norm_label": "main.jsx"
     },
     {
@@ -1892,7 +1936,7 @@
       "_origin": "ast",
       "id": "src_pages_about",
       "community": 1,
-      "community_name": "App.jsx",
+      "community_name": "usePortfolio",
       "norm_label": "about.jsx"
     },
     {
@@ -1903,7 +1947,7 @@
       "_origin": "ast",
       "id": "src_pages_about_defaultservices",
       "community": 1,
-      "community_name": "App.jsx",
+      "community_name": "usePortfolio",
       "norm_label": "defaultservices"
     },
     {
@@ -1914,7 +1958,7 @@
       "_origin": "ast",
       "id": "src_pages_about_about",
       "community": 1,
-      "community_name": "App.jsx",
+      "community_name": "usePortfolio",
       "norm_label": "about()"
     },
     {
@@ -1925,7 +1969,7 @@
       "_origin": "ast",
       "id": "src_pages_adminlogin",
       "community": 3,
-      "community_name": "AdminPage.jsx",
+      "community_name": "App.jsx",
       "norm_label": "adminlogin.jsx"
     },
     {
@@ -1936,7 +1980,7 @@
       "_origin": "ast",
       "id": "src_pages_adminlogin_adminlogin",
       "community": 3,
-      "community_name": "AdminPage.jsx",
+      "community_name": "App.jsx",
       "norm_label": "adminlogin()"
     },
     {
@@ -1947,7 +1991,7 @@
       "_origin": "ast",
       "id": "src_pages_contact",
       "community": 1,
-      "community_name": "App.jsx",
+      "community_name": "usePortfolio",
       "norm_label": "contact.jsx"
     },
     {
@@ -1958,7 +2002,7 @@
       "_origin": "ast",
       "id": "src_pages_contact_contact",
       "community": 1,
-      "community_name": "App.jsx",
+      "community_name": "usePortfolio",
       "norm_label": "contact()"
     },
     {
@@ -1976,7 +2020,7 @@
       "label": "Home()",
       "file_type": "code",
       "source_file": "src/pages/Home.jsx",
-      "source_location": "L6",
+      "source_location": "L7",
       "_origin": "ast",
       "id": "src_pages_home_home",
       "community": 4,
@@ -1991,7 +2035,7 @@
       "_origin": "ast",
       "id": "src_pages_loginpage",
       "community": 3,
-      "community_name": "AdminPage.jsx",
+      "community_name": "App.jsx",
       "norm_label": "loginpage.jsx"
     },
     {
@@ -2002,7 +2046,7 @@
       "_origin": "ast",
       "id": "src_pages_loginpage_loginpage",
       "community": 3,
-      "community_name": "AdminPage.jsx",
+      "community_name": "App.jsx",
       "norm_label": "loginpage()"
     },
     {
@@ -2013,7 +2057,7 @@
       "_origin": "ast",
       "id": "src_pages_projectdetail",
       "community": 1,
-      "community_name": "App.jsx",
+      "community_name": "usePortfolio",
       "norm_label": "projectdetail.jsx"
     },
     {
@@ -2024,7 +2068,7 @@
       "_origin": "ast",
       "id": "src_pages_projectdetail_projectdetail",
       "community": 1,
-      "community_name": "App.jsx",
+      "community_name": "usePortfolio",
       "norm_label": "projectdetail()"
     },
     {
@@ -2035,7 +2079,7 @@
       "_origin": "ast",
       "id": "src_pages_projectdetail_nextproject",
       "community": 1,
-      "community_name": "App.jsx",
+      "community_name": "usePortfolio",
       "norm_label": "nextproject()"
     },
     {
@@ -2046,7 +2090,7 @@
       "_origin": "ast",
       "id": "src_pages_projects",
       "community": 1,
-      "community_name": "App.jsx",
+      "community_name": "usePortfolio",
       "norm_label": "projects.jsx"
     },
     {
@@ -2057,7 +2101,7 @@
       "_origin": "ast",
       "id": "src_pages_projects_projects",
       "community": 1,
-      "community_name": "App.jsx",
+      "community_name": "usePortfolio",
       "norm_label": "projects()"
     },
     {
@@ -2169,6 +2213,61 @@
       "community": 23,
       "community_name": "READMEAGENTS.md",
       "norm_label": "readmeagents.md"
+    },
+    {
+      "label": "query_20260806_032039_where_should_the_expanding_card_and_hero_visual_fi.md",
+      "file_type": "document",
+      "source_file": "graphify-out/memory/query_20260806_032039_where_should_the_expanding_card_and_hero_visual_fi.md",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "graphify_out_memory_query_20260806_032039_where_should_the_expanding_card_and_hero_visual_fi",
+      "community": 24,
+      "community_name": "Q: Where should the expanding-card and hero visual fixes be implemented?",
+      "norm_label": "query_20260806_032039_where_should_the_expanding_card_and_hero_visual_fi.md"
+    },
+    {
+      "label": "Q: Where should the expanding-card and hero visual fixes be implemented?",
+      "file_type": "document",
+      "source_file": "graphify-out/memory/query_20260806_032039_where_should_the_expanding_card_and_hero_visual_fi.md",
+      "source_location": "L10",
+      "_origin": "ast",
+      "id": "graphify_out_memory_query_20260806_032039_where_should_the_expanding_card_and_hero_visual_fi_q_where_should_the_expanding_card_and_hero_visual_fixes_be_implemented",
+      "community": 24,
+      "community_name": "Q: Where should the expanding-card and hero visual fixes be implemented?",
+      "norm_label": "q: where should the expanding-card and hero visual fixes be implemented?"
+    },
+    {
+      "label": "Answer",
+      "file_type": "document",
+      "source_file": "graphify-out/memory/query_20260806_032039_where_should_the_expanding_card_and_hero_visual_fi.md",
+      "source_location": "L12",
+      "_origin": "ast",
+      "id": "graphify_out_memory_query_20260806_032039_where_should_the_expanding_card_and_hero_visual_fi_answer",
+      "community": 24,
+      "community_name": "Q: Where should the expanding-card and hero visual fixes be implemented?",
+      "norm_label": "answer"
+    },
+    {
+      "label": "Outcome",
+      "file_type": "document",
+      "source_file": "graphify-out/memory/query_20260806_032039_where_should_the_expanding_card_and_hero_visual_fi.md",
+      "source_location": "L16",
+      "_origin": "ast",
+      "id": "graphify_out_memory_query_20260806_032039_where_should_the_expanding_card_and_hero_visual_fi_outcome",
+      "community": 24,
+      "community_name": "Q: Where should the expanding-card and hero visual fixes be implemented?",
+      "norm_label": "outcome"
+    },
+    {
+      "label": "Source Nodes",
+      "file_type": "document",
+      "source_file": "graphify-out/memory/query_20260806_032039_where_should_the_expanding_card_and_hero_visual_fi.md",
+      "source_location": "L20",
+      "_origin": "ast",
+      "id": "graphify_out_memory_query_20260806_032039_where_should_the_expanding_card_and_hero_visual_fi_source_nodes",
+      "community": 24,
+      "community_name": "Q: Where should the expanding-card and hero visual fixes be implemented?",
+      "norm_label": "source nodes"
     }
   ],
   "links": [
@@ -2187,7 +2286,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "package.json",
-      "source_location": "L29",
+      "source_location": "L30",
       "weight": 1.0,
       "_origin": "ast",
       "source": "package",
@@ -2455,6 +2554,17 @@
       "weight": 1.0,
       "_origin": "ast",
       "source": "package_dependencies",
+      "target": "package_dependencies_swiper",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "package.json",
+      "source_location": "L28",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "package_dependencies",
       "target": "package_dependencies_tailwind_merge",
       "confidence_score": 1.0
     },
@@ -2634,30 +2744,20 @@
       "weight": 1.0,
       "context": "import",
       "_origin": "ast",
+      "source": "package_dependencies_swiper",
+      "target": "swiper",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "confidence": "EXTRACTED",
+      "source_file": "package.json",
+      "source_location": "L28",
+      "weight": 1.0,
+      "context": "import",
+      "_origin": "ast",
       "source": "package_dependencies_tailwind_merge",
       "target": "tailwind_merge",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "package.json",
-      "source_location": "L35",
-      "weight": 1.0,
-      "_origin": "ast",
-      "source": "package_devdependencies",
-      "target": "package_devdependencies_eslint",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "package.json",
-      "source_location": "L30",
-      "weight": 1.0,
-      "_origin": "ast",
-      "source": "package_devdependencies",
-      "target": "package_devdependencies_eslint_js",
       "confidence_score": 1.0
     },
     {
@@ -2668,40 +2768,7 @@
       "weight": 1.0,
       "_origin": "ast",
       "source": "package_devdependencies",
-      "target": "package_devdependencies_eslint_plugin_react_hooks",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "package.json",
-      "source_location": "L37",
-      "weight": 1.0,
-      "_origin": "ast",
-      "source": "package_devdependencies",
-      "target": "package_devdependencies_eslint_plugin_react_refresh",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "package.json",
-      "source_location": "L38",
-      "weight": 1.0,
-      "_origin": "ast",
-      "source": "package_devdependencies",
-      "target": "package_devdependencies_globals",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "package.json",
-      "source_location": "L39",
-      "weight": 1.0,
-      "_origin": "ast",
-      "source": "package_devdependencies",
-      "target": "package_devdependencies_tailwindcss",
+      "target": "package_devdependencies_eslint",
       "confidence_score": 1.0
     },
     {
@@ -2712,29 +2779,40 @@
       "weight": 1.0,
       "_origin": "ast",
       "source": "package_devdependencies",
-      "target": "package_devdependencies_tailwindcss_vite",
+      "target": "package_devdependencies_eslint_js",
       "confidence_score": 1.0
     },
     {
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "package.json",
-      "source_location": "L32",
+      "source_location": "L37",
       "weight": 1.0,
       "_origin": "ast",
       "source": "package_devdependencies",
-      "target": "package_devdependencies_types_react",
+      "target": "package_devdependencies_eslint_plugin_react_hooks",
       "confidence_score": 1.0
     },
     {
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "package.json",
-      "source_location": "L33",
+      "source_location": "L38",
       "weight": 1.0,
       "_origin": "ast",
       "source": "package_devdependencies",
-      "target": "package_devdependencies_types_react_dom",
+      "target": "package_devdependencies_eslint_plugin_react_refresh",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "package.json",
+      "source_location": "L39",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "package_devdependencies",
+      "target": "package_devdependencies_globals",
       "confidence_score": 1.0
     },
     {
@@ -2745,7 +2823,29 @@
       "weight": 1.0,
       "_origin": "ast",
       "source": "package_devdependencies",
-      "target": "package_devdependencies_vite",
+      "target": "package_devdependencies_tailwindcss",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "package.json",
+      "source_location": "L32",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "package_devdependencies",
+      "target": "package_devdependencies_tailwindcss_vite",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "package.json",
+      "source_location": "L33",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "package_devdependencies",
+      "target": "package_devdependencies_types_react",
       "confidence_score": 1.0
     },
     {
@@ -2756,6 +2856,28 @@
       "weight": 1.0,
       "_origin": "ast",
       "source": "package_devdependencies",
+      "target": "package_devdependencies_types_react_dom",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "package.json",
+      "source_location": "L41",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "package_devdependencies",
+      "target": "package_devdependencies_vite",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "package.json",
+      "source_location": "L35",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "package_devdependencies",
       "target": "package_devdependencies_vitejs_plugin_react",
       "confidence_score": 1.0
     },
@@ -2763,7 +2885,7 @@
       "relation": "imports",
       "confidence": "EXTRACTED",
       "source_file": "package.json",
-      "source_location": "L30",
+      "source_location": "L31",
       "weight": 1.0,
       "context": "import",
       "_origin": "ast",
@@ -2775,7 +2897,7 @@
       "relation": "imports",
       "confidence": "EXTRACTED",
       "source_file": "package.json",
-      "source_location": "L31",
+      "source_location": "L32",
       "weight": 1.0,
       "context": "import",
       "_origin": "ast",
@@ -2787,7 +2909,7 @@
       "relation": "imports",
       "confidence": "EXTRACTED",
       "source_file": "package.json",
-      "source_location": "L32",
+      "source_location": "L33",
       "weight": 1.0,
       "context": "import",
       "_origin": "ast",
@@ -2799,7 +2921,7 @@
       "relation": "imports",
       "confidence": "EXTRACTED",
       "source_file": "package.json",
-      "source_location": "L33",
+      "source_location": "L34",
       "weight": 1.0,
       "context": "import",
       "_origin": "ast",
@@ -2811,7 +2933,7 @@
       "relation": "imports",
       "confidence": "EXTRACTED",
       "source_file": "package.json",
-      "source_location": "L34",
+      "source_location": "L35",
       "weight": 1.0,
       "context": "import",
       "_origin": "ast",
@@ -2823,7 +2945,7 @@
       "relation": "imports",
       "confidence": "EXTRACTED",
       "source_file": "package.json",
-      "source_location": "L35",
+      "source_location": "L36",
       "weight": 1.0,
       "context": "import",
       "_origin": "ast",
@@ -2835,7 +2957,7 @@
       "relation": "imports",
       "confidence": "EXTRACTED",
       "source_file": "package.json",
-      "source_location": "L36",
+      "source_location": "L37",
       "weight": 1.0,
       "context": "import",
       "_origin": "ast",
@@ -2847,7 +2969,7 @@
       "relation": "imports",
       "confidence": "EXTRACTED",
       "source_file": "package.json",
-      "source_location": "L37",
+      "source_location": "L38",
       "weight": 1.0,
       "context": "import",
       "_origin": "ast",
@@ -2859,7 +2981,7 @@
       "relation": "imports",
       "confidence": "EXTRACTED",
       "source_file": "package.json",
-      "source_location": "L38",
+      "source_location": "L39",
       "weight": 1.0,
       "context": "import",
       "_origin": "ast",
@@ -2871,7 +2993,7 @@
       "relation": "imports",
       "confidence": "EXTRACTED",
       "source_file": "package.json",
-      "source_location": "L39",
+      "source_location": "L40",
       "weight": 1.0,
       "context": "import",
       "_origin": "ast",
@@ -2883,7 +3005,7 @@
       "relation": "imports",
       "confidence": "EXTRACTED",
       "source_file": "package.json",
-      "source_location": "L40",
+      "source_location": "L41",
       "weight": 1.0,
       "context": "import",
       "_origin": "ast",
@@ -3838,7 +3960,7 @@
       "context": "import",
       "confidence": "EXTRACTED",
       "source_file": "src/components/ui/hero-scroll-animation.jsx",
-      "source_location": "L17",
+      "source_location": "L8",
       "weight": 1.0,
       "_origin": "ast",
       "source": "src_components_ui_hero_scroll_animation",
@@ -3850,7 +3972,7 @@
       "context": "import",
       "confidence": "EXTRACTED",
       "source_file": "src/components/ui/hero-scroll-animation.jsx",
-      "source_location": "L17",
+      "source_location": "L8",
       "weight": 1.0,
       "_origin": "ast",
       "source": "src_components_ui_hero_scroll_animation",
@@ -4307,6 +4429,41 @@
     {
       "relation": "contains",
       "confidence": "EXTRACTED",
+      "source_file": "src/components/ui/carousel-001.jsx",
+      "source_location": "L13",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "src_components_ui_carousel_001",
+      "target": "src_components_ui_carousel_001_carousel001",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/components/ui/hero-scroll-animation.jsx",
+      "source_location": "L9",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "src_components_ui_hero_scroll_animation",
+      "target": "src_components_ui_carousel_001",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/components/ui/hero-scroll-animation.jsx",
+      "source_location": "L9",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "src_components_ui_hero_scroll_animation",
+      "target": "src_components_ui_carousel_001_carousel001",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
       "source_file": "src/components/ui/cyberpunk-card.jsx",
       "source_location": "L102",
       "weight": 1.0,
@@ -4324,41 +4481,6 @@
       "_origin": "ast",
       "source": "src_components_ui_cyberpunk_card",
       "target": "src_components_ui_cyberpunk_card_matrixrain",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "src/components/ui/expanding-cards.jsx",
-      "source_location": "L6",
-      "weight": 1.0,
-      "_origin": "ast",
-      "source": "src_components_ui_expanding_cards",
-      "target": "src_components_ui_expanding_cards_expandingcards",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "imports_from",
-      "context": "import",
-      "confidence": "EXTRACTED",
-      "source_file": "src/components/ui/hero-scroll-animation.jsx",
-      "source_location": "L18",
-      "weight": 1.0,
-      "_origin": "ast",
-      "source": "src_components_ui_hero_scroll_animation",
-      "target": "src_components_ui_expanding_cards",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "imports",
-      "context": "import",
-      "confidence": "EXTRACTED",
-      "source_file": "src/components/ui/hero-scroll-animation.jsx",
-      "source_location": "L18",
-      "weight": 1.0,
-      "_origin": "ast",
-      "source": "src_components_ui_hero_scroll_animation",
-      "target": "src_components_ui_expanding_cards_expandingcards",
       "confidence_score": 1.0
     },
     {
@@ -4387,7 +4509,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "src/components/ui/hero-scroll-animation.jsx",
-      "source_location": "L148",
+      "source_location": "L124",
       "weight": 1.0,
       "_origin": "ast",
       "source": "src_components_ui_hero_scroll_animation",
@@ -4398,7 +4520,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "src/components/ui/hero-scroll-animation.jsx",
-      "source_location": "L72",
+      "source_location": "L50",
       "weight": 1.0,
       "_origin": "ast",
       "source": "src_components_ui_hero_scroll_animation",
@@ -4409,7 +4531,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "src/components/ui/hero-scroll-animation.jsx",
-      "source_location": "L20",
+      "source_location": "L12",
       "weight": 1.0,
       "_origin": "ast",
       "source": "src_components_ui_hero_scroll_animation",
@@ -4420,7 +4542,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "src/components/ui/hero-scroll-animation.jsx",
-      "source_location": "L112",
+      "source_location": "L86",
       "weight": 1.0,
       "_origin": "ast",
       "source": "src_components_ui_hero_scroll_animation",
@@ -4432,7 +4554,31 @@
       "context": "import",
       "confidence": "EXTRACTED",
       "source_file": "src/components/ui/hero-scroll-animation.jsx",
-      "source_location": "L15",
+      "source_location": "L10",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "src_components_ui_hero_scroll_animation",
+      "target": "src_components_ui_sticky_card_002",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/components/ui/hero-scroll-animation.jsx",
+      "source_location": "L10",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "src_components_ui_hero_scroll_animation",
+      "target": "src_components_ui_sticky_card_002_stickycard002",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/components/ui/hero-scroll-animation.jsx",
+      "source_location": "L6",
       "weight": 1.0,
       "_origin": "ast",
       "source": "src_components_ui_hero_scroll_animation",
@@ -4444,7 +4590,7 @@
       "context": "import",
       "confidence": "EXTRACTED",
       "source_file": "src/components/ui/hero-scroll-animation.jsx",
-      "source_location": "L15",
+      "source_location": "L6",
       "weight": 1.0,
       "_origin": "ast",
       "source": "src_components_ui_hero_scroll_animation",
@@ -4456,7 +4602,7 @@
       "context": "import",
       "confidence": "EXTRACTED",
       "source_file": "src/components/ui/hero-scroll-animation.jsx",
-      "source_location": "L16",
+      "source_location": "L7",
       "weight": 1.0,
       "_origin": "ast",
       "source": "src_components_ui_hero_scroll_animation",
@@ -4468,7 +4614,7 @@
       "context": "import",
       "confidence": "EXTRACTED",
       "source_file": "src/components/ui/hero-scroll-animation.jsx",
-      "source_location": "L16",
+      "source_location": "L7",
       "weight": 1.0,
       "_origin": "ast",
       "source": "src_components_ui_hero_scroll_animation",
@@ -4497,6 +4643,17 @@
       "_origin": "ast",
       "source": "src_pages_home",
       "target": "src_components_ui_hero_scroll_animation_heroscrollanimation",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/components/ui/sticky-card-002.jsx",
+      "source_location": "L10",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "src_components_ui_sticky_card_002",
+      "target": "src_components_ui_sticky_card_002_stickycard002",
       "confidence_score": 1.0
     },
     {
@@ -5284,7 +5441,7 @@
       "context": "call",
       "confidence": "EXTRACTED",
       "source_file": "src/pages/Home.jsx",
-      "source_location": "L7",
+      "source_location": "L8",
       "weight": 1.0,
       "_origin": "ast",
       "source": "src_pages_home_home",
@@ -5350,7 +5507,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "src/pages/Home.jsx",
-      "source_location": "L6",
+      "source_location": "L7",
       "weight": 1.0,
       "_origin": "ast",
       "source": "src_pages_home",
@@ -5455,8 +5612,52 @@
       "source": "readme_react_vite",
       "target": "readme_react_compiler",
       "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "graphify-out/memory/query_20260806_032039_where_should_the_expanding_card_and_hero_visual_fi.md",
+      "source_location": "L10",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "graphify_out_memory_query_20260806_032039_where_should_the_expanding_card_and_hero_visual_fi",
+      "target": "graphify_out_memory_query_20260806_032039_where_should_the_expanding_card_and_hero_visual_fi_q_where_should_the_expanding_card_and_hero_visual_fixes_be_implemented",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "graphify-out/memory/query_20260806_032039_where_should_the_expanding_card_and_hero_visual_fi.md",
+      "source_location": "L12",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "graphify_out_memory_query_20260806_032039_where_should_the_expanding_card_and_hero_visual_fi_q_where_should_the_expanding_card_and_hero_visual_fixes_be_implemented",
+      "target": "graphify_out_memory_query_20260806_032039_where_should_the_expanding_card_and_hero_visual_fi_answer",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "graphify-out/memory/query_20260806_032039_where_should_the_expanding_card_and_hero_visual_fi.md",
+      "source_location": "L16",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "graphify_out_memory_query_20260806_032039_where_should_the_expanding_card_and_hero_visual_fi_q_where_should_the_expanding_card_and_hero_visual_fixes_be_implemented",
+      "target": "graphify_out_memory_query_20260806_032039_where_should_the_expanding_card_and_hero_visual_fi_outcome",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "graphify-out/memory/query_20260806_032039_where_should_the_expanding_card_and_hero_visual_fi.md",
+      "source_location": "L20",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "graphify_out_memory_query_20260806_032039_where_should_the_expanding_card_and_hero_visual_fi_q_where_should_the_expanding_card_and_hero_visual_fixes_be_implemented",
+      "target": "graphify_out_memory_query_20260806_032039_where_should_the_expanding_card_and_hero_visual_fi_source_nodes",
+      "confidence_score": 1.0
     }
   ],
   "hyperedges": [],
-  "built_at_commit": "311014fe96243adc9f11dc3b687d9240338cb4f0"
+  "built_at_commit": "b63a7e6f27989d17872f11244feac166ad40e88c"
 }

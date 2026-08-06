@@ -1,8 +1,8 @@
 {
   "0": "devDependencies",
-  "1": "App.jsx",
+  "1": "usePortfolio",
   "2": "dependencies",
-  "3": "AdminPage.jsx",
+  "3": "App.jsx",
   "4": "hero-scroll-animation.jsx",
   "5": "package.json",
   "6": "PortfolioContext.jsx",
@@ -22,5 +22,6 @@
   "20": "cyberpunk-card.jsx",
   "21": "utils.js",
   "22": "CLAUDE.md",
-  "23": "READMEAGENTS.md"
+  "23": "READMEAGENTS.md",
+  "24": "Q: Where should the expanding-card and hero visual fixes be implemented?"
 }

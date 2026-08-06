@@ -5,8 +5,8 @@
     "semantic_hash": ""
   },
   "package.json": {
-    "mtime": 1785984857.1870635,
-    "ast_hash": "128ae4457b7972435afc58f87b341bbd",
+    "mtime": 1785988139.2389803,
+    "ast_hash": "aa0cfb04d4c90a4799a72d1fd87ac802",
     "semantic_hash": ""
   },
   "skills-lock.json": {
@@ -165,8 +165,8 @@
     "semantic_hash": ""
   },
   "src/pages/Home.jsx": {
-    "mtime": 1785983460.459023,
-    "ast_hash": "27662df448e690e6484d0c5ae59f55c5",
+    "mtime": 1785988326.9919524,
+    "ast_hash": "7a5977d14b284eede7dde67498ca8569",
     "semantic_hash": ""
   },
   "src/pages/LoginPage.jsx": {
@@ -254,24 +254,34 @@
     "ast_hash": "cb3c606ff2befd443a4ae7d70d6bc6ba",
     "semantic_hash": ""
   },
-  "src/components/ui/expanding-cards.jsx": {
-    "mtime": 1785986106.8513372,
-    "ast_hash": "3c9021f288b3b63380305c115cedb5b4",
-    "semantic_hash": ""
-  },
   "src/components/ui/glass-dock.jsx": {
     "mtime": 1785983209.4306118,
     "ast_hash": "16611e67ec8aab5f10ac0e3547e6fb3d",
     "semantic_hash": ""
   },
   "src/components/ui/hero-scroll-animation.jsx": {
-    "mtime": 1785986179.7890208,
-    "ast_hash": "0a87bc49d45ada20c5e96706aa1b363a",
+    "mtime": 1785988325.6940496,
+    "ast_hash": "ae13d5aeef338f798e64f51dc5187d24",
     "semantic_hash": ""
   },
   "src/lib/utils.js": {
     "mtime": 1785982435.6275733,
     "ast_hash": "d1c4afdedf414ae731f58a28173db977",
+    "semantic_hash": ""
+  },
+  "src/components/ui/carousel-001.jsx": {
+    "mtime": 1785988274.6499722,
+    "ast_hash": "6b1a9a6e452a2fd1daf27b8641c45785",
+    "semantic_hash": ""
+  },
+  "src/components/ui/sticky-card-002.jsx": {
+    "mtime": 1785988273.5116808,
+    "ast_hash": "a9e83a4c98bd34812ec54ce18e5ac912",
+    "semantic_hash": ""
+  },
+  "graphify-out/memory/query_20260806_032039_where_should_the_expanding_card_and_hero_visual_fi.md": {
+    "mtime": 1785986439.1011305,
+    "ast_hash": "b6ca1cb7b7686aeab1adc6e9c3e837d1",
     "semantic_hash": ""
   }
 }
