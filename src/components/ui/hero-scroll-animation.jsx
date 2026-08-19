@@ -6,7 +6,7 @@ import { useNavigate } from 'react-router-dom';
 import { usePortfolio } from '../../context/PortfolioContext.jsx';
 import { useTheme } from '../../hooks/useTheme.js';
 import { LiquidMetalButton } from '../LiquidMetalButton.jsx';
-import Carousel001 from './carousel-001.jsx';
+import Carousel_001 from './carousel-001.jsx';
 import StickyCard002 from './sticky-card-002.jsx';
 
 const practiceItems = [
@@ -83,19 +83,16 @@ function HeroSection({ scrollYProgress, name, title }) {
   );
 }
 
-function PracticeSection({ scrollYProgress, isDark }) {
+function PracticeSection({ isDark }) {
   const navigate = useNavigate();
-  const scale = useTransform(scrollYProgress, [0.78, 1], [0.94, 1]);
-  const y = useTransform(scrollYProgress, [0.78, 1], ['4%', '0%']);
 
   return (
-    <Motion.section
-      style={{ scale, y }}
-      className={`relative z-20 min-h-screen rounded-t-[28px] border-t px-4 py-20 md:px-8 ${
+    <section
+      className={`relative z-20 min-h-screen w-full flex flex-col items-center justify-center overflow-hidden rounded-t-[28px] border-t px-4 py-20 md:px-8 ${
         isDark ? 'border-white/10 bg-[#090909] text-white' : 'border-black/10 bg-[#eceae3] text-[#191b1e]'
       }`}
     >
-      <article className="relative z-10 mx-auto flex w-full max-w-[1152px] flex-col items-center justify-center text-center">
+      <div className="mx-auto flex w-full max-w-4xl flex-col items-center justify-center text-center">
         <span className={`text-[11px] font-medium uppercase tracking-[0.24em] ${isDark ? 'text-white/50' : 'text-black/50'}`}>
           Selected practice
         </span>
@@ -105,19 +102,23 @@ function PracticeSection({ scrollYProgress, isDark }) {
         <p className={`mt-4 max-w-2xl text-base leading-relaxed sm:text-lg ${isDark ? 'text-white/60' : 'text-black/60'}`}>
           Drag or use the arrows to browse selected visual experiments.
         </p>
+      </div>
 
-        <Carousel001
-          className="mt-9"
+      <div className="mt-10 w-full flex items-center justify-center">
+        <Carousel_001
           images={practiceItems.map((item) => ({ id: item.id, src: item.image, alt: item.alt }))}
+          showPagination
+          showNavigation
+          loop
         />
+      </div>
 
-        <div className="mt-7">
-          <LiquidMetalButton size="md" icon="↗" onClick={() => navigate('/about')}>
-            More about the practice
-          </LiquidMetalButton>
-        </div>
-      </article>
-    </Motion.section>
+      <div className="mt-8 flex justify-center">
+        <LiquidMetalButton size="md" icon="↗" onClick={() => navigate('/about')}>
+          More about the practice
+        </LiquidMetalButton>
+      </div>
+    </section>
   );
 }
 
@@ -141,7 +142,7 @@ export const HeroScrollAnimation = forwardRef(function HeroScrollAnimation(_prop
         if (typeof ref === 'function') ref(node);
         else if (ref) ref.current = node;
       }}
-      className={`relative ${isDark ? 'bg-black' : 'bg-[#f4f3ef]'}`}
+      className={`relative w-full ${isDark ? 'bg-black' : 'bg-[#f4f3ef]'}`}
     >
       <HeroSection scrollYProgress={scrollYProgress} name={name} title={title} />
       <StickyCard002
@@ -149,7 +150,7 @@ export const HeroScrollAnimation = forwardRef(function HeroScrollAnimation(_prop
         className={isDark ? 'bg-[#090909]' : 'bg-[#eceae3]'}
         imageClassName="border border-black/10 dark:border-white/15"
       />
-      <PracticeSection scrollYProgress={scrollYProgress} isDark={isDark} />
+      <PracticeSection isDark={isDark} />
     </main>
   );
 });
