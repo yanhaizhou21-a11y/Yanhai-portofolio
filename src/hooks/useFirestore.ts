@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react'
 import { doc, onSnapshot, setDoc } from 'firebase/firestore'
-import { db } from '../firebase.js'
-import { defaultPortfolioData } from '../data/defaultData.js'
+import { db } from '../firebase'
+import { defaultPortfolioData } from '../data/defaultData'
 
 const DOC_REF = doc(db, 'portfolio', 'data')
 

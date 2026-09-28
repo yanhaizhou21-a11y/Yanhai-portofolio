@@ -1,10 +1,10 @@
 import { useState } from 'react'
 import { AnimatePresence, motion as Motion, useMotionValueEvent, useScroll } from 'framer-motion'
 import { Link, useLocation, useNavigate } from 'react-router-dom'
-import { usePortfolio } from '../context/PortfolioContext.jsx'
-import { useTheme } from '../hooks/useTheme.js'
-import GlassDock from './ui/glass-dock.jsx'
-import { LiquidMetalButton } from './LiquidMetalButton.jsx'
+import { usePortfolio } from '../context/PortfolioContext'
+import { useTheme } from '../hooks/useTheme'
+import GlassDock from './ui/glass-dock'
+import { LiquidMetalButton } from './LiquidMetalButton'
 
 const navLinks = [
   { label: 'Home', path: '/' },

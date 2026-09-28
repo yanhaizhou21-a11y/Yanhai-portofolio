@@ -1,10 +1,10 @@
 import { useMemo, useState } from 'react'
 import { Link, useNavigate } from 'react-router-dom'
 import { motion, AnimatePresence } from 'framer-motion'
-import DeleteModal from '../components/DeleteModal.jsx'
-import { usePortfolio } from '../context/PortfolioContext.jsx'
-import { useAuth } from '../context/AuthContext.jsx'
-import { useTheme } from '../hooks/useTheme.js'
+import DeleteModal from '../components/DeleteModal'
+import { usePortfolio } from '../context/PortfolioContext'
+import { useAuth } from '../context/AuthContext'
+import { useTheme } from '../hooks/useTheme'
 
 const sectionConfig = {
   hero: {

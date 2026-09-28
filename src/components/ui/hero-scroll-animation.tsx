@@ -3,11 +3,11 @@
 import React, { forwardRef, useRef } from 'react';
 import { motion as Motion, useScroll, useTransform } from 'motion/react';
 import { useNavigate } from 'react-router-dom';
-import { usePortfolio } from '../../context/PortfolioContext.jsx';
-import { useTheme } from '../../hooks/useTheme.js';
-import { LiquidMetalButton } from '../LiquidMetalButton.jsx';
-import Carousel_001 from './carousel-001.jsx';
-import StickyCard002 from './sticky-card-002.jsx';
+import { usePortfolio } from '../../context/PortfolioContext';
+import { useTheme } from '../../hooks/useTheme';
+import { LiquidMetalButton } from '../LiquidMetalButton';
+import Carousel_001 from './carousel-001';
+import StickyCard002 from './sticky-card-002';
 
 const practiceItems = [
   {

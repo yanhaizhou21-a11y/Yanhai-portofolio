@@ -1,9 +1,9 @@
 import { useEffect, useRef, useState } from 'react'
-import { usePortfolio } from '../context/PortfolioContext.jsx'
+import { usePortfolio } from '../context/PortfolioContext'
 import gsap from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
-import FlowingMenu from '../components/reactbits/FlowingMenu.jsx'
-import ScrollFloat from '../components/reactbits/ScrollFloat.jsx'
+import FlowingMenu from '../components/reactbits/FlowingMenu'
+import ScrollFloat from '../components/reactbits/ScrollFloat'
 
 gsap.registerPlugin(ScrollTrigger)
 

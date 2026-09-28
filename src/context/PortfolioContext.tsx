@@ -1,6 +1,6 @@
 import { createContext, useContext, useMemo } from 'react'
-import { defaultPortfolioData } from '../data/defaultData.js'
-import { useFirestore } from '../hooks/useFirestore.js'
+import { defaultPortfolioData } from '../data/defaultData'
+import { useFirestore } from '../hooks/useFirestore'
 
 const PortfolioContext = createContext(null)
 

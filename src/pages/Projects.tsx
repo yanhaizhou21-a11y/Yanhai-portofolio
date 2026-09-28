@@ -1,7 +1,7 @@
 import { useMemo, useState } from 'react'
 import { Link } from 'react-router-dom'
-import Footer from '../components/Footer.jsx'
-import { usePortfolio } from '../context/PortfolioContext.jsx'
+import Footer from '../components/Footer'
+import { usePortfolio } from '../context/PortfolioContext'
 
 function Projects() {
   const { data } = usePortfolio()

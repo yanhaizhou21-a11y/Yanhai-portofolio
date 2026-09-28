@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react'
 import { motion as Motion, AnimatePresence } from 'framer-motion'
-import KineticTextLoader from './KineticTextLoader.jsx'
+import KineticTextLoader from './KineticTextLoader'
 
 function Preloader({ onComplete }) {
   const [visible, setVisible] = useState(true)

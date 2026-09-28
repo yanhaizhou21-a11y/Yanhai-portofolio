@@ -1,8 +1,8 @@
 import { useEffect, useRef } from 'react'
-import { usePortfolio } from '../context/PortfolioContext.jsx'
+import { usePortfolio } from '../context/PortfolioContext'
 import gsap from 'gsap'
-import Footer from '../components/Footer.jsx'
-import ScrollFloat from '../components/reactbits/ScrollFloat.jsx'
+import Footer from '../components/Footer'
+import ScrollFloat from '../components/reactbits/ScrollFloat'
 
 function Contact() {
   const { data } = usePortfolio()

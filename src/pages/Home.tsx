@@ -1,7 +1,7 @@
 import React from 'react'
-import Footer from '../components/Footer.jsx'
-import HeroScrollAnimation from '../components/ui/hero-scroll-animation.jsx'
-import { useTheme } from '../hooks/useTheme.js'
+import Footer from '../components/Footer'
+import HeroScrollAnimation from '../components/ui/hero-scroll-animation'
+import { useTheme } from '../hooks/useTheme'
 import ReactLenis from 'lenis/react'
 
 function Home() {

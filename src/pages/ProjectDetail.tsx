@@ -1,8 +1,8 @@
 import { useMemo } from 'react'
 import { useParams, Link, useNavigate } from 'react-router-dom'
-import { usePortfolio } from '../context/PortfolioContext.jsx'
+import { usePortfolio } from '../context/PortfolioContext'
 import { motion } from 'framer-motion'
-import Footer from '../components/Footer.jsx'
+import Footer from '../components/Footer'
 
 function ProjectDetail() {
   const { id } = useParams()

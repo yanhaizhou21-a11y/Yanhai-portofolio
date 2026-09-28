@@ -1,6 +1,6 @@
 import { createContext, useContext, useEffect, useMemo, useState } from 'react'
 import { GoogleAuthProvider, onAuthStateChanged, signInWithPopup, signOut } from 'firebase/auth'
-import { auth } from '../firebase.js'
+import { auth } from '../firebase'
 
 const AuthContext = createContext(null)
 const ADMIN_EMAIL = 'amrpendragon@gmail.com'

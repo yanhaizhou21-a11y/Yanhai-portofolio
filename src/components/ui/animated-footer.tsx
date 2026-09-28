@@ -3,7 +3,7 @@
 import React, { useEffect, useMemo, useRef } from "react";
 import gsap from "gsap";
 import { cn } from "@/lib/utils";
-import { useTheme } from "../../hooks/useTheme.js";
+import { useTheme } from "../../hooks/useTheme";
 
 const DEFAULT_ASCII_CHARS = "........:::=+xX#0369";
 

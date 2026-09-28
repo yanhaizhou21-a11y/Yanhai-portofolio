@@ -1,7 +1,7 @@
 import React from 'react'
-import { AnimatedFooter } from './ui/animated-footer.jsx'
-import { usePortfolio } from '../context/PortfolioContext.jsx'
-import { LiquidMetalButton } from './LiquidMetalButton.jsx'
+import { AnimatedFooter } from './ui/animated-footer'
+import { usePortfolio } from '../context/PortfolioContext'
+import { LiquidMetalButton } from './LiquidMetalButton'
 
 function Footer() {
   const { data } = usePortfolio()
